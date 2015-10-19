@@ -1,6 +1,6 @@
 import {applyAnnotation, AsModule, Run} from 'a1atscript';
 
-export default function setupLogging($rootScope, $state, noTable) {
+export default function uiRouteLogger($rootScope, $state, noTable) {
   if(noTable){
     $rootScope.$on('$stateChangeStart', (event, toState, toParams, fromState, fromParams) => {
       /*jshint -W075 */
@@ -63,5 +63,5 @@ export default function setupLogging($rootScope, $state, noTable) {
   }
 }
 
-applyAnnotation(setupLogging, AsModule, 'route-logger');
-applyAnnotation(setupLogging, Run, '$rootScope', '$state');
+applyAnnotation(uiRouteLogger, AsModule, 'route-logger');
+applyAnnotation(uiRouteLogger, Run, '$rootScope', '$state');

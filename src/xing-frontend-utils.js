@@ -13,6 +13,7 @@ export {
   TrackAdminState
 } from "./xing-frontend-utils/stateClasses.js";
 export { stateFallback } from "./xing-frontend-utils/stateFallback.js";
+export { uiRouteLogger } from "./xing-frontend-utils/ui-route-logger.js";
 export {
   State,
   Resolve,
