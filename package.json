@@ -1,7 +1,7 @@
 {
   "name": "xing-frontend-utils",
   "private": false,
-  "version": "0.0.1-beta2",
+  "version": "0.0.1-beta3",
   "description": "Utilities that make up the core frontend of XingCMS",
   "homepage": "https://github.com/XingFramework/xing-frontend-utils",
   "repository": {

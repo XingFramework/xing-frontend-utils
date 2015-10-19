@@ -2638,6 +2638,15 @@ Object.defineProperty(exports, "stateFallback", {
   }
 });
 
+var _uiRouteLogger = require("./xing-frontend-utils/ui-route-logger.js");
+
+Object.defineProperty(exports, "uiRouteLogger", {
+  enumerable: true,
+  get: function get() {
+    return _uiRouteLogger.uiRouteLogger;
+  }
+});
+
 var _State$Resolve$Inject$StateInjector = require("./xing-frontend-utils/stateInjector.js");
 
 Object.defineProperty(exports, "State", {
@@ -2665,7 +2674,7 @@ Object.defineProperty(exports, "StateInjector", {
   }
 });
 
-},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":11,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":12,"./xing-frontend-utils/components/toast/toast.js":19,"./xing-frontend-utils/components/unimplemented/unimplemented.js":20,"./xing-frontend-utils/serializer.js":22,"./xing-frontend-utils/stateClasses.js":23,"./xing-frontend-utils/stateFallback.js":24,"./xing-frontend-utils/stateInjector.js":25}],4:[function(require,module,exports){
+},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":11,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":12,"./xing-frontend-utils/components/toast/toast.js":19,"./xing-frontend-utils/components/unimplemented/unimplemented.js":20,"./xing-frontend-utils/serializer.js":22,"./xing-frontend-utils/stateClasses.js":23,"./xing-frontend-utils/stateFallback.js":24,"./xing-frontend-utils/stateInjector.js":25,"./xing-frontend-utils/ui-route-logger.js":26}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4720,6 +4729,83 @@ var StateInjector = (function () {
 exports.StateInjector = StateInjector;
 
 _registerInjector$ToAnnotation.registerInjector('state', StateInjector);
+
+},{"a1atscript":1}],26:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+exports['default'] = uiRouteLogger;
+
+var _applyAnnotation$AsModule$Run = require('a1atscript');
+
+function uiRouteLogger($rootScope, $state, noTable) {
+  if (noTable) {
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+      /*jshint -W075 */
+      console.log('Routing Event', event.name);
+      console.log('From State', fromState.name, fromState.url);
+      console.log('To State', toState.name, toState.url);
+    });
+    $rootScope.$on('$stateNotFound', function (event, missingState) {
+      console.log('Routing Event', event.name);
+      console.log('Missing state', missingState);
+      console.log('Existing states');
+      $state.get().forEach(function (state) {
+        console.log(state);
+      });
+      console.log('End of states');
+    });
+    $rootScope.$on('$stateChangeSuccess', function (event, toState) {
+      console.log('Routing Event', event.name);
+      console.log('To State', toState.name, toState.url);
+    });
+    $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+      console.log('Routing Event', event.name);
+      console.log('From State', fromState);
+      console.log('To State', toState);
+      console.log('Error', error);
+      console.log(error.stack);
+    });
+    $rootScope.$on('$viewContentLoaded', function (event) {
+      console.log('view event', event.name);
+    });
+  } else {
+    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+      /*jshint -W075 */
+      console.group();
+      console.table({ event: event });
+      console.table({ fromState: fromState, toState: toState });
+      console.table({ fromParams: fromParams, toParams: toParams });
+      console.groupEnd();
+    });
+    $rootScope.$on('$stateNotFound', function (event, missingState) {
+      console.table({ event: event, missingState: missingState });
+      console.table($state.get());
+    });
+    $rootScope.$on('$stateChangeSuccess', function (event, toState) {
+      console.group();
+      console.table({ event: event });
+      console.table({ toState: toState });
+      console.groupEnd();
+    });
+    $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+      console.group();
+      /*jshint -W075 */
+      console.table({ event: event });
+      console.table({ error: error });
+      console.table({ fromState: fromState, toState: toState });
+      //console.table({fromParams, toParams});
+      console.log('ui-router error', error.stack);
+      console.groupEnd();
+    });
+  }
+}
+
+_applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.AsModule, 'route-logger');
+_applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.Run, '$rootScope', '$state');
+module.exports = exports['default'];
 
 },{"a1atscript":1}]},{},[3])(3)
 });
