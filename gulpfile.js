@@ -5,16 +5,26 @@ var bump = require('gulp-bump');
 var gulp = require('gulp');
 var karma = require('karma').server;
 var xingTraceurTask = require('xing-traceur').rawTask;
+var htmlToJs = require('gulp-html-to-js');
+var extReplace = require('gulp-ext-replace');
 
 var TRACEUR_OPTIONS = require('./config').traceur;
 var PATH = {
   DIST: './dist/',
   BUILD: './build/',
   SRC: './src/**/*.js',
-  TEST: './test/**/*.js'
+  TEST: './test/**/*.js',
+  TPL: "src/**/*.tpl.html"
 };
 
-gulp.task('testPrep', function(done) {
+gulp.task('template', function() {
+  gulp.src(PATH.TPL)
+    .pipe(htmlToJs())
+    .pipe(extReplace('.tpl', '.tpl.html'))
+    .pipe(gulp.dest('src'));
+});
+
+gulp.task('testPrep', ['template'], function(done) {
   var files = [{
     dest: PATH.BUILD + "test-main.js",
     src: [PATH.TEST]
@@ -28,6 +38,7 @@ gulp.task('testPrep', function(done) {
     done(!result);
   });
 });
+
 
 /**
  * Run test once and exit

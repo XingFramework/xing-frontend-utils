@@ -2,7 +2,9 @@ import {applyAnnotation, Factory, Controller, Directive, Module} from 'a1atscrip
 import {} from './swipe.js';
 import {} from './interimElement.js';
 import Inflector from 'xing-inflector';
-
+import errorListTemplate from "./error-list.tpl.js";
+import errorTemplate from "./error.tpl.js";
+import noticeTemplate from "./notice.tpl.js";
 
 /* This is cribbed from the lrd design toast */
 
@@ -147,7 +149,7 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   $lrdToast.notice = function(message, type = "notice") {
     return this.show({
       parent: toastElement,
-      templateUrl: "components/toast/notice.tpl.html",
+      template: noticeTemplate,
       position: 'top left',
       locals: {
         type: type,
@@ -160,7 +162,7 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   $lrdToast.error = function(message, type = "error") {
     return this.show({
       parent: toastElement,
-      templateUrl: "components/toast/error.tpl.html",
+      template: errorTemplate,
       position: 'top left',
       locals: {
         type: type,
@@ -183,7 +185,7 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
     }
     return this.show({
       parent: toastElement,
-      templateUrl: "components/toast/error-list.tpl.html",
+      template: errorListTemplate,
       position: 'top left',
       locals: {
         type: type,
