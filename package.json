@@ -1,0 +1,61 @@
+{
+  "name": "xing-cms-frontend",
+  "private": false,
+  "version": "0.0.1",
+  "description": "The frontend of the CMS module for Xing",
+  "homepage": "https://github.com/XingFramework/xing-cms-frontend",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/XingFramework/xing-cms-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XingFramework/xing-cms-frontend/issues"
+  },
+  "main": "src/cms.js",
+  "dependencies": {
+    "a1atscript": "^0.4.5",
+    "angular": ">= 1.3.12 < 2.0",
+    "angular-ui-router": "^0.2.15",
+    "hammerjs": "^2.0.4",
+    "xing-inflector": "^0.0.2",
+    "xing-promise": "^0.0.1"
+  },
+  "devDependencies": {
+    "angular-mocks": ">= 1.3.15",
+    "babel": "^5.4.4",
+    "babelify": "^6.0.2",
+    "gulp": "^3.8.9",
+    "gulp-bump": "^0.2.2",
+    "gulp-connect": "^2.0.6",
+    "gulp-rename": "^1.2.0",
+    "karma": "^0.12.24",
+    "karma-babel-preprocessor": "^5.1.0",
+    "karma-browserify": "^4.1.2",
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-cli": "0.0.4",
+    "karma-commonjs": "0.0.13",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.2.2",
+    "karma-requirejs": "^0.2.2",
+    "karma-traceur-preprocessor": "^0.4.0",
+    "karma-sourcemap-loader": "git://github.com/LRDesign/karma-sourcemap-loader",
+    "requirejs": "^2.1.15",
+    "xing-traceur": "^0.0.7"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/gulp test:firefox; ./node_modules/.bin/karma start karma.conf.babel.js --browsers Firefox --single-run",
+    "dist": "browserify -t [ babelify --stage 0 ] ./src/cms.js --standalone xing-cms-frontend > dist/xing-cms-frontend.js"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "stage": 0
+        }
+      ]
+    ]
+  },
+  "author": "Hannah Howard <hannah@lrdesign.com>",
+  "license": "Apache-2.0"
+}

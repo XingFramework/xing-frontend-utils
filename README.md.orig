@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+# Relayer
+
+Relayer has been moved into the XingFramework GitHub organization.  Please see:
+[XingFramework/Relayer](https://github.com/XingFramework/Relayer)
+=======
 [![Code Climate](https://codeclimate.com/github/XingFramework/Relayer/badges/gpa.svg)](https://codeclimate.com/github/XingFramework/Relayer)
 [![Dependency Status](https://gemnasium.com/XingFramework/Relayer.svg)](https://gemnasium.com/XingFramework/Relayer) 
 [![Build Status](https://travis-ci.org/XingFramework/Relayer.svg?branch=master)](https://travis-ci.org/XingFramework/Relayer)
@@ -220,3 +226,4 @@ Authors
 
 * Hannah Howard
 * Judson Lester
+>>>>>>> origin/master

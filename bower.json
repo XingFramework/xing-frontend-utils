@@ -1,0 +1,32 @@
+{
+  "name": "relayer",
+  "version": "0.1.2",
+  "homepage": "https://github.com/XingFramework/Relayer",
+  "authors": [
+    "Hannah Howard <hannah@lrdesign.com>",
+    "Judson Lester <judson@lrdesign.com>",
+    "Evan Dorn <evan@lrdesign.com>"
+  ],
+  "description": "Consume hypermedia API's in Javascript with ease",
+  "main": [
+    "dist/relayer.js"
+  ],
+  "keywords": [
+    "angular",
+    "data",
+    "hypermedia",
+    "api"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.12",
+    "a1atscript": "^0.4.3"
+  }
+}
