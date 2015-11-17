@@ -2633,7 +2633,16 @@ Object.defineProperty(exports, "StateInjector", {
   }
 });
 
-},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":11,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":12,"./xing-frontend-utils/components/toast/toast.js":19,"./xing-frontend-utils/components/unimplemented/unimplemented.js":20,"./xing-frontend-utils/serializer.js":22,"./xing-frontend-utils/stateClasses.js":23,"./xing-frontend-utils/stateFallback.js":24,"./xing-frontend-utils/stateInjector.js":25,"./xing-frontend-utils/ui-route-logger.js":26}],4:[function(require,module,exports){
+var _appConfig = require("./xing-frontend-utils/appConfig.js");
+
+Object.defineProperty(exports, "appConfig", {
+  enumerable: true,
+  get: function get() {
+    return _appConfig.appConfig;
+  }
+});
+
+},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/appConfig.js":10,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":12,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":13,"./xing-frontend-utils/components/toast/toast.js":20,"./xing-frontend-utils/components/unimplemented/unimplemented.js":21,"./xing-frontend-utils/serializer.js":23,"./xing-frontend-utils/stateClasses.js":24,"./xing-frontend-utils/stateFallback.js":25,"./xing-frontend-utils/stateInjector.js":26,"./xing-frontend-utils/ui-route-logger.js":27}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2748,7 +2757,7 @@ var ExampleFormState = (function () {
 
 exports.ExampleFormState = ExampleFormState;
 
-},{"../../stateInjector.js":25,"./example-form.tpl.js":4}],8:[function(require,module,exports){
+},{"../../stateInjector.js":26,"./example-form.tpl.js":4}],8:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2806,7 +2815,58 @@ var Fallback = new _Module.Module('fallback', ['ui.router.state', FallbackState]
 exports['default'] = Fallback;
 module.exports = exports['default'];
 
-},{"../../stateInjector.js":25,"./error-fallback.tpl.js":8,"a1atscript":1}],10:[function(require,module,exports){
+},{"../../stateInjector.js":26,"./error-fallback.tpl.js":8,"a1atscript":1}],10:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.whenGoto = whenGoto;
+exports.appConfig = appConfig;
+
+var _Config$applyAnnotation = require("a1atscript");
+
+function whenGoto($location) {
+  var search = $location.search();
+  if (search.goto) {
+    var target = search.goto;
+
+    var queryParts = [];
+    for (var key in search) {
+      if (search.hasOwnProperty(key) && key != "goto") {
+        queryParts.push([key, search[key]].join("="));
+      }
+    }
+
+    if (queryParts.length > 0) {
+      target = [target, queryParts.join("&")].join("?");
+    }
+
+    return target;
+  } else {
+    return false;
+  }
+}
+
+function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
+  // enable html5 mode
+  $locationProvider.html5Mode(true);
+
+  // html5 mode when frontend urls hit directly they become a backend request
+  // backend in-turn redirects to /?goto=url wher url is the intended frontend url
+  // this function then redirects frontend (via history API) to appropriate frontend
+  // route
+  $urlRouterProvider.when(/.*/, ["$location", whenGoto]);
+
+  $urlRouterProvider.otherwise(function ($injector, $location) {
+    $injector.get("$state").go("root.homepage.show");
+    //return '/home';
+  });
+}
+
+_Config$applyAnnotation.applyAnnotation(appConfig, _Config$applyAnnotation.Config, "$stateProvider", "$urlRouterProvider", "$locationProvider");
+
+},{"a1atscript":1}],11:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2816,7 +2876,7 @@ var template = "<nav class=\"nav-collapse\" ng-transclude>\n</nav>\n";
 exports["default"] = template;
 module.exports = exports["default"];
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 var _interopRequireDefault = function _interopRequireDefault(obj) {
@@ -2876,7 +2936,7 @@ var ResponsiveMenu = (function () {
 exports['default'] = ResponsiveMenu;
 module.exports = exports['default'];
 
-},{"./responsive-menu.tpl.js":10,"a1atscript":1}],12:[function(require,module,exports){
+},{"./responsive-menu.tpl.js":11,"a1atscript":1}],13:[function(require,module,exports){
 'use strict';
 
 var _classCallCheck = function _classCallCheck(instance, Constructor) {
@@ -2945,7 +3005,7 @@ var StateAttrs = (function () {
 exports['default'] = StateAttrs;
 module.exports = exports['default'];
 
-},{"a1atscript":1}],13:[function(require,module,exports){
+},{"a1atscript":1}],14:[function(require,module,exports){
 'use strict';
 
 function lrdCompilerService($q, $http, $injector, $compile, $controller, $templateCache) {
@@ -3082,7 +3142,7 @@ function lrdCompilerService($q, $http, $injector, $compile, $controller, $templa
 
 angular.module('xing.utils.compiler', []).service('$lrdCompiler', ['$q', '$http', '$injector', '$compile', '$controller', '$templateCache', lrdCompilerService]);
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3092,7 +3152,7 @@ var template = "<div id=\"error_explanation\">\n  <h2 ng-if=\"header\">{{header}
 exports["default"] = template;
 module.exports = exports["default"];
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3102,7 +3162,7 @@ var template = "<div id=\"error_explanation\">\n  <div class=\"toast {{type}}\">
 exports["default"] = template;
 module.exports = exports["default"];
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 'use strict';
 
 require('./compiler.js');
@@ -3283,7 +3343,7 @@ function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate,
   };
 }
 
-},{"./compiler.js":13}],17:[function(require,module,exports){
+},{"./compiler.js":14}],18:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -3293,7 +3353,7 @@ var template = "<div id=\"messages\">\n  <div class=\"toast {{type}}>{{content}}
 exports["default"] = template;
 module.exports = exports["default"];
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 "use strict";
 
 (function () {
@@ -3504,7 +3564,7 @@ module.exports = exports["default"];
   }
 })();
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 var _interopRequireDefault = function _interopRequireDefault(obj) {
@@ -3790,7 +3850,7 @@ var Toast = new _applyAnnotation$Factory$Controller$Directive$Module.Module('toa
 exports['default'] = Toast;
 module.exports = exports['default'];
 
-},{"./error-list.tpl.js":14,"./error.tpl.js":15,"./interimElement.js":16,"./notice.tpl.js":17,"./swipe.js":18,"a1atscript":1,"xing-inflector":2}],20:[function(require,module,exports){
+},{"./error-list.tpl.js":15,"./error.tpl.js":16,"./interimElement.js":17,"./notice.tpl.js":18,"./swipe.js":19,"a1atscript":1,"xing-inflector":2}],21:[function(require,module,exports){
 'use strict';
 
 var _classCallCheck = function _classCallCheck(instance, Constructor) {
@@ -3840,7 +3900,7 @@ var UnimplementedDirective = (function () {
 exports['default'] = UnimplementedDirective;
 module.exports = exports['default'];
 
-},{"a1atscript":1}],21:[function(require,module,exports){
+},{"a1atscript":1}],22:[function(require,module,exports){
 "use strict";
 
 var _classCallCheck = function _classCallCheck(instance, Constructor) {
@@ -3934,7 +3994,7 @@ var ErrorLimiter = (function () {
 exports["default"] = ErrorLimiter;
 module.exports = exports["default"];
 
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 'use strict';
 
 var _interopRequireDefault = function _interopRequireDefault(obj) {
@@ -4417,7 +4477,7 @@ var Serializer = new _applyAnnotation$Module$Factory$Provider.Module('serializer
 exports['default'] = Serializer;
 module.exports = exports['default'];
 
-},{"a1atscript":1,"xing-inflector":2}],23:[function(require,module,exports){
+},{"a1atscript":1,"xing-inflector":2}],24:[function(require,module,exports){
 'use strict';
 
 var _inherits = function _inherits(subClass, superClass) {
@@ -4529,7 +4589,7 @@ var TrackAdminState = (function () {
 
 exports.TrackAdminState = TrackAdminState;
 
-},{"./stateInjector.js":25}],24:[function(require,module,exports){
+},{"./stateInjector.js":26}],25:[function(require,module,exports){
 'use strict';
 
 var _interopRequireDefault = function _interopRequireDefault(obj) {
@@ -4560,7 +4620,7 @@ function stateFallback($rootScope, $state) {
 _Run$applyAnnotation.applyAnnotation(stateFallback, _Run$applyAnnotation.Run, '$rootScope', '$state');
 module.exports = exports['default'];
 
-},{"./errorLimiter.js":21,"a1atscript":1}],25:[function(require,module,exports){
+},{"./errorLimiter.js":22,"a1atscript":1}],26:[function(require,module,exports){
 'use strict';
 
 var _createClass = (function () {
@@ -4689,7 +4749,7 @@ exports.StateInjector = StateInjector;
 
 _registerInjector$ToAnnotation.registerInjector('state', StateInjector);
 
-},{"a1atscript":1}],26:[function(require,module,exports){
+},{"a1atscript":1}],27:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
