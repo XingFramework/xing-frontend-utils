@@ -20,3 +20,5 @@ export {
   Inject,
   StateInjector
 } from "./xing-frontend-utils/stateInjector.js";
+
+export { appConfig } from "./xing-frontend-utils/appConfig.js";

@@ -2541,72 +2541,41 @@ module.exports = exports['default'];
 },{"a1atscript":1}],3:[function(require,module,exports){
 "use strict";
 
+var _interopRequire = function _interopRequire(obj) {
+  return obj && obj.__esModule ? obj["default"] : obj;
+};
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ExampleForm = require("./xing-frontend-utils/app/exampleForm/exampleForm.js");
+var _default = require("./xing-frontend-utils/app/exampleForm/exampleForm.js");
 
-Object.defineProperty(exports, "ExampleForm", {
-  enumerable: true,
-  get: function get() {
-    return _ExampleForm.ExampleForm;
-  }
-});
+exports.ExampleForm = _interopRequire(_default);
 
-var _Fallback = require("./xing-frontend-utils/app/fallback/fallback.js");
+var _default2 = require("./xing-frontend-utils/app/fallback/fallback.js");
 
-Object.defineProperty(exports, "Fallback", {
-  enumerable: true,
-  get: function get() {
-    return _Fallback.Fallback;
-  }
-});
+exports.Fallback = _interopRequire(_default2);
 
-var _ResponsiveMenu = require("./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js");
+var _default3 = require("./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js");
 
-Object.defineProperty(exports, "ResponsiveMenu", {
-  enumerable: true,
-  get: function get() {
-    return _ResponsiveMenu.ResponsiveMenu;
-  }
-});
+exports.ResponsiveMenu = _interopRequire(_default3);
 
-var _StateAttrs = require("./xing-frontend-utils/components/stateAttrs/stateAttrs.js");
+var _default4 = require("./xing-frontend-utils/components/stateAttrs/stateAttrs.js");
 
-Object.defineProperty(exports, "StateAttrs", {
-  enumerable: true,
-  get: function get() {
-    return _StateAttrs.StateAttrs;
-  }
-});
+exports.StateAttrs = _interopRequire(_default4);
 
-var _Toast = require("./xing-frontend-utils/components/toast/toast.js");
+var _default5 = require("./xing-frontend-utils/components/toast/toast.js");
 
-Object.defineProperty(exports, "Toast", {
-  enumerable: true,
-  get: function get() {
-    return _Toast.Toast;
-  }
-});
+exports.Toast = _interopRequire(_default5);
 
-var _UnimplementedDirective = require("./xing-frontend-utils/components/unimplemented/unimplemented.js");
+var _default6 = require("./xing-frontend-utils/components/unimplemented/unimplemented.js");
 
-Object.defineProperty(exports, "UnimplementedDirective", {
-  enumerable: true,
-  get: function get() {
-    return _UnimplementedDirective.UnimplementedDirective;
-  }
-});
+exports.UnimplementedDirective = _interopRequire(_default6);
 
-var _Serializer = require("./xing-frontend-utils/serializer.js");
+var _default7 = require("./xing-frontend-utils/serializer.js");
 
-Object.defineProperty(exports, "Serializer", {
-  enumerable: true,
-  get: function get() {
-    return _Serializer.Serializer;
-  }
-});
+exports.Serializer = _interopRequire(_default7);
 
 var _LoggedInOnlyState$AdminOnlyState$TrackAdminState = require("./xing-frontend-utils/stateClasses.js");
 
@@ -2629,23 +2598,13 @@ Object.defineProperty(exports, "TrackAdminState", {
   }
 });
 
-var _stateFallback = require("./xing-frontend-utils/stateFallback.js");
+var _default8 = require("./xing-frontend-utils/stateFallback.js");
 
-Object.defineProperty(exports, "stateFallback", {
-  enumerable: true,
-  get: function get() {
-    return _stateFallback.stateFallback;
-  }
-});
+exports.stateFallback = _interopRequire(_default8);
 
-var _uiRouteLogger = require("./xing-frontend-utils/ui-route-logger.js");
+var _default9 = require("./xing-frontend-utils/ui-route-logger.js");
 
-Object.defineProperty(exports, "uiRouteLogger", {
-  enumerable: true,
-  get: function get() {
-    return _uiRouteLogger.uiRouteLogger;
-  }
-});
+exports.uiRouteLogger = _interopRequire(_default9);
 
 var _State$Resolve$Inject$StateInjector = require("./xing-frontend-utils/stateInjector.js");
 
