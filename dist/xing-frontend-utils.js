@@ -46,15 +46,15 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	__webpack_require__(1);
-	
+
 	var _a1atscriptInjectorJs = __webpack_require__(2);
-	
+
 	Object.defineProperty(exports, 'registerInjector', {
 	  enumerable: true,
 	  get: function get() {
@@ -73,9 +73,9 @@
 	    return _a1atscriptInjectorJs.Injector;
 	  }
 	});
-	
+
 	var _a1atscriptAnnotationsJs = __webpack_require__(3);
-	
+
 	Object.defineProperty(exports, 'Config', {
 	  enumerable: true,
 	  get: function get() {
@@ -154,18 +154,18 @@
 	    return _a1atscriptAnnotationsJs.AsModule;
 	  }
 	});
-	
+
 	var _a1atscriptDirectiveObjectJs = __webpack_require__(19);
-	
+
 	Object.defineProperty(exports, 'DirectiveObject', {
 	  enumerable: true,
 	  get: function get() {
 	    return _a1atscriptDirectiveObjectJs.DirectiveObject;
 	  }
 	});
-	
+
 	var _a1atscriptNg2DirectivesComponentJs = __webpack_require__(9);
-	
+
 	Object.defineProperty(exports, 'Component', {
 	  enumerable: true,
 	  get: function get() {
@@ -184,27 +184,27 @@
 	    return _a1atscriptNg2DirectivesComponentJs.View;
 	  }
 	});
-	
+
 	var _a1atscriptToAnnotationJs = __webpack_require__(4);
-	
+
 	Object.defineProperty(exports, 'ToAnnotation', {
 	  enumerable: true,
 	  get: function get() {
 	    return _a1atscriptToAnnotationJs.ToAnnotation;
 	  }
 	});
-	
+
 	var _a1atscriptBootstrapJs = __webpack_require__(20);
-	
+
 	Object.defineProperty(exports, 'bootstrap', {
 	  enumerable: true,
 	  get: function get() {
 	    return _a1atscriptBootstrapJs.bootstrap;
 	  }
 	});
-	
+
 	var _a1atscriptRouterJs = __webpack_require__(7);
-	
+
 	Object.defineProperty(exports, 'Router', {
 	  enumerable: true,
 	  get: function get() {
@@ -217,9 +217,9 @@
 	    return _a1atscriptRouterJs.RouteConfig;
 	  }
 	});
-	
+
 	var _a1atscriptApplyAnnotationJs = __webpack_require__(21);
-	
+
 	Object.defineProperty(exports, 'applyAnnotation', {
 	  enumerable: true,
 	  get: function get() {
@@ -232,47 +232,47 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	var _InjectorJs = __webpack_require__(2);
-	
+
 	var _ComponentJs = __webpack_require__(9);
-	
+
 	var _injectorTypesJs = __webpack_require__(6);
-	
+
 	var _Ng2DirectiveDefinitionObjectJs = __webpack_require__(15);
-	
+
 	var _Ng2DirectiveDefinitionObjectJs2 = _interopRequireDefault(_Ng2DirectiveDefinitionObjectJs);
-	
+
 	var _PropertiesBuilderJs = __webpack_require__(16);
-	
+
 	var _PropertiesBuilderJs2 = _interopRequireDefault(_PropertiesBuilderJs);
-	
+
 	var _EventsBuilderJs = __webpack_require__(18);
-	
+
 	var _EventsBuilderJs2 = _interopRequireDefault(_EventsBuilderJs);
-	
+
 	var _RouterJs = __webpack_require__(7);
-	
+
 	var ComponentInjector = (function (_ListInjector) {
 	  _inherits(ComponentInjector, _ListInjector);
-	
+
 	  function ComponentInjector() {
 	    _classCallCheck(this, ComponentInjector);
-	
+
 	    _get(Object.getPrototypeOf(ComponentInjector.prototype), 'constructor', this).call(this);
 	    this.componentHooks = { before: [], after: [] };
 	  }
-	
+
 	  _createClass(ComponentInjector, [{
 	    key: '_template',
 	    value: function _template(component) {
@@ -319,10 +319,10 @@
 	      return _ComponentJs.Component;
 	    }
 	  }]);
-	
+
 	  return ComponentInjector;
 	})(_injectorTypesJs.ListInjector);
-	
+
 	(0, _InjectorJs.registerInjector)('component', ComponentInjector);
 
 /***/ },
@@ -330,34 +330,34 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	exports.registerInjector = registerInjector;
 	exports.getInjector = getInjector;
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	var _annotationsJs = __webpack_require__(3);
-	
+
 	var _AnnotationFinderJs = __webpack_require__(5);
-	
+
 	var _injectorTypesJs = __webpack_require__(6);
-	
+
 	var registeredInjectors = {};
-	
+
 	function registerInjector(name, InjectorClass) {
 	  registeredInjectors[name] = new InjectorClass();
 	}
-	
+
 	function getInjector(name) {
 	  return registeredInjectors[name];
 	}
-	
+
 	registerInjector('config', _injectorTypesJs.ConfigInjector);
 	registerInjector('run', _injectorTypesJs.RunInjector);
 	registerInjector('controller', _injectorTypesJs.ControllerInjector);
@@ -369,17 +369,17 @@
 	registerInjector('constant', _injectorTypesJs.ConstantInjector);
 	registerInjector('animation', _injectorTypesJs.AnimationInjector);
 	registerInjector('filter', _injectorTypesJs.FilterInjector);
-	
+
 	var Injector = (function () {
 	  function Injector() {
 	    var appNamePrefix = arguments.length <= 0 || arguments[0] === undefined ? "" : arguments[0];
-	
+
 	    _classCallCheck(this, Injector);
-	
+
 	    this.appNamePrefix = appNamePrefix;
 	    this.injectedModules = {};
 	  }
-	
+
 	  _createClass(Injector, [{
 	    key: 'instantiate',
 	    value: function instantiate(moduleClass) {
@@ -467,11 +467,11 @@
 	    key: '_sortDependency',
 	    value: function _sortDependency(dependency) {
 	      var _this = this;
-	
+
 	      var checkModule = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-	
+
 	      var sorted = {};
-	
+
 	      if (typeof dependency === "string" || dependency instanceof _annotationsJs.Module) {
 	        sorted.module = [dependency];
 	      } else if (dependency.annotations) {
@@ -499,13 +499,13 @@
 	    key: '_sortModuleDependencies',
 	    value: function _sortModuleDependencies(moduleClass) {
 	      var _this2 = this;
-	
+
 	      var sorted = {};
 	      moduleClass.dependencies.forEach(function (dependency) {
 	        var newSortedDependencies = _this2._sortDependency(dependency);
 	        sorted = _this2._mergeSortedDependencies(sorted, newSortedDependencies);
 	      });
-	
+
 	      return sorted;
 	    }
 	  }, {
@@ -519,9 +519,9 @@
 	    key: '_instantiateModuleDependencies',
 	    value: function _instantiateModuleDependencies(moduleDependencies) {
 	      var _this3 = this;
-	
+
 	      var returnedDependencies = [];
-	
+
 	      if (moduleDependencies) {
 	        moduleDependencies.forEach(function (moduleDependency) {
 	          if (typeof moduleDependency === "string") {
@@ -531,7 +531,7 @@
 	          }
 	        });
 	      }
-	
+
 	      return returnedDependencies;
 	    }
 	  }, {
@@ -547,10 +547,10 @@
 	      return _annotationsJs.Module;
 	    }
 	  }]);
-	
+
 	  return Injector;
 	})();
-	
+
 	exports.Injector = Injector;
 
 /***/ },
@@ -558,242 +558,242 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	var _ToAnnotationJs = __webpack_require__(4);
-	
+
 	var NgAnnotation = function NgAnnotation() {
 	  _classCallCheck(this, NgAnnotation);
-	
+
 	  for (var _len = arguments.length, dependencies = Array(_len), _key = 0; _key < _len; _key++) {
 	    dependencies[_key] = arguments[_key];
 	  }
-	
+
 	  this.dependencies = dependencies;
 	};
-	
+
 	var NgNamedAnnotation = function NgNamedAnnotation(token) {
 	  var dependencies = arguments.length <= 1 || arguments[1] === undefined ? [] : arguments[1];
-	
+
 	  _classCallCheck(this, NgNamedAnnotation);
-	
+
 	  this.dependencies = dependencies;
 	  this.token = token;
 	};
-	
+
 	var Config = (function (_NgAnnotation) {
 	  _inherits(Config, _NgAnnotation);
-	
+
 	  function Config() {
 	    _classCallCheck(this, _Config);
-	
+
 	    _get(Object.getPrototypeOf(_Config.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Config = Config;
 	  Config = (0, _ToAnnotationJs.ToAnnotation)(Config) || Config;
 	  return Config;
 	})(NgAnnotation);
-	
+
 	exports.Config = Config;
-	
+
 	var Run = (function (_NgAnnotation2) {
 	  _inherits(Run, _NgAnnotation2);
-	
+
 	  function Run() {
 	    _classCallCheck(this, _Run);
-	
+
 	    _get(Object.getPrototypeOf(_Run.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Run = Run;
 	  Run = (0, _ToAnnotationJs.ToAnnotation)(Run) || Run;
 	  return Run;
 	})(NgAnnotation);
-	
+
 	exports.Run = Run;
-	
+
 	var Controller = (function (_NgNamedAnnotation) {
 	  _inherits(Controller, _NgNamedAnnotation);
-	
+
 	  function Controller() {
 	    _classCallCheck(this, _Controller);
-	
+
 	    _get(Object.getPrototypeOf(_Controller.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Controller = Controller;
 	  Controller = (0, _ToAnnotationJs.ToAnnotation)(Controller) || Controller;
 	  return Controller;
 	})(NgNamedAnnotation);
-	
+
 	exports.Controller = Controller;
-	
+
 	var Directive = (function (_NgNamedAnnotation2) {
 	  _inherits(Directive, _NgNamedAnnotation2);
-	
+
 	  function Directive() {
 	    _classCallCheck(this, _Directive);
-	
+
 	    _get(Object.getPrototypeOf(_Directive.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Directive = Directive;
 	  Directive = (0, _ToAnnotationJs.ToAnnotation)(Directive) || Directive;
 	  return Directive;
 	})(NgNamedAnnotation);
-	
+
 	exports.Directive = Directive;
-	
+
 	var Service = (function (_NgNamedAnnotation3) {
 	  _inherits(Service, _NgNamedAnnotation3);
-	
+
 	  function Service() {
 	    _classCallCheck(this, _Service);
-	
+
 	    _get(Object.getPrototypeOf(_Service.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Service = Service;
 	  Service = (0, _ToAnnotationJs.ToAnnotation)(Service) || Service;
 	  return Service;
 	})(NgNamedAnnotation);
-	
+
 	exports.Service = Service;
-	
+
 	var Factory = (function (_NgNamedAnnotation4) {
 	  _inherits(Factory, _NgNamedAnnotation4);
-	
+
 	  function Factory() {
 	    _classCallCheck(this, _Factory);
-	
+
 	    _get(Object.getPrototypeOf(_Factory.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Factory = Factory;
 	  Factory = (0, _ToAnnotationJs.ToAnnotation)(Factory) || Factory;
 	  return Factory;
 	})(NgNamedAnnotation);
-	
+
 	exports.Factory = Factory;
-	
+
 	var Provider = (function (_NgNamedAnnotation5) {
 	  _inherits(Provider, _NgNamedAnnotation5);
-	
+
 	  function Provider() {
 	    _classCallCheck(this, _Provider);
-	
+
 	    _get(Object.getPrototypeOf(_Provider.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Provider = Provider;
 	  Provider = (0, _ToAnnotationJs.ToAnnotation)(Provider) || Provider;
 	  return Provider;
 	})(NgNamedAnnotation);
-	
+
 	exports.Provider = Provider;
-	
+
 	var Value = (function (_NgNamedAnnotation6) {
 	  _inherits(Value, _NgNamedAnnotation6);
-	
+
 	  function Value() {
 	    _classCallCheck(this, _Value);
-	
+
 	    _get(Object.getPrototypeOf(_Value.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Value = Value;
 	  Value = (0, _ToAnnotationJs.ToAnnotation)(Value) || Value;
 	  return Value;
 	})(NgNamedAnnotation);
-	
+
 	exports.Value = Value;
-	
+
 	var Constant = (function (_NgNamedAnnotation7) {
 	  _inherits(Constant, _NgNamedAnnotation7);
-	
+
 	  function Constant() {
 	    _classCallCheck(this, _Constant);
-	
+
 	    _get(Object.getPrototypeOf(_Constant.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Constant = Constant;
 	  Constant = (0, _ToAnnotationJs.ToAnnotation)(Constant) || Constant;
 	  return Constant;
 	})(NgNamedAnnotation);
-	
+
 	exports.Constant = Constant;
-	
+
 	var Filter = (function (_NgNamedAnnotation8) {
 	  _inherits(Filter, _NgNamedAnnotation8);
-	
+
 	  function Filter() {
 	    _classCallCheck(this, _Filter);
-	
+
 	    _get(Object.getPrototypeOf(_Filter.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Filter = Filter;
 	  Filter = (0, _ToAnnotationJs.ToAnnotation)(Filter) || Filter;
 	  return Filter;
 	})(NgNamedAnnotation);
-	
+
 	exports.Filter = Filter;
-	
+
 	var Animation = (function (_NgNamedAnnotation9) {
 	  _inherits(Animation, _NgNamedAnnotation9);
-	
+
 	  function Animation() {
 	    _classCallCheck(this, _Animation);
-	
+
 	    _get(Object.getPrototypeOf(_Animation.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Animation = Animation;
 	  Animation = (0, _ToAnnotationJs.ToAnnotation)(Animation) || Animation;
 	  return Animation;
 	})(NgNamedAnnotation);
-	
+
 	exports.Animation = Animation;
-	
+
 	var Module = (function (_NgNamedAnnotation10) {
 	  _inherits(Module, _NgNamedAnnotation10);
-	
+
 	  function Module() {
 	    _classCallCheck(this, Module);
-	
+
 	    _get(Object.getPrototypeOf(Module.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  return Module;
 	})(NgNamedAnnotation);
-	
+
 	exports.Module = Module;
-	
+
 	var AsModule = (function (_Module) {
 	  _inherits(AsModule, _Module);
-	
+
 	  function AsModule() {
 	    _classCallCheck(this, _AsModule);
-	
+
 	    _get(Object.getPrototypeOf(_AsModule.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _AsModule = AsModule;
 	  AsModule = (0, _ToAnnotationJs.ToAnnotation)(AsModule) || AsModule;
 	  return AsModule;
 	})(Module);
-	
+
 	exports.AsModule = AsModule;
 
 /***/ },
@@ -801,7 +801,7 @@
 /***/ function(module, exports) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
@@ -825,7 +825,7 @@
 	      } });
 	  }
 	}
-	
+
 	function handleProperty(descriptor, AnnotationClass, callParams) {
 	  var value;
 	  if (descriptor.initializer) {
@@ -842,19 +842,19 @@
 	  descriptor.enumerable = true;
 	  return descriptor;
 	}
-	
+
 	function ToAnnotation(AnnotationClass) {
 	  var decorator = function decorator() {
 	    for (var _len = arguments.length, callParams = Array(_len), _key = 0; _key < _len; _key++) {
 	      callParams[_key] = arguments[_key];
 	    }
-	
+
 	    callParams.unshift(null);
 	    return function (targetClass) {
 	      for (var _len2 = arguments.length, otherParams = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
 	        otherParams[_key2 - 1] = arguments[_key2];
 	      }
-	
+
 	      if (otherParams.length >= 2) {
 	        return handleProperty(otherParams[1], AnnotationClass, callParams);
 	      } else {
@@ -872,22 +872,22 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var AnnotationFinder = (function () {
 	  function AnnotationFinder(AnnotatedClass) {
 	    _classCallCheck(this, AnnotationFinder);
-	
+
 	    this.AnnotatedClass = AnnotatedClass;
 	  }
-	
+
 	  _createClass(AnnotationFinder, [{
 	    key: "annotationFor",
 	    value: function annotationFor(AnnotationClass) {
@@ -913,10 +913,10 @@
 	      }
 	    }
 	  }]);
-	
+
 	  return AnnotationFinder;
 	})();
-	
+
 	exports.AnnotationFinder = AnnotationFinder;
 
 /***/ },
@@ -924,53 +924,53 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	var _annotationsJs = __webpack_require__(3);
-	
+
 	var _RouterJs = __webpack_require__(7);
-	
+
 	var ListInjector = (function () {
 	  function ListInjector() {
 	    _classCallCheck(this, ListInjector);
 	  }
-	
+
 	  _createClass(ListInjector, [{
 	    key: 'instantiate',
 	    value: function instantiate(module, dependencyList) {
 	      var _this = this;
-	
+
 	      dependencyList.forEach(function (dependencyObject) {
 	        _this.instantiateOne(module, dependencyObject.dependency, dependencyObject.metadata);
 	      });
 	    }
 	  }]);
-	
+
 	  return ListInjector;
 	})();
-	
+
 	exports.ListInjector = ListInjector;
-	
+
 	var ConfigInjector = (function (_ListInjector) {
 	  _inherits(ConfigInjector, _ListInjector);
-	
+
 	  function ConfigInjector() {
 	    _classCallCheck(this, ConfigInjector);
-	
+
 	    _get(Object.getPrototypeOf(ConfigInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(ConfigInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, config, metadata) {
@@ -983,21 +983,21 @@
 	      return _annotationsJs.Config;
 	    }
 	  }]);
-	
+
 	  return ConfigInjector;
 	})(ListInjector);
-	
+
 	exports.ConfigInjector = ConfigInjector;
-	
+
 	var RunInjector = (function (_ListInjector2) {
 	  _inherits(RunInjector, _ListInjector2);
-	
+
 	  function RunInjector() {
 	    _classCallCheck(this, RunInjector);
-	
+
 	    _get(Object.getPrototypeOf(RunInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(RunInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, run, metadata) {
@@ -1010,21 +1010,21 @@
 	      return _annotationsJs.Run;
 	    }
 	  }]);
-	
+
 	  return RunInjector;
 	})(ListInjector);
-	
+
 	exports.RunInjector = RunInjector;
-	
+
 	var ControllerInjector = (function (_ListInjector3) {
 	  _inherits(ControllerInjector, _ListInjector3);
-	
+
 	  function ControllerInjector() {
 	    _classCallCheck(this, ControllerInjector);
-	
+
 	    _get(Object.getPrototypeOf(ControllerInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(ControllerInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, controller, metadata) {
@@ -1038,21 +1038,21 @@
 	      return _annotationsJs.Controller;
 	    }
 	  }]);
-	
+
 	  return ControllerInjector;
 	})(ListInjector);
-	
+
 	exports.ControllerInjector = ControllerInjector;
-	
+
 	var DirectiveInjector = (function (_ListInjector4) {
 	  _inherits(DirectiveInjector, _ListInjector4);
-	
+
 	  function DirectiveInjector() {
 	    _classCallCheck(this, DirectiveInjector);
-	
+
 	    _get(Object.getPrototypeOf(DirectiveInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(DirectiveInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, directive, metadata) {
@@ -1065,21 +1065,21 @@
 	      return _annotationsJs.Directive;
 	    }
 	  }]);
-	
+
 	  return DirectiveInjector;
 	})(ListInjector);
-	
+
 	exports.DirectiveInjector = DirectiveInjector;
-	
+
 	var ServiceInjector = (function (_ListInjector5) {
 	  _inherits(ServiceInjector, _ListInjector5);
-	
+
 	  function ServiceInjector() {
 	    _classCallCheck(this, ServiceInjector);
-	
+
 	    _get(Object.getPrototypeOf(ServiceInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(ServiceInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, service, metadata) {
@@ -1092,21 +1092,21 @@
 	      return _annotationsJs.Service;
 	    }
 	  }]);
-	
+
 	  return ServiceInjector;
 	})(ListInjector);
-	
+
 	exports.ServiceInjector = ServiceInjector;
-	
+
 	var FactoryInjector = (function (_ListInjector6) {
 	  _inherits(FactoryInjector, _ListInjector6);
-	
+
 	  function FactoryInjector() {
 	    _classCallCheck(this, FactoryInjector);
-	
+
 	    _get(Object.getPrototypeOf(FactoryInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(FactoryInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, factory, metadata) {
@@ -1119,21 +1119,21 @@
 	      return _annotationsJs.Factory;
 	    }
 	  }]);
-	
+
 	  return FactoryInjector;
 	})(ListInjector);
-	
+
 	exports.FactoryInjector = FactoryInjector;
-	
+
 	var ProviderInjector = (function (_ListInjector7) {
 	  _inherits(ProviderInjector, _ListInjector7);
-	
+
 	  function ProviderInjector() {
 	    _classCallCheck(this, ProviderInjector);
-	
+
 	    _get(Object.getPrototypeOf(ProviderInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(ProviderInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, provider, metadata) {
@@ -1146,21 +1146,21 @@
 	      return _annotationsJs.Provider;
 	    }
 	  }]);
-	
+
 	  return ProviderInjector;
 	})(ListInjector);
-	
+
 	exports.ProviderInjector = ProviderInjector;
-	
+
 	var ValueInjector = (function (_ListInjector8) {
 	  _inherits(ValueInjector, _ListInjector8);
-	
+
 	  function ValueInjector() {
 	    _classCallCheck(this, ValueInjector);
-	
+
 	    _get(Object.getPrototypeOf(ValueInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(ValueInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, value, metadata) {
@@ -1173,21 +1173,21 @@
 	      return _annotationsJs.Value;
 	    }
 	  }]);
-	
+
 	  return ValueInjector;
 	})(ListInjector);
-	
+
 	exports.ValueInjector = ValueInjector;
-	
+
 	var ConstantInjector = (function (_ListInjector9) {
 	  _inherits(ConstantInjector, _ListInjector9);
-	
+
 	  function ConstantInjector() {
 	    _classCallCheck(this, ConstantInjector);
-	
+
 	    _get(Object.getPrototypeOf(ConstantInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(ConstantInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, constant, metadata) {
@@ -1200,21 +1200,21 @@
 	      return _annotationsJs.Constant;
 	    }
 	  }]);
-	
+
 	  return ConstantInjector;
 	})(ListInjector);
-	
+
 	exports.ConstantInjector = ConstantInjector;
-	
+
 	var AnimationInjector = (function (_ListInjector10) {
 	  _inherits(AnimationInjector, _ListInjector10);
-	
+
 	  function AnimationInjector() {
 	    _classCallCheck(this, AnimationInjector);
-	
+
 	    _get(Object.getPrototypeOf(AnimationInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(AnimationInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, animation, metadata) {
@@ -1227,21 +1227,21 @@
 	      return _annotationsJs.Animation;
 	    }
 	  }]);
-	
+
 	  return AnimationInjector;
 	})(ListInjector);
-	
+
 	exports.AnimationInjector = AnimationInjector;
-	
+
 	var FilterInjector = (function (_ListInjector11) {
 	  _inherits(FilterInjector, _ListInjector11);
-	
+
 	  function FilterInjector() {
 	    _classCallCheck(this, FilterInjector);
-	
+
 	    _get(Object.getPrototypeOf(FilterInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(FilterInjector, [{
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, filter, metadata) {
@@ -1254,10 +1254,10 @@
 	      return _annotationsJs.Filter;
 	    }
 	  }]);
-	
+
 	  return FilterInjector;
 	})(ListInjector);
-	
+
 	exports.FilterInjector = FilterInjector;
 
 /***/ },
@@ -1265,30 +1265,30 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _routerComponentMapperJs = __webpack_require__(8);
-	
+
 	var _routerRouteReaderJs = __webpack_require__(12);
-	
+
 	var _routerRouteInitializerJs = __webpack_require__(14);
-	
+
 	var _routerRouteConfigJs = __webpack_require__(13);
-	
+
 	Object.defineProperty(exports, "RouteConfig", {
 	  enumerable: true,
 	  get: function get() {
 	    return _routerRouteConfigJs.RouteConfig;
 	  }
 	});
-	
+
 	var componentMapper = new _routerComponentMapperJs.ComponentMapper();
 	var routeReader = new _routerRouteReaderJs.RouteReader(componentMapper);
 	var routeInitializer = new _routerRouteInitializerJs.RouteInitializer(componentMapper);
-	
+
 	var Router = {
 	  componentMapper: componentMapper,
 	  routeReader: routeReader,
@@ -1301,39 +1301,39 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var _annotationsJs = __webpack_require__(3);
-	
+
 	var _ng2DirectivesComponentJs = __webpack_require__(9);
-	
+
 	var _AnnotationFinderJs = __webpack_require__(5);
-	
+
 	var _ng2DirectivesSelectorMatcherJs = __webpack_require__(11);
-	
+
 	var _ng2DirectivesSelectorMatcherJs2 = _interopRequireDefault(_ng2DirectivesSelectorMatcherJs);
-	
+
 	var DEFAULT_CONTROLLER_SUFFIX = "Controller";
 	var DEFAULT_COMPONENT_PREFIX = "a1atscript";
 	var DEFAULT_CONTROLLER_PREFIX = "A1AtScript";
-	
+
 	var ComponentMapping = (function () {
 	  function ComponentMapping(component, componentMapper) {
 	    _classCallCheck(this, ComponentMapping);
-	
+
 	    this.component = component;
 	    this.componentMapper = componentMapper;
 	  }
-	
+
 	  _createClass(ComponentMapping, [{
 	    key: "componentName",
 	    get: function get() {
@@ -1355,15 +1355,15 @@
 	      return this.componentMapper.registry[this.componentName].controllerName;
 	    }
 	  }]);
-	
+
 	  return ComponentMapping;
 	})();
-	
+
 	var ComponentMapper = (function () {
 	  function ComponentMapper() {
 	    _classCallCheck(this, ComponentMapper);
 	  }
-	
+
 	  _createClass(ComponentMapper, [{
 	    key: "register",
 	    value: function register(component) {
@@ -1526,10 +1526,10 @@
 	      return this._inlineTemplateCache;
 	    }
 	  }]);
-	
+
 	  return ComponentMapper;
 	})();
-	
+
 	exports.ComponentMapper = ComponentMapper;
 
 /***/ },
@@ -1537,81 +1537,81 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	var _Ng2DirectiveJs = __webpack_require__(10);
-	
+
 	var _Ng2DirectiveJs2 = _interopRequireDefault(_Ng2DirectiveJs);
-	
+
 	var _ToAnnotationJs = __webpack_require__(4);
-	
+
 	var Component = (function (_Ng2Directive) {
 	  _inherits(Component, _Ng2Directive);
-	
+
 	  function Component(descriptor) {
 	    _classCallCheck(this, _Component);
-	
+
 	    _get(Object.getPrototypeOf(_Component.prototype), 'constructor', this).call(this, descriptor);
 	    this.appInjector = descriptor.appInjector || descriptor.injectables || descriptor.services;
 	  }
-	
+
 	  var _Component = Component;
 	  Component = (0, _ToAnnotationJs.ToAnnotation)(Component) || Component;
 	  return Component;
 	})(_Ng2DirectiveJs2['default']);
-	
+
 	exports.Component = Component;
-	
+
 	var ViewBase = function ViewBase(descriptor) {
 	  _classCallCheck(this, ViewBase);
-	
+
 	  this.templateUrl = descriptor.templateUrl || descriptor.url;
 	  this.template = descriptor.template || descriptor.inline;
 	};
-	
+
 	exports.ViewBase = ViewBase;
-	
+
 	var Template = (function (_ViewBase) {
 	  _inherits(Template, _ViewBase);
-	
+
 	  function Template() {
 	    _classCallCheck(this, _Template);
-	
+
 	    _get(Object.getPrototypeOf(_Template.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _Template = Template;
 	  Template = (0, _ToAnnotationJs.ToAnnotation)(Template) || Template;
 	  return Template;
 	})(ViewBase);
-	
+
 	exports.Template = Template;
-	
+
 	var View = (function (_ViewBase2) {
 	  _inherits(View, _ViewBase2);
-	
+
 	  function View() {
 	    _classCallCheck(this, _View);
-	
+
 	    _get(Object.getPrototypeOf(_View.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  var _View = View;
 	  View = (0, _ToAnnotationJs.ToAnnotation)(View) || View;
 	  return View;
 	})(ViewBase);
-	
+
 	exports.View = View;
 
 /***/ },
@@ -1619,16 +1619,16 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var Ng2Directive = function Ng2Directive(descriptor) {
 	  _classCallCheck(this, Ng2Directive);
-	
+
 	  this.selector = descriptor.selector;
 	  this.properties = descriptor.properties || descriptor.bind;
 	  this.controllerAs = descriptor.controllerAs;
@@ -1636,7 +1636,7 @@
 	  this.transclude = descriptor.transclude;
 	  this.events = descriptor.events;
 	};
-	
+
 	exports["default"] = Ng2Directive;
 	module.exports = exports["default"];
 
@@ -1645,25 +1645,25 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;
 	var MOZ_HACK_REGEXP = /^moz([A-Z])/;
-	
+
 	var SelectorMatcher = (function () {
 	  function SelectorMatcher(selector) {
 	    _classCallCheck(this, SelectorMatcher);
-	
+
 	    this._selector = selector;
 	  }
-	
+
 	  _createClass(SelectorMatcher, [{
 	    key: "_camelizeName",
 	    value: function _camelizeName() {
@@ -1703,10 +1703,10 @@
 	      return this._restrict;
 	    }
 	  }]);
-	
+
 	  return SelectorMatcher;
 	})();
-	
+
 	exports["default"] = SelectorMatcher;
 	module.exports = exports["default"];
 
@@ -1715,26 +1715,26 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var _RouteConfigJs = __webpack_require__(13);
-	
+
 	var _AnnotationFinderJs = __webpack_require__(5);
-	
+
 	var RouteReader = (function () {
 	  function RouteReader(componentMapper) {
 	    _classCallCheck(this, RouteReader);
-	
+
 	    this.componentMapper = componentMapper;
 	  }
-	
+
 	  _createClass(RouteReader, [{
 	    key: "_routeConfigAnnotations",
 	    value: function _routeConfigAnnotations(component) {
@@ -1758,12 +1758,12 @@
 	    key: "_convertConfig",
 	    value: function _convertConfig(routeConfigAnnotation) {
 	      var _this = this;
-	
+
 	      var routeDescription = Object.assign({}, routeConfigAnnotation.routeDescription);
 	      if (routeDescription.component) {
 	        routeDescription.component = this._componentName(routeDescription.component);
 	      }
-	
+
 	      if (routeDescription.components) {
 	        var components = {};
 	        Object.keys(routeDescription.components).forEach(function (key) {
@@ -1771,7 +1771,7 @@
 	        });
 	        routeDescription.components = components;
 	      }
-	
+
 	      return routeDescription;
 	    }
 	  }, {
@@ -1781,10 +1781,10 @@
 	      component.$routeConfig = this._routeConfig(component);
 	    }
 	  }]);
-	
+
 	  return RouteReader;
 	})();
-	
+
 	exports.RouteReader = RouteReader;
 
 /***/ },
@@ -1792,27 +1792,27 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	var _ToAnnotationJs = __webpack_require__(4);
-	
+
 	var RouteConfig = (function () {
 	  function RouteConfig(routeDescription) {
 	    _classCallCheck(this, _RouteConfig);
-	
+
 	    this.routeDescription = routeDescription;
 	  }
-	
+
 	  var _RouteConfig = RouteConfig;
 	  RouteConfig = (0, _ToAnnotationJs.ToAnnotation)(RouteConfig) || RouteConfig;
 	  return RouteConfig;
 	})();
-	
+
 	exports.RouteConfig = RouteConfig;
 
 /***/ },
@@ -1820,22 +1820,22 @@
 /***/ function(module, exports) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	var RouteInitializer = (function () {
 	  function RouteInitializer(componentMapper) {
 	    _classCallCheck(this, RouteInitializer);
-	
+
 	    this.componentMapper = componentMapper;
 	  }
-	
+
 	  _createClass(RouteInitializer, [{
 	    key: 'configurationFunction',
 	    value: function configurationFunction(componentMapperName) {
@@ -1875,7 +1875,7 @@
 	    key: 'setupComponentControllers',
 	    value: function setupComponentControllers() {
 	      var _this = this;
-	
+
 	      Object.keys(this.componentMapper.registry).forEach(function (component) {
 	        var config = _this.componentMapper.registry[component];
 	        if (!config.isController && config.component != _this.topComponent) {
@@ -1897,30 +1897,30 @@
 	    key: 'initialize',
 	    value: function initialize(ngModuleName) {
 	      var topComponent = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
-	
+
 	      this.module = angular.module(ngModuleName);
-	
+
 	      // ng-new-router changed the name of its componentMapper service recently
 	      // essentially the approach here is to try to configure the mapper with both names
 	      // catch exceptions if they don't exist.
 	      // if both throw an exception, than there is no component router present
 	      this.module.config(['$injector', this.configurationFunction('$componentLoaderProvider')]);
 	      this.module.run(['$injector', this.configurationFunction('$componentMapper')]);
-	
+
 	      if (topComponent && topComponent.$routeConfig) {
 	        this.topComponent = topComponent;
 	        this.module.run(['$injector', this.topRouteConfig('$router', topComponent.$routeConfig)]);
 	      }
-	
+
 	      this.setupComponentControllers();
-	
+
 	      this.module.run(['$templateCache', this.setupInlineTemplates()]);
 	    }
 	  }]);
-	
+
 	  return RouteInitializer;
 	})();
-	
+
 	exports.RouteInitializer = RouteInitializer;
 
 /***/ },
@@ -1928,34 +1928,34 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var _SelectorMatcherJs = __webpack_require__(11);
-	
+
 	var _SelectorMatcherJs2 = _interopRequireDefault(_SelectorMatcherJs);
-	
+
 	var Ng2DirectiveDefinitionObject = (function () {
 	  function Ng2DirectiveDefinitionObject(controller, annotation) {
 	    var template = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
 	    var bind = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
-	
+
 	    _classCallCheck(this, Ng2DirectiveDefinitionObject);
-	
+
 	    this._annotation = annotation;
 	    this._controller = controller;
 	    this._template = template;
 	    this._bind = bind;
 	  }
-	
+
 	  _createClass(Ng2DirectiveDefinitionObject, [{
 	    key: "selectorMatcher",
 	    get: function get() {
@@ -2026,7 +2026,7 @@
 	    key: "factoryFn",
 	    get: function get() {
 	      var _this = this;
-	
+
 	      return function () {
 	        return {
 	          scope: _this.scope,
@@ -2042,10 +2042,10 @@
 	      };
 	    }
 	  }]);
-	
+
 	  return Ng2DirectiveDefinitionObject;
 	})();
-	
+
 	exports["default"] = Ng2DirectiveDefinitionObject;
 	module.exports = exports["default"];
 
@@ -2054,45 +2054,45 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	var _BindBuilderJs = __webpack_require__(17);
-	
+
 	var _BindBuilderJs2 = _interopRequireDefault(_BindBuilderJs);
-	
+
 	var BIND_PREFIX = "_=_";
 	var STRING_PREFIX = "_@_";
 	var BINDING = BIND_PREFIX;
 	var RAW_STRING = STRING_PREFIX;
-	
+
 	var PropertiesBuilder = (function (_BindBuilder) {
 	  _inherits(PropertiesBuilder, _BindBuilder);
-	
+
 	  function PropertiesBuilder() {
 	    _classCallCheck(this, PropertiesBuilder);
-	
+
 	    _get(Object.getPrototypeOf(PropertiesBuilder.prototype), "constructor", this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(PropertiesBuilder, [{
 	    key: "setupProperty",
 	    value: function setupProperty(key, properties) {
 	      properties[STRING_PREFIX + key] = "@" + this.bindObj[key];
 	      properties[BIND_PREFIX + key] = "=?bind" + this.bindObj[key][0].toUpperCase() + this.bindObj[key].slice(1);
-	
+
 	      // This property is used when user uses the `bind-property` attribute on a directive to bind an expression
 	      Object.defineProperty(this._component.prototype, BIND_PREFIX + key, {
 	        enumerable: true,
@@ -2102,7 +2102,7 @@
 	          return this[key];
 	        }
 	      });
-	
+
 	      // This property is used when user uses the `property` attribute on a directive to bind a string
 	      Object.defineProperty(this._component.prototype, STRING_PREFIX + key, {
 	        enumerable: true,
@@ -2112,32 +2112,32 @@
 	          return this[key];
 	        }
 	      });
-	
+
 	      function genericSetter(use, errorOn) {
 	        return function (value) {
 	          this.__using_binding__ = this.__using_binding__ || {};
-	
+
 	          if (this.__using_binding__[key] === errorOn) {
 	            if (value !== undefined) {
 	              throw new Error("Cannot use bind-" + key + " and " + key + " simultaneously");
 	            }
-	
+
 	            return;
 	          }
-	
+
 	          if (value !== undefined) {
 	            this.__using_binding__[key] = use;
 	          }
-	
+
 	          this[key] = value;
 	        };
 	      }
 	    }
 	  }]);
-	
+
 	  return PropertiesBuilder;
 	})(_BindBuilderJs2["default"]);
-	
+
 	exports["default"] = PropertiesBuilder;
 	module.exports = exports["default"];
 
@@ -2146,28 +2146,28 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	var BindBuilder = (function () {
 	  function BindBuilder(bindParam, component) {
 	    _classCallCheck(this, BindBuilder);
-	
+
 	    this._bindParam = bindParam;
 	    this._component = component;
 	  }
-	
+
 	  _createClass(BindBuilder, [{
 	    key: "build",
 	    value: function build() {
 	      var _this = this;
-	
+
 	      var properties = {};
 	      Object.keys(this.bindObj).forEach(function (key) {
 	        _this.setupProperty(key, properties);
@@ -2178,7 +2178,7 @@
 	    key: "bindObj",
 	    get: function get() {
 	      var _this2 = this;
-	
+
 	      if (!this._bindObj) {
 	        if (Array.isArray(this._bindParam)) {
 	          this._bindObj = {};
@@ -2198,10 +2198,10 @@
 	      return this._bindObj;
 	    }
 	  }]);
-	
+
 	  return BindBuilder;
 	})();
-	
+
 	exports["default"] = BindBuilder;
 	module.exports = exports["default"];
 
@@ -2210,46 +2210,46 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	var _BindBuilderJs = __webpack_require__(17);
-	
+
 	var _BindBuilderJs2 = _interopRequireDefault(_BindBuilderJs);
-	
+
 	var prefix = "___bindable___";
-	
+
 	var EventsBuilder = (function (_BindBuilder) {
 	  _inherits(EventsBuilder, _BindBuilder);
-	
+
 	  function EventsBuilder() {
 	    _classCallCheck(this, EventsBuilder);
-	
+
 	    _get(Object.getPrototypeOf(EventsBuilder.prototype), "constructor", this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(EventsBuilder, [{
 	    key: "setupProperty",
 	    value: function setupProperty(key, events) {
 	      events[key] = "=?on" + this.bindObj[key][0].toUpperCase() + this.bindObj[key].slice(1);
 	    }
 	  }]);
-	
+
 	  return EventsBuilder;
 	})(_BindBuilderJs2["default"]);
-	
+
 	exports["default"] = EventsBuilder;
 	module.exports = exports["default"];
 
@@ -2258,52 +2258,52 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
-	
+
 	Object.defineProperty(exports, '__esModule', {
 	  value: true
 	});
 	var _bind = Function.prototype.bind;
-	
+
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-	
+
 	var _get = function get(_x2, _x3, _x4) { var _again = true; _function: while (_again) { var object = _x2, property = _x3, receiver = _x4; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x2 = parent; _x3 = property; _x4 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-	
+
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
-	
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
+
 	var _injectorTypesJs = __webpack_require__(6);
-	
+
 	var _InjectorJs = __webpack_require__(2);
-	
+
 	var _ToAnnotationJs = __webpack_require__(4);
-	
+
 	var DirectiveObject = (function () {
 	  function DirectiveObject(token) {
 	    var dependencies = arguments.length <= 1 || arguments[1] === undefined ? [] : arguments[1];
-	
+
 	    _classCallCheck(this, _DirectiveObject);
-	
+
 	    this.dependencies = dependencies;
 	    this.token = token;
 	  }
-	
+
 	  var _DirectiveObject = DirectiveObject;
 	  DirectiveObject = (0, _ToAnnotationJs.ToAnnotation)(DirectiveObject) || DirectiveObject;
 	  return DirectiveObject;
 	})();
-	
+
 	exports.DirectiveObject = DirectiveObject;
-	
+
 	var DirectiveObjectInjector = (function (_ListInjector) {
 	  _inherits(DirectiveObjectInjector, _ListInjector);
-	
+
 	  function DirectiveObjectInjector() {
 	    _classCallCheck(this, DirectiveObjectInjector);
-	
+
 	    _get(Object.getPrototypeOf(DirectiveObjectInjector.prototype), 'constructor', this).apply(this, arguments);
 	  }
-	
+
 	  _createClass(DirectiveObjectInjector, [{
 	    key: '_createFactoryArray',
 	    value: function _createFactoryArray(ConstructorFn) {
@@ -2316,14 +2316,14 @@
 	        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
 	          args[_key] = arguments[_key];
 	        }
-	
+
 	        var directive = new (_bind.apply(ConstructorFn, [null].concat(args)))();
 	        for (var key in directive) {
 	          directive[key] = directive[key];
 	        }
 	        return directive;
 	      });
-	
+
 	      return factoryArray;
 	    }
 	  }, {
@@ -2342,31 +2342,31 @@
 	    key: 'instantiateOne',
 	    value: function instantiateOne(module, directiveObject, metadata) {
 	      directiveObject['$inject'] = metadata.dependencies;
-	
+
 	      if (!directiveObject.prototype.compile) {
 	        // create an empty compile function if none was defined.
 	        directiveObject.prototype.compile = function () {};
 	      }
-	
+
 	      var originalCompileFn = this._cloneFunction(directiveObject.prototype.compile);
-	
+
 	      // Decorate the compile method to automatically return the link method (if it exists)
 	      // and bind it to the context of the constructor (so `this` works correctly).
 	      // This gets around the problem of a non-lexical "this" which occurs when the directive class itself
 	      // returns `this.link` from within the compile function.
 	      this._override(directiveObject.prototype, 'compile', function () {
 	        return function () {
-	
+
 	          originalCompileFn.apply(this, arguments);
-	
+
 	          if (directiveObject.prototype.link) {
 	            return directiveObject.prototype.link.bind(this);
 	          }
 	        };
 	      });
-	
+
 	      var factoryArray = this._createFactoryArray(directiveObject);
-	
+
 	      module.directive(metadata.token, factoryArray);
 	    }
 	  }, {
@@ -2375,12 +2375,12 @@
 	      return DirectiveObject;
 	    }
 	  }]);
-	
+
 	  return DirectiveObjectInjector;
 	})(_injectorTypesJs.ListInjector);
-	
+
 	(0, _InjectorJs.registerInjector)('directiveObject', DirectiveObjectInjector);
-	
+
 	/*
 	        var originalCompileFn = _cloneFunction(constructorFn.prototype.compile);
 
@@ -2410,19 +2410,19 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.bootstrap = bootstrap;
-	
+
 	var _InjectorJs = __webpack_require__(2);
-	
+
 	var _RouterJs = __webpack_require__(7);
-	
+
 	function bootstrap(appModule) {
 	  var appPrefix = arguments.length <= 1 || arguments[1] === undefined ? "" : arguments[1];
-	
+
 	  var injector = new _InjectorJs.Injector(appPrefix);
 	  var moduleName = injector.instantiate(appModule);
 	  _RouterJs.Router.routeInitializer.initialize(moduleName, appModule);
@@ -2433,21 +2433,21 @@
 /***/ function(module, exports) {
 
 	"use strict";
-	
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	var _bind = Function.prototype.bind;
 	exports.applyAnnotation = applyAnnotation;
-	
+
 	function applyAnnotation(target, annotationClass) {
 	  var AnnotationVersion = annotationClass.originalClass || annotationClass;
 	  target.annotations = target.annotations || [];
-	
+
 	  for (var _len = arguments.length, params = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
 	    params[_key - 2] = arguments[_key];
 	  }
-	
+
 	  target.annotations.push(new (_bind.apply(AnnotationVersion, [null].concat(params)))());
 	}
 
@@ -2457,24 +2457,22 @@
 },{}],2:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _AsModule$Service = require('a1atscript');
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var _a1atscript = require('a1atscript');
 
 var Inflector = (function () {
   function Inflector() {
     _classCallCheck(this, _Inflector);
   }
 
-  var _Inflector = Inflector;
-
-  _createClass(_Inflector, [{
+  _createClass(Inflector, [{
     key: 'camelize',
     value: function camelize(key) {
       if (!angular.isString(key)) {
@@ -2530,8 +2528,9 @@ var Inflector = (function () {
     }
   }]);
 
-  Inflector = _AsModule$Service.Service('Inflector')(Inflector) || Inflector;
-  Inflector = _AsModule$Service.AsModule('inflector')(Inflector) || Inflector;
+  var _Inflector = Inflector;
+  Inflector = (0, _a1atscript.Service)('Inflector')(Inflector) || Inflector;
+  Inflector = (0, _a1atscript.AsModule)('inflector')(Inflector) || Inflector;
   return Inflector;
 })();
 
@@ -2545,136 +2544,99 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _ExampleForm = require("./xing-frontend-utils/app/exampleForm/exampleForm.js");
+function _interopRequire(obj) {
+  return obj && obj.__esModule ? obj["default"] : obj;
+}
 
-Object.defineProperty(exports, "ExampleForm", {
-  enumerable: true,
-  get: function get() {
-    return _ExampleForm.ExampleForm;
-  }
-});
+var _xingFrontendUtilsAppExampleFormExampleFormJs = require("./xing-frontend-utils/app/exampleForm/exampleForm.js");
 
-var _Fallback = require("./xing-frontend-utils/app/fallback/fallback.js");
+exports.ExampleForm = _interopRequire(_xingFrontendUtilsAppExampleFormExampleFormJs);
 
-Object.defineProperty(exports, "Fallback", {
-  enumerable: true,
-  get: function get() {
-    return _Fallback.Fallback;
-  }
-});
+var _xingFrontendUtilsAppFallbackFallbackJs = require("./xing-frontend-utils/app/fallback/fallback.js");
 
-var _ResponsiveMenu = require("./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js");
+exports.Fallback = _interopRequire(_xingFrontendUtilsAppFallbackFallbackJs);
 
-Object.defineProperty(exports, "ResponsiveMenu", {
-  enumerable: true,
-  get: function get() {
-    return _ResponsiveMenu.ResponsiveMenu;
-  }
-});
+var _xingFrontendUtilsComponentsResponsiveMenuResponsiveMenuJs = require("./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js");
 
-var _StateAttrs = require("./xing-frontend-utils/components/stateAttrs/stateAttrs.js");
+exports.ResponsiveMenu = _interopRequire(_xingFrontendUtilsComponentsResponsiveMenuResponsiveMenuJs);
 
-Object.defineProperty(exports, "StateAttrs", {
-  enumerable: true,
-  get: function get() {
-    return _StateAttrs.StateAttrs;
-  }
-});
+var _xingFrontendUtilsComponentsStateAttrsStateAttrsJs = require("./xing-frontend-utils/components/stateAttrs/stateAttrs.js");
 
-var _Toast = require("./xing-frontend-utils/components/toast/toast.js");
+exports.StateAttrs = _interopRequire(_xingFrontendUtilsComponentsStateAttrsStateAttrsJs);
 
-Object.defineProperty(exports, "Toast", {
-  enumerable: true,
-  get: function get() {
-    return _Toast.Toast;
-  }
-});
+var _xingFrontendUtilsComponentsToastToastJs = require("./xing-frontend-utils/components/toast/toast.js");
 
-var _UnimplementedDirective = require("./xing-frontend-utils/components/unimplemented/unimplemented.js");
+exports.Toast = _interopRequire(_xingFrontendUtilsComponentsToastToastJs);
 
-Object.defineProperty(exports, "UnimplementedDirective", {
-  enumerable: true,
-  get: function get() {
-    return _UnimplementedDirective.UnimplementedDirective;
-  }
-});
+var _xingFrontendUtilsComponentsUnimplementedUnimplementedJs = require("./xing-frontend-utils/components/unimplemented/unimplemented.js");
 
-var _Serializer = require("./xing-frontend-utils/serializer.js");
+exports.UnimplementedDirective = _interopRequire(_xingFrontendUtilsComponentsUnimplementedUnimplementedJs);
 
-Object.defineProperty(exports, "Serializer", {
-  enumerable: true,
-  get: function get() {
-    return _Serializer.Serializer;
-  }
-});
+var _xingFrontendUtilsSerializerJs = require("./xing-frontend-utils/serializer.js");
 
-var _LoggedInOnlyState$AdminOnlyState$TrackAdminState = require("./xing-frontend-utils/stateClasses.js");
+exports.Serializer = _interopRequire(_xingFrontendUtilsSerializerJs);
+
+var _xingFrontendUtilsStateClassesJs = require("./xing-frontend-utils/stateClasses.js");
 
 Object.defineProperty(exports, "LoggedInOnlyState", {
   enumerable: true,
   get: function get() {
-    return _LoggedInOnlyState$AdminOnlyState$TrackAdminState.LoggedInOnlyState;
+    return _xingFrontendUtilsStateClassesJs.LoggedInOnlyState;
   }
 });
 Object.defineProperty(exports, "AdminOnlyState", {
   enumerable: true,
   get: function get() {
-    return _LoggedInOnlyState$AdminOnlyState$TrackAdminState.AdminOnlyState;
+    return _xingFrontendUtilsStateClassesJs.AdminOnlyState;
   }
 });
 Object.defineProperty(exports, "TrackAdminState", {
   enumerable: true,
   get: function get() {
-    return _LoggedInOnlyState$AdminOnlyState$TrackAdminState.TrackAdminState;
+    return _xingFrontendUtilsStateClassesJs.TrackAdminState;
   }
 });
 
-var _stateFallback = require("./xing-frontend-utils/stateFallback.js");
+var _xingFrontendUtilsWhenGotoJs = require("./xing-frontend-utils/whenGoto.js");
 
-Object.defineProperty(exports, "stateFallback", {
-  enumerable: true,
-  get: function get() {
-    return _stateFallback.stateFallback;
-  }
-});
+exports.whenGoto = _interopRequire(_xingFrontendUtilsWhenGotoJs);
 
-var _uiRouteLogger = require("./xing-frontend-utils/ui-route-logger.js");
+var _xingFrontendUtilsStateFallbackJs = require("./xing-frontend-utils/stateFallback.js");
 
-Object.defineProperty(exports, "uiRouteLogger", {
-  enumerable: true,
-  get: function get() {
-    return _uiRouteLogger.uiRouteLogger;
-  }
-});
+exports.stateFallback = _interopRequire(_xingFrontendUtilsStateFallbackJs);
 
-var _State$Resolve$Inject$StateInjector = require("./xing-frontend-utils/stateInjector.js");
+var _xingFrontendUtilsUiRouteLoggerJs = require("./xing-frontend-utils/ui-route-logger.js");
+
+exports.uiRouteLogger = _interopRequire(_xingFrontendUtilsUiRouteLoggerJs);
+
+var _xingFrontendUtilsStateInjectorJs = require("./xing-frontend-utils/stateInjector.js");
 
 Object.defineProperty(exports, "State", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.State;
+    return _xingFrontendUtilsStateInjectorJs.State;
   }
 });
 Object.defineProperty(exports, "Resolve", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.Resolve;
+    return _xingFrontendUtilsStateInjectorJs.Resolve;
   }
 });
 Object.defineProperty(exports, "Inject", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.Inject;
+    return _xingFrontendUtilsStateInjectorJs.Inject;
   }
 });
 Object.defineProperty(exports, "StateInjector", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.StateInjector;
+    return _xingFrontendUtilsStateInjectorJs.StateInjector;
   }
 });
 
-},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":11,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":12,"./xing-frontend-utils/components/toast/toast.js":19,"./xing-frontend-utils/components/unimplemented/unimplemented.js":20,"./xing-frontend-utils/serializer.js":22,"./xing-frontend-utils/stateClasses.js":23,"./xing-frontend-utils/stateFallback.js":24,"./xing-frontend-utils/stateInjector.js":25,"./xing-frontend-utils/ui-route-logger.js":26}],4:[function(require,module,exports){
+},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":11,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":12,"./xing-frontend-utils/components/toast/toast.js":19,"./xing-frontend-utils/components/unimplemented/unimplemented.js":20,"./xing-frontend-utils/serializer.js":22,"./xing-frontend-utils/stateClasses.js":23,"./xing-frontend-utils/stateFallback.js":24,"./xing-frontend-utils/stateInjector.js":25,"./xing-frontend-utils/ui-route-logger.js":26,"./xing-frontend-utils/whenGoto.js":27}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2687,37 +2649,37 @@ module.exports = exports["default"];
 },{}],5:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
-var _interopRequireWildcard = function _interopRequireWildcard(obj) {
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
+
+function _interopRequireWildcard(obj) {
   if (obj && obj.__esModule) {
     return obj;
   } else {
-    var newObj = {};if (typeof obj === 'object' && obj !== null) {
+    var newObj = {};if (obj != null) {
       for (var key in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
       }
     }newObj['default'] = obj;return newObj;
   }
-};
+}
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+var _exampleFormStatesJs = require('./exampleFormStates.js');
 
-var _import = require('./exampleFormStates.js');
+var ExampleFormStates = _interopRequireWildcard(_exampleFormStatesJs);
 
-var ExampleFormStates = _interopRequireWildcard(_import);
+var _exampleFormControllersJs = require('./exampleFormControllers.js');
 
-var _ExampleFormController = require('./exampleFormControllers.js');
+var _exampleFormControllersJs2 = _interopRequireDefault(_exampleFormControllersJs);
 
-var _ExampleFormController2 = _interopRequireDefault(_ExampleFormController);
+var _a1atscript = require('a1atscript');
 
-var _Module = require('a1atscript');
-
-var ExampleForm = new _Module.Module('exampleForm', ['ui.router.state', ExampleFormStates, _ExampleFormController2['default']]);
+var ExampleForm = new _a1atscript.Module('exampleForm', ['ui.router.state', ExampleFormStates, _exampleFormControllersJs2['default']]);
 
 exports['default'] = ExampleForm;
 module.exports = exports['default'];
@@ -2725,17 +2687,17 @@ module.exports = exports['default'];
 },{"./exampleFormControllers.js":6,"./exampleFormStates.js":7,"a1atscript":1}],6:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _Controller = require('a1atscript');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
+
+var _a1atscript = require('a1atscript');
 
 var ExampleFormCtrl = (function () {
   function ExampleFormCtrl($scope) {
@@ -2743,7 +2705,7 @@ var ExampleFormCtrl = (function () {
   }
 
   var _ExampleFormCtrl = ExampleFormCtrl;
-  ExampleFormCtrl = _Controller.Controller('ExampleFormCtrl', ['$scope'])(ExampleFormCtrl) || ExampleFormCtrl;
+  ExampleFormCtrl = (0, _a1atscript.Controller)('ExampleFormCtrl', ['$scope'])(ExampleFormCtrl) || ExampleFormCtrl;
   return ExampleFormCtrl;
 })();
 
@@ -2753,25 +2715,25 @@ module.exports = exports['default'];
 },{"a1atscript":1}],7:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _State = require('../../stateInjector.js');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _template = require('./example-form.tpl.js');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _template2 = _interopRequireDefault(_template);
+var _stateInjectorJs = require('../../stateInjector.js');
+
+var _exampleFormTplJs = require("./example-form.tpl.js");
+
+var _exampleFormTplJs2 = _interopRequireDefault(_exampleFormTplJs);
 
 var ExampleFormState = (function () {
   function ExampleFormState() {
@@ -2779,11 +2741,11 @@ var ExampleFormState = (function () {
 
     this.url = '^/example-form';
     this.controller = 'ExampleFormCtrl';
-    this.template = _template2['default'];
+    this.template = _exampleFormTplJs2['default'];
   }
 
   var _ExampleFormState = ExampleFormState;
-  ExampleFormState = _State.State('root.inner.exampleForm')(ExampleFormState) || ExampleFormState;
+  ExampleFormState = (0, _stateInjectorJs.State)('root.inner.exampleForm')(ExampleFormState) || ExampleFormState;
   return ExampleFormState;
 })();
 
@@ -2802,29 +2764,29 @@ module.exports = exports["default"];
 },{}],9:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _Module = require('a1atscript');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _State = require('../../stateInjector.js');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _template = require('./error-fallback.tpl.js');
+var _a1atscript = require('a1atscript');
+
+var _stateInjectorJs = require('../../stateInjector.js');
+
+var _errorFallbackTplJs = require("./error-fallback.tpl.js");
+
+var _errorFallbackTplJs2 = _interopRequireDefault(_errorFallbackTplJs);
 
 //import errorTemplate from 'common/templates/app/error-fallback.tpl.js';
-
-var _template2 = _interopRequireDefault(_template);
 
 //must be top level - don't want e.g. resolve error in root to break it
 
@@ -2833,16 +2795,16 @@ var FallbackState = (function () {
     _classCallCheck(this, _FallbackState);
 
     // no controller, no resolves.
-    this.url = '/error';
-    this.template = _template2['default'];
+    this.url = "/error";
+    this.template = _errorFallbackTplJs2['default'];
   }
 
   var _FallbackState = FallbackState;
-  FallbackState = _State.State('errorFallback')(FallbackState) || FallbackState;
+  FallbackState = (0, _stateInjectorJs.State)('errorFallback')(FallbackState) || FallbackState;
   return FallbackState;
 })();
 
-var Fallback = new _Module.Module('fallback', ['ui.router.state', FallbackState]);
+var Fallback = new _a1atscript.Module('fallback', ['ui.router.state', FallbackState]);
 
 exports['default'] = Fallback;
 module.exports = exports['default'];
@@ -2860,15 +2822,9 @@ module.exports = exports["default"];
 },{}],11:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -2880,37 +2836,42 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _AsModule$DirectiveObject = require('a1atscript');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _template = require('./responsive-menu.tpl.js');
+var _a1atscript = require('a1atscript');
 
-var _template2 = _interopRequireDefault(_template);
+var _responsiveMenuTplJs = require("./responsive-menu.tpl.js");
+
+var _responsiveMenuTplJs2 = _interopRequireDefault(_responsiveMenuTplJs);
 
 var ResponsiveMenu = (function () {
   function ResponsiveMenu() {
     _classCallCheck(this, _ResponsiveMenu);
 
     this.restrict = 'E';
-    this.template = _template2['default'];
+    this.template = _responsiveMenuTplJs2['default'];
     this.transclude = true;
     this.scope = true;
   }
 
-  var _ResponsiveMenu = ResponsiveMenu;
-
-  _createClass(_ResponsiveMenu, [{
+  _createClass(ResponsiveMenu, [{
     key: 'link',
     value: function link(scope, element, attrs) {
-      var nav = responsiveNav('.nav-collapse');
+      var nav = responsiveNav(".nav-collapse");
     }
   }]);
 
-  ResponsiveMenu = _AsModule$DirectiveObject.DirectiveObject('lrdResponsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
-  ResponsiveMenu = _AsModule$DirectiveObject.AsModule('responsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
+  var _ResponsiveMenu = ResponsiveMenu;
+  ResponsiveMenu = (0, _a1atscript.DirectiveObject)('lrdResponsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
+  ResponsiveMenu = (0, _a1atscript.AsModule)('responsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
   return ResponsiveMenu;
 })();
 
@@ -2920,11 +2881,9 @@ module.exports = exports['default'];
 },{"./responsive-menu.tpl.js":10,"a1atscript":1}],12:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -2936,11 +2895,13 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _AsModule$DirectiveObject = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 var StateAttrs = (function () {
   function StateAttrs($compile, $state) {
@@ -2952,9 +2913,7 @@ var StateAttrs = (function () {
     this.priority = -500;
   }
 
-  var _StateAttrs = StateAttrs;
-
-  _createClass(_StateAttrs, [{
+  _createClass(StateAttrs, [{
     key: 'getUiViewName',
     value: function getUiViewName(attrs, inherited) {
       var name = attrs.uiView || attrs.name || '';
@@ -2971,15 +2930,16 @@ var StateAttrs = (function () {
         var idName = viewStateName.replace(/\./g, '_');
 
         if (!attrs.id) {
-          attrs.$set('id', idName);
+          attrs.$set("id", idName);
         }
         attrs.$addClass(className);
       }
     }
   }]);
 
-  StateAttrs = _AsModule$DirectiveObject.DirectiveObject('lrdStateAttrs', ['$compile', '$state'])(StateAttrs) || StateAttrs;
-  StateAttrs = _AsModule$DirectiveObject.AsModule('stateAttrs', ['ui.router.state'])(StateAttrs) || StateAttrs;
+  var _StateAttrs = StateAttrs;
+  StateAttrs = (0, _a1atscript.DirectiveObject)('lrdStateAttrs', ['$compile', '$state'])(StateAttrs) || StateAttrs;
+  StateAttrs = (0, _a1atscript.AsModule)('stateAttrs', ['ui.router.state'])(StateAttrs) || StateAttrs;
   return StateAttrs;
 })();
 
@@ -3200,7 +3160,8 @@ function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate,
       },
       onRemove: function onRemove(scope, $el, options) {
         return $animate.leave($el);
-      } }, defaults || {});
+      }
+    }, defaults || {});
 
     var service;
     service = {
@@ -3344,7 +3305,7 @@ module.exports = exports["default"];
    * @name lrd.components.swipe
    * @description Swipe module!
    */
-  angular.module("xing.utils.swipe", ["ng"])
+  angular.module("xing.utils.swipe", ['ng'])
 
   /**
    * @ngdoc directive
@@ -3388,7 +3349,7 @@ module.exports = exports["default"];
         }
 
         // auto-disconnect during destroy
-        scope.$on("$destroy", function () {
+        scope.$on('$destroy', function () {
           hammertime.destroy();
         });
 
@@ -3474,9 +3435,9 @@ module.exports = exports["default"];
    * </hljs>
    *
    */
-  .directive("lrdSwipeLeft", ["$parse", "$lrdSwipe", function LRDSwipeLeft($parse, $lrdSwipe) {
+  .directive("lrdSwipeLeft", ['$parse', '$lrdSwipe', function LRDSwipeLeft($parse, $lrdSwipe) {
     return {
-      restrict: "A",
+      restrict: 'A',
       link: swipePostLink($parse, $lrdSwipe, "SwipeLeft")
     };
   }])
@@ -3508,9 +3469,9 @@ module.exports = exports["default"];
    * </hljs>
    *
    */
-  .directive("lrdSwipeRight", ["$parse", "$lrdSwipe", function LRDSwipeRight($parse, $lrdSwipe) {
+  .directive("lrdSwipeRight", ['$parse', '$lrdSwipe', function LRDSwipeRight($parse, $lrdSwipe) {
     return {
-      restrict: "A",
+      restrict: 'A',
       link: swipePostLink($parse, $lrdSwipe, "SwipeRight")
     };
   }]);
@@ -3548,41 +3509,41 @@ module.exports = exports["default"];
 },{}],19:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _applyAnnotation$Factory$Controller$Directive$Module = require('a1atscript');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
+
+var _a1atscript = require('a1atscript');
 
 require('./swipe.js');
 
 require('./interimElement.js');
 
-var _Inflector = require('xing-inflector');
+var _xingInflector = require('xing-inflector');
 
-var _Inflector2 = _interopRequireDefault(_Inflector);
+var _xingInflector2 = _interopRequireDefault(_xingInflector);
 
-var _errorListTemplate = require('./error-list.tpl.js');
+var _errorListTplJs = require("./error-list.tpl.js");
 
-var _errorListTemplate2 = _interopRequireDefault(_errorListTemplate);
+var _errorListTplJs2 = _interopRequireDefault(_errorListTplJs);
 
-var _errorTemplate = require('./error.tpl.js');
+var _errorTplJs = require("./error.tpl.js");
 
-var _errorTemplate2 = _interopRequireDefault(_errorTemplate);
+var _errorTplJs2 = _interopRequireDefault(_errorTplJs);
 
-var _noticeTemplate = require('./notice.tpl.js');
+var _noticeTplJs = require("./notice.tpl.js");
 
-var _noticeTemplate2 = _interopRequireDefault(_noticeTemplate);
+var _noticeTplJs2 = _interopRequireDefault(_noticeTplJs);
 
 /* This is cribbed from the lrd design toast */
 
@@ -3592,7 +3553,7 @@ function lrdToastDirective() {
   };
 }
 
-_applyAnnotation$Factory$Controller$Directive$Module.applyAnnotation(lrdToastDirective, _applyAnnotation$Factory$Controller$Directive$Module.Directive, '$lrdToast');
+(0, _a1atscript.applyAnnotation)(lrdToastDirective, _a1atscript.Directive, '$lrdToast');
 
 var LrdToastErrorListCtrl = (function () {
   function LrdToastErrorListCtrl($scope, type, header, messages) {
@@ -3604,7 +3565,7 @@ var LrdToastErrorListCtrl = (function () {
   }
 
   var _LrdToastErrorListCtrl = LrdToastErrorListCtrl;
-  LrdToastErrorListCtrl = _applyAnnotation$Factory$Controller$Directive$Module.Controller('$lrdToastErrorListCtrl', ['$scope', 'type', 'header', 'messages'])(LrdToastErrorListCtrl) || LrdToastErrorListCtrl;
+  LrdToastErrorListCtrl = (0, _a1atscript.Controller)('$lrdToastErrorListCtrl', ['$scope', 'type', 'header', 'messages'])(LrdToastErrorListCtrl) || LrdToastErrorListCtrl;
   return LrdToastErrorListCtrl;
 })();
 
@@ -3617,7 +3578,7 @@ var LrdToastErrorCtrl = (function () {
   }
 
   var _LrdToastErrorCtrl = LrdToastErrorCtrl;
-  LrdToastErrorCtrl = _applyAnnotation$Factory$Controller$Directive$Module.Controller('$lrdToastErrorCtrl', ['$scope', 'type', 'message'])(LrdToastErrorCtrl) || LrdToastErrorCtrl;
+  LrdToastErrorCtrl = (0, _a1atscript.Controller)('$lrdToastErrorCtrl', ['$scope', 'type', 'message'])(LrdToastErrorCtrl) || LrdToastErrorCtrl;
   return LrdToastErrorCtrl;
 })();
 
@@ -3629,104 +3590,104 @@ var LrdToastNoticeCtrl = (function () {
     $scope.message = message;
   }
 
+  /**
+   * @ngdoc service
+   * @name $lrdToast
+   * @module lrd.components.toast
+   *
+   * @description
+   * Open a toast notification on any position on the screen, with an optional
+   * duration.
+   *
+   * Only one toast notification may ever be active at any time. If a new toast is
+   * shown while a different toast is active, the old toast will be automatically
+   * hidden.
+   *
+   * `$lrdToast` is an `$interimElement` service and adheres to the same behaviors.
+   *  - `$lrdToast.show()`
+   *  - `$lrdToast.hide()`
+   *  - `$lrdToast.cancel()`
+   *
+   * @usage
+   * <hljs lang="html">
+   * <div ng-controller="MyController">
+   *   <lrd-button ng-click="openToast()">
+   *     Open a Toast!
+   *   </lrd-button>
+   * </div>
+   * </hljs>
+   * <hljs lang="js">
+   * var app = angular.module('app', ['nglrd']);
+   * app.controller('MyController', function($scope, $lrdToast) {
+   *   $scope.openToast = function($event) {
+   *     $lrdToast.show({
+   *       template: '<lrd-toast>Hello!</lrd-toast>',
+   *       hideDelay: 3000
+   *     });
+   *   };
+   * });
+   * </hljs>
+   */
+
+  /**
+  * @ngdoc method
+  * @name $lrdToast#show
+  *
+  * @description
+  * Show a toast dialog with the specified options.
+  *
+  * @paramType Options
+  * @param {string=} templateUrl The url of an html template file that will
+  * be used as the content of the toast. Restrictions: the template must
+  * have an outer `lrd-toast` element.
+  * @param {string=} template Same as templateUrl, except this is an actual
+  * template string.
+  * @param {number=} hideDelay How many milliseconds the toast should stay
+  * active before automatically closing.  Set to 0 to disable duration.
+  * Default: 3000.
+  * @param {string=} position Where to place the toast. Available: any combination
+  * of 'bottom', 'left', 'top', 'right', 'fit'. Default: 'bottom left'.
+  * @param {string=} controller The controller to associate with this toast.
+  * The controller will be injected the local `$hideToast`, which is a function
+  * used to hide the toast.
+  * @param {string=} locals An object containing key/value pairs. The keys will
+  * be used as names of values to inject into the controller. For example,
+  * `locals: {three: 3}` would inject `three` into the controller with the value
+  * of 3.
+  * @param {object=} resolve Similar to locals, except it takes promises as values
+  * and the toast will not open until the promises resolve.
+  * @param {string=} controllerAs An alias to assign the controller to on the scope.
+  *
+  * @returns {Promise} Returns a promise that will be resolved or rejected when
+  *  `$lrdToast.hide()` or `$lrdToast.cancel()` is called respectively.
+  */
+
+  /**
+   * @ngdoc method
+   * @name $lrdToast#hide
+   *
+   * @description
+   * Hide an existing toast and `resolve` the promise returned from `$lrdToast.show()`.
+   *
+   * @param {*} arg An argument to resolve the promise with.
+   *
+   */
+
+  /**
+   * @ngdoc method
+   * @name $lrdToast#cancel
+   *
+   * @description
+   * Hide an existing toast and `reject` the promise returned from `$lrdToast.show()`.
+   *
+   * @param {*} arg An argument to reject the promise with.
+   *
+   */
+
   var _LrdToastNoticeCtrl = LrdToastNoticeCtrl;
-  LrdToastNoticeCtrl = _applyAnnotation$Factory$Controller$Directive$Module.Controller('$lrdToastNoticeCtrl', ['$scope', 'type', 'message'])(LrdToastNoticeCtrl) || LrdToastNoticeCtrl;
+  LrdToastNoticeCtrl = (0, _a1atscript.Controller)('$lrdToastNoticeCtrl', ['$scope', 'type', 'message'])(LrdToastNoticeCtrl) || LrdToastNoticeCtrl;
   return LrdToastNoticeCtrl;
 })();
-
-/**
- * @ngdoc service
- * @name $lrdToast
- * @module lrd.components.toast
- *
- * @description
- * Open a toast notification on any position on the screen, with an optional
- * duration.
- *
- * Only one toast notification may ever be active at any time. If a new toast is
- * shown while a different toast is active, the old toast will be automatically
- * hidden.
- *
- * `$lrdToast` is an `$interimElement` service and adheres to the same behaviors.
- *  - `$lrdToast.show()`
- *  - `$lrdToast.hide()`
- *  - `$lrdToast.cancel()`
- *
- * @usage
- * <hljs lang="html">
- * <div ng-controller="MyController">
- *   <lrd-button ng-click="openToast()">
- *     Open a Toast!
- *   </lrd-button>
- * </div>
- * </hljs>
- * <hljs lang="js">
- * var app = angular.module('app', ['nglrd']);
- * app.controller('MyController', function($scope, $lrdToast) {
- *   $scope.openToast = function($event) {
- *     $lrdToast.show({
- *       template: '<lrd-toast>Hello!</lrd-toast>',
- *       hideDelay: 3000
- *     });
- *   };
- * });
- * </hljs>
- */
-
-/**
-* @ngdoc method
-* @name $lrdToast#show
-*
-* @description
-* Show a toast dialog with the specified options.
-*
-* @paramType Options
-* @param {string=} templateUrl The url of an html template file that will
-* be used as the content of the toast. Restrictions: the template must
-* have an outer `lrd-toast` element.
-* @param {string=} template Same as templateUrl, except this is an actual
-* template string.
-* @param {number=} hideDelay How many milliseconds the toast should stay
-* active before automatically closing.  Set to 0 to disable duration.
-* Default: 3000.
-* @param {string=} position Where to place the toast. Available: any combination
-* of 'bottom', 'left', 'top', 'right', 'fit'. Default: 'bottom left'.
-* @param {string=} controller The controller to associate with this toast.
-* The controller will be injected the local `$hideToast`, which is a function
-* used to hide the toast.
-* @param {string=} locals An object containing key/value pairs. The keys will
-* be used as names of values to inject into the controller. For example,
-* `locals: {three: 3}` would inject `three` into the controller with the value
-* of 3.
-* @param {object=} resolve Similar to locals, except it takes promises as values
-* and the toast will not open until the promises resolve.
-* @param {string=} controllerAs An alias to assign the controller to on the scope.
-*
-* @returns {Promise} Returns a promise that will be resolved or rejected when
-*  `$lrdToast.hide()` or `$lrdToast.cancel()` is called respectively.
-*/
-
-/**
- * @ngdoc method
- * @name $lrdToast#hide
- *
- * @description
- * Hide an existing toast and `resolve` the promise returned from `$lrdToast.show()`.
- *
- * @param {*} arg An argument to resolve the promise with.
- *
- */
-
-/**
- * @ngdoc method
- * @name $lrdToast#cancel
- *
- * @description
- * Hide an existing toast and `reject` the promise returned from `$lrdToast.show()`.
- *
- * @param {*} arg An argument to reject the promise with.
- *
- */
 
 function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflector) {
 
@@ -3734,17 +3695,18 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
     onShow: onShow,
     onRemove: onRemove,
     position: 'bottom left',
-    hideDelay: 3000 };
+    hideDelay: 3000
+  };
 
-  var toastElement = angular.element(document.getElementById('toast_main'));
+  var toastElement = angular.element(document.getElementById("toast_main"));
   var $lrdToast = $$interimElement(factoryDef);
 
   $lrdToast.notice = function (message) {
-    var type = arguments[1] === undefined ? 'notice' : arguments[1];
+    var type = arguments.length <= 1 || arguments[1] === undefined ? "notice" : arguments[1];
 
     return this.show({
       parent: toastElement,
-      template: _noticeTemplate2['default'],
+      template: _noticeTplJs2['default'],
       position: 'top left',
       locals: {
         type: type,
@@ -3755,11 +3717,11 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   };
 
   $lrdToast.error = function (message) {
-    var type = arguments[1] === undefined ? 'error' : arguments[1];
+    var type = arguments.length <= 1 || arguments[1] === undefined ? "error" : arguments[1];
 
     return this.show({
       parent: toastElement,
-      template: _errorTemplate2['default'],
+      template: _errorTplJs2['default'],
       position: 'top left',
       locals: {
         type: type,
@@ -3770,8 +3732,8 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   };
 
   $lrdToast.errorList = function (errors) {
-    var header = arguments[1] === undefined ? '' : arguments[1];
-    var type = arguments[2] === undefined ? 'error' : arguments[2];
+    var header = arguments.length <= 1 || arguments[1] === undefined ? "" : arguments[1];
+    var type = arguments.length <= 2 || arguments[2] === undefined ? "error" : arguments[2];
 
     var messages = [];
     if (Array.isArray(errors)) {
@@ -3779,13 +3741,13 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
     } else {
       for (var key in errors) {
         if (errors.hasOwnProperty(key)) {
-          messages.push('' + Inflector.humanize(key) + ' ' + errors[key]);
+          messages.push(Inflector.humanize(key) + ' ' + errors[key]);
         }
       }
     }
     return this.show({
       parent: toastElement,
-      template: _errorListTemplate2['default'],
+      template: _errorListTplJs2['default'],
       position: 'top left',
       locals: {
         type: type,
@@ -3824,9 +3786,9 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   }
 }
 
-_applyAnnotation$Factory$Controller$Directive$Module.applyAnnotation(lrdToastService, _applyAnnotation$Factory$Controller$Directive$Module.Factory, '$lrdToast', ['$timeout', '$$interimElement', '$animate', '$lrdSwipe', 'Inflector']);
+(0, _a1atscript.applyAnnotation)(lrdToastService, _a1atscript.Factory, '$lrdToast', ['$timeout', '$$interimElement', '$animate', '$lrdSwipe', 'Inflector']);
 
-var Toast = new _applyAnnotation$Factory$Controller$Directive$Module.Module('toast', ['xing.utils.interimElement', 'xing.utils.swipe', _Inflector2['default'], lrdToastDirective, LrdToastErrorListCtrl, LrdToastErrorCtrl, LrdToastNoticeCtrl, lrdToastService]);
+var Toast = new _a1atscript.Module('toast', ['xing.utils.interimElement', 'xing.utils.swipe', _xingInflector2['default'], lrdToastDirective, LrdToastErrorListCtrl, LrdToastErrorCtrl, LrdToastNoticeCtrl, lrdToastService]);
 
 exports['default'] = Toast;
 module.exports = exports['default'];
@@ -3834,11 +3796,9 @@ module.exports = exports['default'];
 },{"./error-list.tpl.js":14,"./error.tpl.js":15,"./interimElement.js":16,"./notice.tpl.js":17,"./swipe.js":18,"a1atscript":1,"xing-inflector":2}],20:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -3850,11 +3810,13 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _DirectiveObject = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 var UnimplementedDirective = (function () {
   function UnimplementedDirective() {
@@ -3863,9 +3825,7 @@ var UnimplementedDirective = (function () {
     this.restrict = 'A';
   }
 
-  var _UnimplementedDirective = UnimplementedDirective;
-
-  _createClass(_UnimplementedDirective, [{
+  _createClass(UnimplementedDirective, [{
     key: 'link',
     value: function link(scope, element, attrs) {
       element.on('click', function () {
@@ -3874,7 +3834,8 @@ var UnimplementedDirective = (function () {
     }
   }]);
 
-  UnimplementedDirective = _DirectiveObject.DirectiveObject('xngUnimplemented', [])(UnimplementedDirective) || UnimplementedDirective;
+  var _UnimplementedDirective = UnimplementedDirective;
+  UnimplementedDirective = (0, _a1atscript.DirectiveObject)('xngUnimplemented', [])(UnimplementedDirective) || UnimplementedDirective;
   return UnimplementedDirective;
 })();
 
@@ -3884,11 +3845,9 @@ module.exports = exports['default'];
 },{"a1atscript":1}],21:[function(require,module,exports){
 "use strict";
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -3900,9 +3859,11 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
 
 var ErrorLimiter = (function () {
   function ErrorLimiter(uiState, failsafeStateName) {
@@ -3978,25 +3939,25 @@ module.exports = exports["default"];
 },{}],22:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _Inflector = require('xing-inflector');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _Inflector2 = _interopRequireDefault(_Inflector);
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _applyAnnotation$Module$Factory$Provider = require('a1atscript');
+var _xingInflector = require('xing-inflector');
+
+var _xingInflector2 = _interopRequireDefault(_xingInflector);
+
+var _a1atscript = require('a1atscript');
 
 var SerializerProvider = (function () {
   function SerializerProvider() {
@@ -4425,7 +4386,7 @@ var SerializerProvider = (function () {
   }
 
   var _SerializerProvider = SerializerProvider;
-  SerializerProvider = _applyAnnotation$Module$Factory$Provider.Provider('Serializer')(SerializerProvider) || SerializerProvider;
+  SerializerProvider = (0, _a1atscript.Provider)('Serializer')(SerializerProvider) || SerializerProvider;
   return SerializerProvider;
 })();
 
@@ -4441,7 +4402,7 @@ function RequestInterceptor(Serializer) {
   };
 }
 
-_applyAnnotation$Module$Factory$Provider.applyAnnotation(RequestInterceptor, _applyAnnotation$Module$Factory$Provider.Factory, 'RequestInterceptor', ['Serializer']);
+(0, _a1atscript.applyAnnotation)(RequestInterceptor, _a1atscript.Factory, 'RequestInterceptor', ['Serializer']);
 
 function ResponseInterceptor(Serializer) {
   var serializer = new Serializer();
@@ -4451,9 +4412,9 @@ function ResponseInterceptor(Serializer) {
   };
 }
 
-_applyAnnotation$Module$Factory$Provider.applyAnnotation(ResponseInterceptor, _applyAnnotation$Module$Factory$Provider.Factory, 'ResponseInterceptor', ['Serializer']);
+(0, _a1atscript.applyAnnotation)(ResponseInterceptor, _a1atscript.Factory, 'ResponseInterceptor', ['Serializer']);
 
-var Serializer = new _applyAnnotation$Module$Factory$Provider.Module('serializer', [_Inflector2['default'], SerializerProvider, RequestInterceptor, ResponseInterceptor]);
+var Serializer = new _a1atscript.Module('serializer', [_xingInflector2['default'], SerializerProvider, RequestInterceptor, ResponseInterceptor]);
 
 exports['default'] = Serializer;
 module.exports = exports['default'];
@@ -4461,15 +4422,27 @@ module.exports = exports['default'];
 },{"a1atscript":1,"xing-inflector":2}],23:[function(require,module,exports){
 'use strict';
 
-var _inherits = function _inherits(subClass, superClass) {
-  if (typeof superClass !== 'function' && superClass !== null) {
-    throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) subClass.__proto__ = superClass;
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
+var _get = function get(_x, _x2, _x3) {
+  var _again = true;_function: while (_again) {
+    var object = _x,
+        property = _x2,
+        receiver = _x3;_again = false;if (object === null) object = Function.prototype;var desc = Object.getOwnPropertyDescriptor(object, property);if (desc === undefined) {
+      var parent = Object.getPrototypeOf(object);if (parent === null) {
+        return undefined;
+      } else {
+        _x = parent;_x2 = property;_x3 = receiver;_again = true;desc = parent = undefined;continue _function;
+      }
+    } else if ('value' in desc) {
+      return desc.value;
+    } else {
+      var getter = desc.get;if (getter === undefined) {
+        return undefined;
+      }return getter.call(receiver);
+    }
   }
 };
 
@@ -4483,7 +4456,7 @@ var _createDecoratedClass = (function () {
           } else {
             throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator);
           }
-        }if (descriptor.initializer) {
+        }if (descriptor.initializer !== undefined) {
           initializers[key] = descriptor;continue;
         }
       }Object.defineProperty(target, key, descriptor);
@@ -4493,20 +4466,31 @@ var _createDecoratedClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== 'function' && superClass !== null) {
+    throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
 
-var _Resolve = require('./stateInjector.js');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
+
+var _stateInjectorJs = require('./stateInjector.js');
 
 var LoggedInOnlyState = (function () {
   function LoggedInOnlyState() {
     _classCallCheck(this, LoggedInOnlyState);
   }
 
+  // In base Xing, being logged in means you're an admin
+  // override AdminOnlyState and TrackAdminState in a more complex app
+
   _createDecoratedClass(LoggedInOnlyState, [{
     key: 'currentUser',
-    decorators: [_Resolve.Resolve('$auth', '$state')],
+    decorators: [(0, _stateInjectorJs.Resolve)('$auth', '$state')],
     value: function currentUser($auth, $state) {
       return $auth.validateUser().then(function (user) {
         return user;
@@ -4521,23 +4505,18 @@ var LoggedInOnlyState = (function () {
 
 exports.LoggedInOnlyState = LoggedInOnlyState;
 
-// In base Xing, being logged in means you're an admin
-// override AdminOnlyState and TrackAdminState in a more complex app
-
 var AdminOnlyState = (function (_LoggedInOnlyState) {
+  _inherits(AdminOnlyState, _LoggedInOnlyState);
+
   function AdminOnlyState() {
     _classCallCheck(this, AdminOnlyState);
 
-    if (_LoggedInOnlyState != null) {
-      _LoggedInOnlyState.apply(this, arguments);
-    }
+    _get(Object.getPrototypeOf(AdminOnlyState.prototype), 'constructor', this).apply(this, arguments);
   }
-
-  _inherits(AdminOnlyState, _LoggedInOnlyState);
 
   _createDecoratedClass(AdminOnlyState, [{
     key: 'onlyAdmin',
-    decorators: [_Resolve.Resolve()],
+    decorators: [(0, _stateInjectorJs.Resolve)()],
     value: function onlyAdmin() {
       return true;
     }
@@ -4555,7 +4534,7 @@ var TrackAdminState = (function () {
 
   _createDecoratedClass(TrackAdminState, [{
     key: 'isAdmin',
-    decorators: [_Resolve.Resolve('$auth')],
+    decorators: [(0, _stateInjectorJs.Resolve)('$auth')],
     value: function isAdmin($auth) {
       return $auth.validateUser().then(function (success) {
         return true;
@@ -4573,23 +4552,23 @@ exports.TrackAdminState = TrackAdminState;
 },{"./stateInjector.js":25}],24:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 exports['default'] = stateFallback;
 
-var _ErrorLimiter = require('./errorLimiter.js');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _ErrorLimiter2 = _interopRequireDefault(_ErrorLimiter);
+var _errorLimiterJs = require('./errorLimiter.js');
 
-var _Run$applyAnnotation = require('a1atscript');
+var _errorLimiterJs2 = _interopRequireDefault(_errorLimiterJs);
+
+var _a1atscript = require('a1atscript');
 
 function stateFallback($rootScope, $state) {
-  var limiter = new _ErrorLimiter2['default']($state, 'errorFallback');
+  var limiter = new _errorLimiterJs2['default']($state, "errorFallback");
   $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
     limiter.transitionError(fromState, toState);
   });
@@ -4598,11 +4577,15 @@ function stateFallback($rootScope, $state) {
   });
 }
 
-_Run$applyAnnotation.applyAnnotation(stateFallback, _Run$applyAnnotation.Run, '$rootScope', '$state');
+(0, _a1atscript.applyAnnotation)(stateFallback, _a1atscript.Run, "$rootScope", "$state");
 module.exports = exports['default'];
 
 },{"./errorLimiter.js":21,"a1atscript":1}],25:[function(require,module,exports){
 'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -4614,17 +4597,13 @@ var _createClass = (function () {
   };
 })();
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
+function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError('Cannot call a class as a function');
   }
-};
+}
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _registerInjector$ToAnnotation = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 var State = (function () {
   function State(stateName) {
@@ -4634,7 +4613,7 @@ var State = (function () {
   }
 
   var _State = State;
-  State = _registerInjector$ToAnnotation.ToAnnotation(State) || State;
+  State = (0, _a1atscript.ToAnnotation)(State) || State;
   return State;
 })();
 
@@ -4642,17 +4621,17 @@ exports.State = State;
 
 var Resolve = (function () {
   function Resolve() {
+    _classCallCheck(this, _Resolve);
+
     for (var _len = arguments.length, inject = Array(_len), _key = 0; _key < _len; _key++) {
       inject[_key] = arguments[_key];
     }
-
-    _classCallCheck(this, _Resolve);
 
     this.inject = inject;
   }
 
   var _Resolve = Resolve;
-  Resolve = _registerInjector$ToAnnotation.ToAnnotation(Resolve) || Resolve;
+  Resolve = (0, _a1atscript.ToAnnotation)(Resolve) || Resolve;
   return Resolve;
 })();
 
@@ -4660,23 +4639,22 @@ exports.Resolve = Resolve;
 
 var Inject = (function () {
   function Inject() {
+    _classCallCheck(this, _Inject);
+
     for (var _len2 = arguments.length, inject = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
       inject[_key2] = arguments[_key2];
     }
 
-    _classCallCheck(this, _Inject);
-
     this.inject = inject;
   }
 
+  // An Injector must define an annotationClass getter and an instantiate method
   var _Inject = Inject;
-  Inject = _registerInjector$ToAnnotation.ToAnnotation(Inject) || Inject;
+  Inject = (0, _a1atscript.ToAnnotation)(Inject) || Inject;
   return Inject;
 })();
 
 exports.Inject = Inject;
-
-// An Injector must define an annotationClass getter and an instantiate method
 
 var StateInjector = (function () {
   function StateInjector() {
@@ -4684,24 +4662,19 @@ var StateInjector = (function () {
   }
 
   _createClass(StateInjector, [{
-    key: 'annotationClass',
-    get: function get() {
-      return State;
-    }
-  }, {
     key: 'annotateResolves',
     value: function annotateResolves(state) {
       state.resolve = {};
       for (var prop in state) {
-        if (typeof state[prop] == 'function') {
+        if (typeof state[prop] == "function") {
           var resolveItem = state[prop];
           resolveItem.annotations.forEach(function (annotation) {
             if (annotation instanceof (Resolve.originalClass || Resolve)) {
-              resolveItem.$inject = annotation.inject;
+              resolveItem['$inject'] = annotation.inject;
               state.resolve[prop] = resolveItem;
             }
             if (annotation instanceof (Inject.originalClass || Inject)) {
-              resolveItem.$inject = annotation.inject;
+              resolveItem['$inject'] = annotation.inject;
             }
           });
         }
@@ -4721,6 +4694,11 @@ var StateInjector = (function () {
         });
       });
     }
+  }, {
+    key: 'annotationClass',
+    get: function get() {
+      return State;
+    }
   }]);
 
   return StateInjector;
@@ -4728,7 +4706,7 @@ var StateInjector = (function () {
 
 exports.StateInjector = StateInjector;
 
-_registerInjector$ToAnnotation.registerInjector('state', StateInjector);
+(0, _a1atscript.registerInjector)('state', StateInjector);
 
 },{"a1atscript":1}],26:[function(require,module,exports){
 'use strict';
@@ -4738,38 +4716,38 @@ Object.defineProperty(exports, '__esModule', {
 });
 exports['default'] = uiRouteLogger;
 
-var _applyAnnotation$AsModule$Run = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 function uiRouteLogger($rootScope, $state, noTable) {
   if (noTable) {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
       /*jshint -W075 */
-      console.log('Routing Event', event.name);
-      console.log('From State', fromState.name, fromState.url);
-      console.log('To State', toState.name, toState.url);
+      console.log("Routing Event", event.name);
+      console.log("From State", fromState.name, fromState.url);
+      console.log("To State", toState.name, toState.url);
     });
     $rootScope.$on('$stateNotFound', function (event, missingState) {
-      console.log('Routing Event', event.name);
-      console.log('Missing state', missingState);
-      console.log('Existing states');
+      console.log("Routing Event", event.name);
+      console.log("Missing state", missingState);
+      console.log("Existing states");
       $state.get().forEach(function (state) {
         console.log(state);
       });
-      console.log('End of states');
+      console.log("End of states");
     });
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {
-      console.log('Routing Event', event.name);
-      console.log('To State', toState.name, toState.url);
+      console.log("Routing Event", event.name);
+      console.log("To State", toState.name, toState.url);
     });
     $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
-      console.log('Routing Event', event.name);
-      console.log('From State', fromState);
-      console.log('To State', toState);
-      console.log('Error', error);
+      console.log("Routing Event", event.name);
+      console.log("From State", fromState);
+      console.log("To State", toState);
+      console.log("Error", error);
       console.log(error.stack);
     });
     $rootScope.$on('$viewContentLoaded', function (event) {
-      console.log('view event', event.name);
+      console.log("view event", event.name);
     });
   } else {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
@@ -4797,15 +4775,47 @@ function uiRouteLogger($rootScope, $state, noTable) {
       console.table({ error: error });
       console.table({ fromState: fromState, toState: toState });
       //console.table({fromParams, toParams});
-      console.log('ui-router error', error.stack);
+      console.log("ui-router error", error.stack);
       console.groupEnd();
     });
   }
 }
 
-_applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.AsModule, 'route-logger');
-_applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.Run, '$rootScope', '$state');
+(0, _a1atscript.applyAnnotation)(uiRouteLogger, _a1atscript.AsModule, 'route-logger');
+(0, _a1atscript.applyAnnotation)(uiRouteLogger, _a1atscript.Run, '$rootScope', '$state');
 module.exports = exports['default'];
 
-},{"a1atscript":1}]},{},[3])(3)
+},{"a1atscript":1}],27:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = whenGoto;
+
+function whenGoto($location) {
+  var search = $location.search();
+  if (search.goto) {
+    var target = search.goto;
+
+    var queryParts = [];
+    for (var key in search) {
+      if (search.hasOwnProperty(key) && key != "goto") {
+        queryParts.push([key, search[key]].join("="));
+      }
+    }
+
+    if (queryParts.length > 0) {
+      target = [target, queryParts.join("&")].join("?");
+    }
+
+    return target;
+  } else {
+    return false;
+  }
+}
+
+module.exports = exports["default"];
+
+},{}]},{},[3])(3)
 });
