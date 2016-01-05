@@ -2598,13 +2598,17 @@ Object.defineProperty(exports, "TrackAdminState", {
   }
 });
 
-var _default8 = require("./xing-frontend-utils/stateFallback.js");
+var _default8 = require("./xing-frontend-utils/whenGoto.js");
 
-exports.stateFallback = _interopRequire(_default8);
+exports.whenGoto = _interopRequire(_default8);
 
-var _default9 = require("./xing-frontend-utils/ui-route-logger.js");
+var _default9 = require("./xing-frontend-utils/stateFallback.js");
 
-exports.uiRouteLogger = _interopRequire(_default9);
+exports.stateFallback = _interopRequire(_default9);
+
+var _default10 = require("./xing-frontend-utils/ui-route-logger.js");
+
+exports.uiRouteLogger = _interopRequire(_default10);
 
 var _State$Resolve$Inject$StateInjector = require("./xing-frontend-utils/stateInjector.js");
 
@@ -2642,7 +2646,7 @@ Object.defineProperty(exports, "appConfig", {
   }
 });
 
-},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/appConfig.js":10,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":12,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":13,"./xing-frontend-utils/components/toast/toast.js":20,"./xing-frontend-utils/components/unimplemented/unimplemented.js":21,"./xing-frontend-utils/serializer.js":23,"./xing-frontend-utils/stateClasses.js":24,"./xing-frontend-utils/stateFallback.js":25,"./xing-frontend-utils/stateInjector.js":26,"./xing-frontend-utils/ui-route-logger.js":27}],4:[function(require,module,exports){
+},{"./xing-frontend-utils/app/exampleForm/exampleForm.js":5,"./xing-frontend-utils/app/fallback/fallback.js":9,"./xing-frontend-utils/appConfig.js":10,"./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js":12,"./xing-frontend-utils/components/stateAttrs/stateAttrs.js":13,"./xing-frontend-utils/components/toast/toast.js":20,"./xing-frontend-utils/components/unimplemented/unimplemented.js":21,"./xing-frontend-utils/serializer.js":23,"./xing-frontend-utils/stateClasses.js":24,"./xing-frontend-utils/stateFallback.js":25,"./xing-frontend-utils/stateInjector.js":26,"./xing-frontend-utils/ui-route-logger.js":27,"./xing-frontend-utils/whenGoto.js":28}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -2763,7 +2767,7 @@ exports.ExampleFormState = ExampleFormState;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var template = "<div class=\"critical error\">\n  <img class='icon' src='/assets/icons/alert.svg' />\n\n  <p>A significant error has occurred in the application.\n  Please try returning to the <a href=\"/\">home page.</a></p>\n\n  <p>If you cannot visit the home page, the error is probably caused by a\n  failure in a remote service. Please report the error to your \n  administrator.</p>\n</div>\n";
+var template = "<div class=\"critical error\">\n  <img class='icon' src='/assets/icons/alert.svg' />\n\n  <p>A significant error has occurred in the application.\n  Please try returning to the <a href=\"/\">home page.</a></p>\n\n  <p>If you cannot visit the home page, the error is probably caused by a\n  failure in a remote service. Please report the error to your\n  administrator.</p>\n</div>\n";
 exports["default"] = template;
 module.exports = exports["default"];
 
@@ -4826,5 +4830,37 @@ _applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$As
 _applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.Run, '$rootScope', '$state');
 module.exports = exports['default'];
 
-},{"a1atscript":1}]},{},[3])(3)
+},{"a1atscript":1}],28:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = whenGoto;
+
+function whenGoto($location) {
+  var search = $location.search();
+  if (search.goto) {
+    var target = search.goto;
+
+    var queryParts = [];
+    for (var key in search) {
+      if (search.hasOwnProperty(key) && key != "goto") {
+        queryParts.push([key, search[key]].join("="));
+      }
+    }
+
+    if (queryParts.length > 0) {
+      target = [target, queryParts.join("&")].join("?");
+    }
+
+    return target;
+  } else {
+    return false;
+  }
+}
+
+module.exports = exports["default"];
+
+},{}]},{},[3])(3)
 });

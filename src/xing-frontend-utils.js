@@ -12,6 +12,7 @@ export {
   AdminOnlyState,
   TrackAdminState
 } from "./xing-frontend-utils/stateClasses.js";
+export { default as whenGoto } from "./xing-frontend-utils/whenGoto.js";
 export { default as stateFallback } from "./xing-frontend-utils/stateFallback.js";
 export { default as uiRouteLogger } from "./xing-frontend-utils/ui-route-logger.js";
 export {
