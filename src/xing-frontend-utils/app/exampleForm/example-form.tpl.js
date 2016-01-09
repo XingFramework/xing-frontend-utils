@@ -7,31 +7,31 @@ var template = `<h1>Example Form</h1>
 </ul>
 
 <form id='example-form'>
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <label for="username">Username:</label>
-      <input name="username" placeholder="e.g. CoolDev08" required />
+      <input name="username" placeholder="e.g. CoolDev" required />
       <span class='messages'></span>
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <label for="password">Password:</label>
       <input type="password" name="password" placeholder="Password" required />
       <span class='messages'></span>
     </div>
 
-    <div class='lrd-form-row with-errors'>
+    <div class='xng-form-row with-errors'>
       <label for="invalid-data">Field With Errors:</label>
       <input type="invalid-data" name="invalid-data" value='Invalid Entry' placeholder="Password" required />
       <span class='messages error'>Invalid format!</span>
     </div>
 
-    <div class='lrd-form-row with-errors'>
+    <div class='xng-form-row with-errors'>
       <label for="valid-data">Valid Entry:</label>
       <input name="valid-data" value='Valid Entry'/>
       <span class='messages success'>Name is available!</span>
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <label for="favorite_color">Favorite Color:</label>
       <select name='favorite_color' id='favorite_color'>
         <option>Red</option>
@@ -47,7 +47,7 @@ var template = `<h1>Example Form</h1>
       <span class='messages'></span>
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <label>Radio Station:</label>
       <div class='option-group'>
         <label><input type='radio' name='radio_station' />KPCC</label>
@@ -57,7 +57,7 @@ var template = `<h1>Example Form</h1>
       </div>
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <label>Artists You Like:</label>
       <div class='option-group'>
         <label><input type='checkbox' name='artists' />Kandinsky</label>
@@ -67,25 +67,25 @@ var template = `<h1>Example Form</h1>
       </div>
     </div>
 
-    <div class='lrd-form-row'>
-      <label>Gender:</label>
+    <div class='xng-form-row'>
+      <label>Favorite Animal:</label>
       <div class='option-group inline'>
-        <label><input type='radio' name='gender' />Female</label>
-        <label><input type='radio' name='gender' />Male</label>
-        <label><input type='radio' name='gender' />Other</label>
+        <label><input type='radio' name='animal' />Cat</label>
+        <label><input type='radio' name='animal' />Dog</label>
+        <label><input type='radio' name='animal' />Other</label>
       </div>
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <label for='message'>Message:</label>
       <textarea name='message' id='message' />
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <button type="submit" ng-click="sessionSubmit()" class="call-to-action">Submit</button>
     </div>
 
-    <div class='lrd-form-row'>
+    <div class='xng-form-row'>
       <div ng-if="passwordShow" class='input-like'>
         <a ui-sref='root.inner.passwordsRequest'>Forgot your password?</a>
       </div>
