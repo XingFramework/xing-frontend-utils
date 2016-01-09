@@ -2,7 +2,7 @@ import { AsModule, DirectiveObject } from 'a1atscript';
 import template from "./responsive-menu.tpl.js";
 
 @AsModule('responsiveMenu')
-@DirectiveObject('lrdResponsiveMenu')
+@DirectiveObject('xngResponsiveMenu')
 export default class ResponsiveMenu {
   constructor() {
     this.restrict = 'E';
