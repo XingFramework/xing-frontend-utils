@@ -1,7 +1,7 @@
 import ToastModule from "../../src/xing-frontend-utils/components/toast/toast.js";
 import {bootstrap} from "a1atscript";
 
-describe('$xngToast service', function() {
+xdescribe('$xngToast service', function() {
   beforeEach(function() {
     bootstrap(ToastModule);
     angular.mock.module(`toast`, 'ngAnimateMock', function($provide) {
