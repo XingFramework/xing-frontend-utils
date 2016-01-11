@@ -10,7 +10,7 @@ angular.module(`xing.utils.interimElement`, [
   '$timeout',
   '$rootElement',
   '$animate',
-  '$lrdCompiler',
+  '$xngCompiler',
   InterimElementFactory
 ]);
 
@@ -21,14 +21,14 @@ angular.module(`xing.utils.interimElement`, [
  * @description
  *
  * Factory that contructs `$$interimElement.$service` services.
- * Used internally in lrd for elements that appear on screen temporarily.
+ * Used internally in xing for elements that appear on screen temporarily.
  * The service provides a promise-like API for interacting with the temporary
  * elements.
  *
  * ```js
- * app.service('$lrdToast', function($$interimElement) {
- *   var $lrdToast = $$interimElement(toastDefaultOptions);
- *   return $lrdToast;
+ * app.service('$xngToast', function($$interimElement) {
+ *   var $xngToast = $$interimElement(toastDefaultOptions);
+ *   return $xngToast;
  * });
  * ```
  * @param {object=} defaultOptions Options used by default for the `show` method on the service.
@@ -37,7 +37,7 @@ angular.module(`xing.utils.interimElement`, [
  *
  */
 
-function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate, $lrdCompiler) {
+function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate, $xngCompiler) {
 
   return function createInterimElementService(defaults) {
 
@@ -158,7 +158,7 @@ function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate,
         options: options,
         deferred: $q.defer(),
         show: function() {
-          return $lrdCompiler.compile(options).then(function(compiledData) {
+          return $xngCompiler.compile(options).then(function(compiledData) {
             element = compiledData.link(options.scope);
             var ret = options.onShow(options.scope, element, options);
             return $q.when(ret)

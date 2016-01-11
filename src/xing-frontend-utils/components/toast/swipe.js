@@ -2,22 +2,22 @@
 
   /**
    * @ngdoc module
-   * @name lrd.components.swipe
+   * @name xng.components.swipe
    * @description Swipe module!
    */
   angular.module(`xing.utils.swipe`,['ng'])
 
     /**
      * @ngdoc directive
-     * @module lrd.components.swipe
-     * @name lrdSwipe
+     * @module xng.components.swipe
+     * @name xngSwipe
      *
      *  This service allows directives to easily attach swipe and pan listeners to
      *  the specified element.
      *
      * @private
      */
-    .factory("$lrdSwipe", function() {
+    .factory("$xngSwipe", function() {
 
       // match expected API functionality
       var attachNoop = function(){ return angular.noop; };
@@ -105,14 +105,14 @@
 
     /**
      * @ngdoc directive
-     * @module lrd.components.swipe
-     * @name lrdSwipeLeft
+     * @module xng.components.swipe
+     * @name xngSwipeLeft
      *
      * @order 0
      * @restrict A
      *
      * @description
-     * The `<div  lrd-swipe-left="<expression" >` directive identifies an element on which
+     * The `<div  xng-swipe-left="<expression" >` directive identifies an element on which
      * HammerJS horizontal swipe left and pan left support will be active. The swipe/pan action
      * can result in custom activity trigger by evaluating `<expression>`.
      *
@@ -123,31 +123,31 @@
      *
      * <div class="animate-switch-container"
      *      ng-switch on="data.selectedIndex"
-     *      lrd-swipe-left="data.selectedIndex+=1;"
-     *      lrd-swipe-right="data.selectedIndex-=1;" >
+     *      xng-swipe-left="data.selectedIndex+=1;"
+     *      xng-swipe-right="data.selectedIndex-=1;" >
      *
      * </div>
      * </hljs>
      *
      */
-    .directive("lrdSwipeLeft", ['$parse', '$lrdSwipe',
-      function LRDSwipeLeft($parse, $lrdSwipe) {
+    .directive("xngSwipeLeft", ['$parse', '$xngSwipe',
+      function XNGSwipeLeft($parse, $xngSwipe) {
         return {
           restrict: 'A',
-          link :  swipePostLink( $parse, $lrdSwipe, "SwipeLeft" )
+          link :  swipePostLink( $parse, $xngSwipe, "SwipeLeft" )
         };
       }])
 
     /**
      * @ngdoc directive
-     * @module lrd.components.swipe
-     * @name lrdSwipeRight
+     * @module xng.components.swipe
+     * @name xngSwipeRight
      *
      * @order 1
      * @restrict A
      *
      * @description
-     * The `<div  lrd-swipe-right="<expression" >` directive identifies functionality
+     * The `<div  xng-swipe-right="<expression" >` directive identifies functionality
      * that attaches HammerJS horizontal swipe right and pan right support to an element. The swipe/pan action
      * can result in activity trigger by evaluating `<expression>`
      *
@@ -158,18 +158,18 @@
      *
      * <div class="animate-switch-container"
      *      ng-switch on="data.selectedIndex"
-     *      lrd-swipe-left="data.selectedIndex+=1;"
-     *      lrd-swipe-right="data.selectedIndex-=1;" >
+     *      xng-swipe-left="data.selectedIndex+=1;"
+     *      xng-swipe-right="data.selectedIndex-=1;" >
      *
      * </div>
      * </hljs>
      *
      */
-    .directive( "lrdSwipeRight", ['$parse', '$lrdSwipe',
-      function LRDSwipeRight($parse, $lrdSwipe) {
+    .directive( "xngSwipeRight", ['$parse', '$xngSwipe',
+      function XNGSwipeRight($parse, $xngSwipe) {
         return {
           restrict: 'A',
-          link: swipePostLink( $parse, $lrdSwipe, "SwipeRight" )
+          link: swipePostLink( $parse, $xngSwipe, "SwipeRight" )
         };
       }
     ]);
@@ -178,18 +178,18 @@
      * Factory to build PostLink function specific to Swipe or Pan direction
      *
      * @param $parse
-     * @param lrdSwipe
+     * @param xngSwipe
      * @param name
      * @returns {Function}
      */
-    function swipePostLink($parse, $lrdSwipe, name ) {
+    function swipePostLink($parse, $xngSwipe, name ) {
 
       return function(scope, element, attrs) {
         var direction = name.toLowerCase();
-        var directiveName= "lrd" + name;
+        var directiveName= "xng" + name;
 
         var parentGetter = $parse(attrs[directiveName]) || angular.noop;
-        var configureSwipe = $lrdSwipe(scope, direction);
+        var configureSwipe = $xngSwipe(scope, direction);
         var requestSwipe = function(locals) {
           // build function to request scope-specific swipe response
           parentGetter(scope, locals);

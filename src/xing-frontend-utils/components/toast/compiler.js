@@ -1,18 +1,18 @@
-function lrdCompilerService($q, $http, $injector, $compile, $controller, $templateCache) {
+function xngCompilerService($q, $http, $injector, $compile, $controller, $templateCache) {
 
   /**
    * @ngdoc service
-   * @name $lrdCompiler
-   * @module lrd.services.compiler
+   * @name $xngCompiler
+   * @module xng.services.compiler
    *
    * @description
-   * The $lrdCompiler service is an abstraction of angular's compiler, that allows the developer
+   * The $xngCompiler service is an abstraction of angular's compiler, that allows the developer
    * to easily compile an element with a templateUrl, controller, and locals.
    */
 
    /**
     * @ngdoc method
-    * @name $lrdCompiler#compile
+    * @name $xngCompiler#compile
     * @param {object} options An options object, with the following properties:
     *
     *    - `controller` â€“ `{(string=|function()=}` â€“ Controller fn that should be associated with
@@ -55,7 +55,7 @@ function lrdCompilerService($q, $http, $injector, $compile, $controller, $templa
     *     called.
     *
     * @usage
-    * $lrdCompiler.compile({
+    * $xngCompiler.compile({
     *   templateUrl: 'modal.html',
     *   controller: 'ModalCtrl',
     *   locals: {
@@ -134,12 +134,12 @@ function lrdCompilerService($q, $http, $injector, $compile, $controller, $templa
 
 angular.module(`xing.utils.compiler`, [
 ])
-  .service('$lrdCompiler', [
+  .service('$xngCompiler', [
     '$q',
     '$http',
     '$injector',
     '$compile',
     '$controller',
     '$templateCache',
-    lrdCompilerService
+    xngCompilerService
   ]);

@@ -6,18 +6,16 @@ import errorListTemplate from "./error-list.tpl.js";
 import errorTemplate from "./error.tpl.js";
 import noticeTemplate from "./notice.tpl.js";
 
-/* This is cribbed from the lrd design toast */
-
-function lrdToastDirective() {
+function xngToastDirective() {
   return {
     restrict: 'E'
   };
 }
 
-applyAnnotation(lrdToastDirective, Directive, '$lrdToast');
+applyAnnotation(xngToastDirective, Directive, '$xngToast');
 
-@Controller('$lrdToastErrorListCtrl', ['$scope','type','header','messages'])
-class LrdToastErrorListCtrl {
+@Controller('$xngToastErrorListCtrl', ['$scope','type','header','messages'])
+class XngToastErrorListCtrl {
   constructor($scope, type, header, messages) {
     $scope.type = type;
     $scope.header = header;
@@ -25,16 +23,16 @@ class LrdToastErrorListCtrl {
   }
 }
 
-@Controller('$lrdToastErrorCtrl', ['$scope','type','message'])
-class LrdToastErrorCtrl {
+@Controller('$xngToastErrorCtrl', ['$scope','type','message'])
+class XngToastErrorCtrl {
   constructor($scope, type, message) {
     $scope.type = type;
     $scope.message = message;
   }
 }
 
-@Controller('$lrdToastNoticeCtrl', ['$scope','type','message'])
-class LrdToastNoticeCtrl {
+@Controller('$xngToastNoticeCtrl', ['$scope','type','message'])
+class XngToastNoticeCtrl {
   constructor($scope, type, message) {
     $scope.type = type;
     $scope.message = message;
@@ -42,8 +40,8 @@ class LrdToastNoticeCtrl {
 }
 /**
  * @ngdoc service
- * @name $lrdToast
- * @module lrd.components.toast
+ * @name $xngToast
+ * @module xng.components.toast
  *
  * @description
  * Open a toast notification on any position on the screen, with an optional
@@ -53,25 +51,25 @@ class LrdToastNoticeCtrl {
  * shown while a different toast is active, the old toast will be automatically
  * hidden.
  *
- * `$lrdToast` is an `$interimElement` service and adheres to the same behaviors.
- *  - `$lrdToast.show()`
- *  - `$lrdToast.hide()`
- *  - `$lrdToast.cancel()`
+ * `$xngToast` is an `$interimElement` service and adheres to the same behaviors.
+ *  - `$xngToast.show()`
+ *  - `$xngToast.hide()`
+ *  - `$xngToast.cancel()`
  *
  * @usage
  * <hljs lang="html">
  * <div ng-controller="MyController">
- *   <lrd-button ng-click="openToast()">
+ *   <xng-button ng-click="openToast()">
  *     Open a Toast!
- *   </lrd-button>
+ *   </xng-button>
  * </div>
  * </hljs>
  * <hljs lang="js">
- * var app = angular.module('app', ['nglrd']);
- * app.controller('MyController', function($scope, $lrdToast) {
+ * var app = angular.module('app', ['ngxng']);
+ * app.controller('MyController', function($scope, $xngToast) {
  *   $scope.openToast = function($event) {
- *     $lrdToast.show({
- *       template: '<lrd-toast>Hello!</lrd-toast>',
+ *     $xngToast.show({
+ *       template: '<xng-toast>Hello!</xng-toast>',
  *       hideDelay: 3000
  *     });
  *   };
@@ -81,7 +79,7 @@ class LrdToastNoticeCtrl {
 
  /**
  * @ngdoc method
- * @name $lrdToast#show
+ * @name $xngToast#show
  *
  * @description
  * Show a toast dialog with the specified options.
@@ -89,7 +87,7 @@ class LrdToastNoticeCtrl {
  * @paramType Options
  * @param {string=} templateUrl The url of an html template file that will
  * be used as the content of the toast. Restrictions: the template must
- * have an outer `lrd-toast` element.
+ * have an outer `xng-toast` element.
  * @param {string=} template Same as templateUrl, except this is an actual
  * template string.
  * @param {number=} hideDelay How many milliseconds the toast should stay
@@ -109,15 +107,15 @@ class LrdToastNoticeCtrl {
  * @param {string=} controllerAs An alias to assign the controller to on the scope.
  *
  * @returns {Promise} Returns a promise that will be resolved or rejected when
- *  `$lrdToast.hide()` or `$lrdToast.cancel()` is called respectively.
+ *  `$xngToast.hide()` or `$xngToast.cancel()` is called respectively.
  */
 
 /**
  * @ngdoc method
- * @name $lrdToast#hide
+ * @name $xngToast#hide
  *
  * @description
- * Hide an existing toast and `resolve` the promise returned from `$lrdToast.show()`.
+ * Hide an existing toast and `resolve` the promise returned from `$xngToast.show()`.
  *
  * @param {*} arg An argument to resolve the promise with.
  *
@@ -125,16 +123,16 @@ class LrdToastNoticeCtrl {
 
 /**
  * @ngdoc method
- * @name $lrdToast#cancel
+ * @name $xngToast#cancel
  *
  * @description
- * Hide an existing toast and `reject` the promise returned from `$lrdToast.show()`.
+ * Hide an existing toast and `reject` the promise returned from `$xngToast.show()`.
  *
  * @param {*} arg An argument to reject the promise with.
  *
  */
 
-function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflector) {
+function xngToastService($timeout, $$interimElement, $animate, $xngSwipe, Inflector) {
 
   var factoryDef = {
     onShow: onShow,
@@ -144,9 +142,9 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   };
 
   var toastElement = angular.element(document.getElementById("toast_main"));
-  var $lrdToast = $$interimElement(factoryDef);
+  var $xngToast = $$interimElement(factoryDef);
 
-  $lrdToast.notice = function(message, type = "notice") {
+  $xngToast.notice = function(message, type = "notice") {
     return this.show({
       parent: toastElement,
       template: noticeTemplate,
@@ -155,11 +153,11 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
         type: type,
         message: message
       },
-      controller: '$lrdToastNoticeCtrl'
+      controller: '$xngToastNoticeCtrl'
     });
   };
 
-  $lrdToast.error = function(message, type = "error") {
+  $xngToast.error = function(message, type = "error") {
     return this.show({
       parent: toastElement,
       template: errorTemplate,
@@ -168,11 +166,11 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
         type: type,
         message: message
       },
-      controller: '$lrdToastErrorCtrl'
+      controller: '$xngToastErrorCtrl'
     });
   };
 
-  $lrdToast.errorList = function(errors, header = "", type = "error") {
+  $xngToast.errorList = function(errors, header = "", type = "error") {
     var messages = [];
     if (Array.isArray(errors)) {
       messages = errors;
@@ -192,22 +190,22 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
         header: header,
         messages: messages
       },
-      controller: '$lrdToastErrorListCtrl'
+      controller: '$xngToastErrorListCtrl'
 
     });
   };
 
-  return $lrdToast;
+  return $xngToast;
 
   function onShow(scope, element, options) {
     element.addClass(options.position);
     options.parent.addClass(toastOpenClass(options.position));
 
-    var configureSwipe = $lrdSwipe(scope, 'swipeleft swiperight');
+    var configureSwipe = $xngSwipe(scope, 'swipeleft swiperight');
     options.detachSwipe = configureSwipe(element, function(ev) {
       //Add swipeleft/swiperight class to element so it can animate correctly
       element.addClass(ev.type);
-      $timeout($lrdToast.hide);
+      $timeout($xngToast.hide);
     });
 
     return $animate.enter(element, options.parent);
@@ -220,22 +218,22 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   }
 
   function toastOpenClass(position) {
-    return 'lrd-toast-open-' +
+    return 'xng-toast-open-' +
       (position.indexOf('top') > -1 ? 'top' : 'bottom');
   }
 }
 
-applyAnnotation(lrdToastService, Factory, '$lrdToast', ['$timeout','$$interimElement','$animate','$lrdSwipe','Inflector'])
+applyAnnotation(xngToastService, Factory, '$xngToast', ['$timeout','$$interimElement','$animate','$xngSwipe','Inflector'])
 
 var Toast = new Module('toast', [
   `xing.utils.interimElement`,
   `xing.utils.swipe`,
   Inflector,
-  lrdToastDirective,
-  LrdToastErrorListCtrl,
-  LrdToastErrorCtrl,
-  LrdToastNoticeCtrl,
-  lrdToastService
+  xngToastDirective,
+  XngToastErrorListCtrl,
+  XngToastErrorCtrl,
+  XngToastNoticeCtrl,
+  xngToastService
 ]);
 
 export default Toast;
