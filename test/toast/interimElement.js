@@ -21,7 +21,7 @@ describe('$$interimElement service', function() {
     });
   }));
 
-  xdescribe('instance', function() {
+  describe('instance', function() {
     var Service;
     beforeEach(inject(function($$interimElement) {
       Service = $$interimElement();
