@@ -3,13 +3,13 @@ import {xpath, stringAtXpath} from "../test-help/xpath.js";
 import setupUiRouteLogging from "../src/xing-frontend-utils/ui-route-logger.js";
 import {bootstrap} from "a1atscript";
 
-describe('lrdStateAttrs directive', function() {
+describe('xngStateAttrs directive', function() {
   var $compile, $rootScope, $state;
 
   beforeEach(function() {
     bootstrap(StateAttrs);
     angular.mock.module(`stateAttrs`, "ui.router.state", function($stateProvider) {
-      $stateProvider.state('root', {url: "/", template: "<ui-view lrd-state-attrs label='r'></ui-view>"});
+      $stateProvider.state('root', {url: "/", template: "<ui-view xng-state-attrs label='r'></ui-view>"});
       $stateProvider.state('root.inner', {url: "/ri", template: "<hr label='r-i'/>"});
       $stateProvider.state('root.other', {url: "/ro", template: "<hr label='r-o'/>"});
     })
@@ -27,7 +27,7 @@ describe('lrdStateAttrs directive', function() {
     beforeEach(function() {
       $state.go('root.inner');
       $rootScope.$apply();
-      element = $compile("<div ng-app><p>Before</p><ui-view lrd-state-attrs label='t'></ui-view><p>After</p></div>")($rootScope);
+      element = $compile("<div ng-app><p>Before</p><ui-view xng-state-attrs label='t'></ui-view><p>After</p></div>")($rootScope);
 
       $rootScope.$digest();
     });

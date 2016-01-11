@@ -1,7 +1,7 @@
 import {AsModule, DirectiveObject} from 'a1atscript';
 
 @AsModule( 'stateAttrs', ['ui.router.state'])
-@DirectiveObject('lrdStateAttrs', ['$compile', '$state'])
+@DirectiveObject('xngStateAttrs', ['$compile', '$state'])
 export default class StateAttrs {
   constructor($compile, $state) {
     this.$compile = $compile;
