@@ -21,6 +21,7 @@ describe('$$interimElement service', function() {
     });
   }));
 
+  // Tests are skipped because of problems with HammerJS
   xdescribe('instance', function() {
     var Service;
     beforeEach(inject(function($$interimElement) {

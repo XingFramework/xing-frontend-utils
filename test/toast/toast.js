@@ -1,6 +1,7 @@
 import ToastModule from "../../src/xing-frontend-utils/components/toast/toast.js";
 import {bootstrap} from "a1atscript";
 
+// Tests are skipped because of problems with hammerJS
 xdescribe('$xngToast service', function() {
   beforeEach(function() {
     bootstrap(ToastModule);
