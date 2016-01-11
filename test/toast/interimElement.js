@@ -4,10 +4,10 @@ describe('$$interimElement service', function() {
   var $compilerSpy, resolvingPromise;
 
   beforeEach(angular.mock.module(`xing.utils.interimElement`, 'ngAnimateMock', function($provide) {
-    var $lrdCompiler = { compile: angular.noop };
-    $compilerSpy = spyOn($lrdCompiler, 'compile');
+    var $xngCompiler = { compile: angular.noop };
+    $compilerSpy = spyOn($xngCompiler, 'compile');
 
-    $provide.value('$lrdCompiler', $lrdCompiler);
+    $provide.value('$xngCompiler', $xngCompiler);
   }));
 
   beforeEach(inject(function($q, $compile) {
@@ -35,7 +35,7 @@ describe('$$interimElement service', function() {
         expect($compilerSpy.calls.mostRecent().args[0].templateUrl).toBe('testing.html');
       }));
 
-      it('forwards options to $lrdCompiler', inject(function($$interimElement) {
+      it('forwards options to $xngCompiler', inject(function($$interimElement) {
         var options = {template: 'testing'};
         Service.show(options);
         expect($compilerSpy.calls.mostRecent().args[0].template).toBe('testing');

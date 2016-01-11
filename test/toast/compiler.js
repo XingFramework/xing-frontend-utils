@@ -1,6 +1,6 @@
 import {} from "../../src/xing-frontend-utils/components/toast/compiler.js";
 
-describe('$lrdCompiler service', function() {
+describe('$xngCompiler service', function() {
   beforeEach(
     angular.mock.module(`xing.utils.compiler`, function($provide) {
     // Some constant to use in one of the tests below
@@ -9,8 +9,8 @@ describe('$lrdCompiler service', function() {
 
   function compile(options) {
     var compileData;
-    inject(function($lrdCompiler, $rootScope) {
-      $lrdCompiler.compile(options).then(function(data) {
+    inject(function($xngCompiler, $rootScope) {
+      $xngCompiler.compile(options).then(function(data) {
         compileData = data;
       });
       $rootScope.$apply();
