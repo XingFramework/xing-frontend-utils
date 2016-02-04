@@ -2457,24 +2457,22 @@
 },{}],2:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function (instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } };
-
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _AsModule$Service = require('a1atscript');
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+var _a1atscript = require('a1atscript');
 
 var Inflector = (function () {
   function Inflector() {
     _classCallCheck(this, _Inflector);
   }
 
-  var _Inflector = Inflector;
-
-  _createClass(_Inflector, [{
+  _createClass(Inflector, [{
     key: 'camelize',
     value: function camelize(key) {
       if (!angular.isString(key)) {
@@ -2530,8 +2528,9 @@ var Inflector = (function () {
     }
   }]);
 
-  Inflector = _AsModule$Service.Service('Inflector')(Inflector) || Inflector;
-  Inflector = _AsModule$Service.AsModule('inflector')(Inflector) || Inflector;
+  var _Inflector = Inflector;
+  Inflector = (0, _a1atscript.Service)('Inflector')(Inflector) || Inflector;
+  Inflector = (0, _a1atscript.AsModule)('inflector')(Inflector) || Inflector;
   return Inflector;
 })();
 
@@ -2541,108 +2540,108 @@ module.exports = exports['default'];
 },{"a1atscript":1}],3:[function(require,module,exports){
 "use strict";
 
-var _interopRequire = function _interopRequire(obj) {
-  return obj && obj.__esModule ? obj["default"] : obj;
-};
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _default = require("./xing-frontend-utils/app/exampleForm/exampleForm.js");
+function _interopRequire(obj) {
+  return obj && obj.__esModule ? obj["default"] : obj;
+}
 
-exports.ExampleForm = _interopRequire(_default);
+var _xingFrontendUtilsAppExampleFormExampleFormJs = require("./xing-frontend-utils/app/exampleForm/exampleForm.js");
 
-var _default2 = require("./xing-frontend-utils/app/fallback/fallback.js");
+exports.ExampleForm = _interopRequire(_xingFrontendUtilsAppExampleFormExampleFormJs);
 
-exports.Fallback = _interopRequire(_default2);
+var _xingFrontendUtilsAppFallbackFallbackJs = require("./xing-frontend-utils/app/fallback/fallback.js");
 
-var _default3 = require("./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js");
+exports.Fallback = _interopRequire(_xingFrontendUtilsAppFallbackFallbackJs);
 
-exports.ResponsiveMenu = _interopRequire(_default3);
+var _xingFrontendUtilsComponentsResponsiveMenuResponsiveMenuJs = require("./xing-frontend-utils/components/responsiveMenu/responsiveMenu.js");
 
-var _default4 = require("./xing-frontend-utils/components/stateAttrs/stateAttrs.js");
+exports.ResponsiveMenu = _interopRequire(_xingFrontendUtilsComponentsResponsiveMenuResponsiveMenuJs);
 
-exports.StateAttrs = _interopRequire(_default4);
+var _xingFrontendUtilsComponentsStateAttrsStateAttrsJs = require("./xing-frontend-utils/components/stateAttrs/stateAttrs.js");
 
-var _default5 = require("./xing-frontend-utils/components/toast/toast.js");
+exports.StateAttrs = _interopRequire(_xingFrontendUtilsComponentsStateAttrsStateAttrsJs);
 
-exports.Toast = _interopRequire(_default5);
+var _xingFrontendUtilsComponentsToastToastJs = require("./xing-frontend-utils/components/toast/toast.js");
 
-var _default6 = require("./xing-frontend-utils/components/unimplemented/unimplemented.js");
+exports.Toast = _interopRequire(_xingFrontendUtilsComponentsToastToastJs);
 
-exports.UnimplementedDirective = _interopRequire(_default6);
+var _xingFrontendUtilsComponentsUnimplementedUnimplementedJs = require("./xing-frontend-utils/components/unimplemented/unimplemented.js");
 
-var _default7 = require("./xing-frontend-utils/serializer.js");
+exports.UnimplementedDirective = _interopRequire(_xingFrontendUtilsComponentsUnimplementedUnimplementedJs);
 
-exports.Serializer = _interopRequire(_default7);
+var _xingFrontendUtilsSerializerJs = require("./xing-frontend-utils/serializer.js");
 
-var _LoggedInOnlyState$AdminOnlyState$TrackAdminState = require("./xing-frontend-utils/stateClasses.js");
+exports.Serializer = _interopRequire(_xingFrontendUtilsSerializerJs);
+
+var _xingFrontendUtilsStateClassesJs = require("./xing-frontend-utils/stateClasses.js");
 
 Object.defineProperty(exports, "LoggedInOnlyState", {
   enumerable: true,
   get: function get() {
-    return _LoggedInOnlyState$AdminOnlyState$TrackAdminState.LoggedInOnlyState;
+    return _xingFrontendUtilsStateClassesJs.LoggedInOnlyState;
   }
 });
 Object.defineProperty(exports, "AdminOnlyState", {
   enumerable: true,
   get: function get() {
-    return _LoggedInOnlyState$AdminOnlyState$TrackAdminState.AdminOnlyState;
+    return _xingFrontendUtilsStateClassesJs.AdminOnlyState;
   }
 });
 Object.defineProperty(exports, "TrackAdminState", {
   enumerable: true,
   get: function get() {
-    return _LoggedInOnlyState$AdminOnlyState$TrackAdminState.TrackAdminState;
+    return _xingFrontendUtilsStateClassesJs.TrackAdminState;
   }
 });
 
-var _default8 = require("./xing-frontend-utils/whenGoto.js");
+var _xingFrontendUtilsWhenGotoJs = require("./xing-frontend-utils/whenGoto.js");
 
-exports.whenGoto = _interopRequire(_default8);
+exports.whenGoto = _interopRequire(_xingFrontendUtilsWhenGotoJs);
 
-var _default9 = require("./xing-frontend-utils/stateFallback.js");
+var _xingFrontendUtilsStateFallbackJs = require("./xing-frontend-utils/stateFallback.js");
 
-exports.stateFallback = _interopRequire(_default9);
+exports.stateFallback = _interopRequire(_xingFrontendUtilsStateFallbackJs);
 
-var _default10 = require("./xing-frontend-utils/ui-route-logger.js");
+var _xingFrontendUtilsUiRouteLoggerJs = require("./xing-frontend-utils/ui-route-logger.js");
 
-exports.uiRouteLogger = _interopRequire(_default10);
+exports.uiRouteLogger = _interopRequire(_xingFrontendUtilsUiRouteLoggerJs);
 
-var _State$Resolve$Inject$StateInjector = require("./xing-frontend-utils/stateInjector.js");
+var _xingFrontendUtilsStateInjectorJs = require("./xing-frontend-utils/stateInjector.js");
 
 Object.defineProperty(exports, "State", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.State;
+    return _xingFrontendUtilsStateInjectorJs.State;
   }
 });
 Object.defineProperty(exports, "Resolve", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.Resolve;
+    return _xingFrontendUtilsStateInjectorJs.Resolve;
   }
 });
 Object.defineProperty(exports, "Inject", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.Inject;
+    return _xingFrontendUtilsStateInjectorJs.Inject;
   }
 });
 Object.defineProperty(exports, "StateInjector", {
   enumerable: true,
   get: function get() {
-    return _State$Resolve$Inject$StateInjector.StateInjector;
+    return _xingFrontendUtilsStateInjectorJs.StateInjector;
   }
 });
 
-var _appConfig = require("./xing-frontend-utils/appConfig.js");
+var _xingFrontendUtilsAppConfigJs = require("./xing-frontend-utils/appConfig.js");
 
 Object.defineProperty(exports, "appConfig", {
   enumerable: true,
   get: function get() {
-    return _appConfig.appConfig;
+    return _xingFrontendUtilsAppConfigJs.appConfig;
   }
 });
 
@@ -2652,44 +2651,44 @@ Object.defineProperty(exports, "appConfig", {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var template = "<h1>Example Form</h1>\n<h2>Still To-Do:</h2>\n<ul>\n  <li>Large Textarea</li>\n  <li>Date</li>\n  <li>Time</li>\n</ul>\n\n<form id='example-form'>\n    <div class='lrd-form-row'>\n      <label for=\"username\">Username:</label>\n      <input name=\"username\" placeholder=\"e.g. CoolDev08\" required />\n      <span class='messages'></span>\n    </div>\n\n    <div class='lrd-form-row'>\n      <label for=\"password\">Password:</label>\n      <input type=\"password\" name=\"password\" placeholder=\"Password\" required />\n      <span class='messages'></span>\n    </div>\n\n    <div class='lrd-form-row with-errors'>\n      <label for=\"invalid-data\">Field With Errors:</label>\n      <input type=\"invalid-data\" name=\"invalid-data\" value='Invalid Entry' placeholder=\"Password\" required />\n      <span class='messages error'>Invalid format!</span>\n    </div>\n\n    <div class='lrd-form-row with-errors'>\n      <label for=\"valid-data\">Valid Entry:</label>\n      <input name=\"valid-data\" value='Valid Entry'/>\n      <span class='messages success'>Name is available!</span>\n    </div>\n\n    <div class='lrd-form-row'>\n      <label for=\"favorite_color\">Favorite Color:</label>\n      <select name='favorite_color' id='favorite_color'>\n        <option>Red</option>\n        <option>Orange</option>\n        <option>Yellow</option>\n        <option>Green</option>\n        <option>Blue</option>\n        <option>Indigo</option>\n        <option>Violet</option>\n        <option>White</option>\n        <option>Black</option>\n      </select>\n      <span class='messages'></span>\n    </div>\n\n    <div class='lrd-form-row'>\n      <label>Radio Station:</label>\n      <div class='option-group'>\n        <label><input type='radio' name='radio_station' />KPCC</label>\n        <label><input type='radio' name='radio_station' />KROQ</label>\n        <label><input type='radio' name='radio_station' />KLOS</label>\n        <label><input type='radio' name='radio_station' />KQED</label>\n      </div>\n    </div>\n\n    <div class='lrd-form-row'>\n      <label>Artists You Like:</label>\n      <div class='option-group'>\n        <label><input type='checkbox' name='artists' />Kandinsky</label>\n        <label><input type='checkbox' name='artists' />Renoir</label>\n        <label><input type='checkbox' name='artists' />De Kooning</label>\n        <label><input type='checkbox' name='artists' />Pollock</label>\n      </div>\n    </div>\n\n    <div class='lrd-form-row'>\n      <label>Gender:</label>\n      <div class='option-group inline'>\n        <label><input type='radio' name='gender' />Female</label>\n        <label><input type='radio' name='gender' />Male</label>\n        <label><input type='radio' name='gender' />Other</label>\n      </div>\n    </div>\n\n    <div class='lrd-form-row'>\n      <label for='message'>Message:</label>\n      <textarea name='message' id='message' />\n    </div>\n\n    <div class='lrd-form-row'>\n      <button type=\"submit\" ng-click=\"sessionSubmit()\" class=\"call-to-action\">Submit</button>\n    </div>\n\n    <div class='lrd-form-row'>\n      <div ng-if=\"passwordShow\" class='input-like'>\n        <a ui-sref='root.inner.passwordsRequest'>Forgot your password?</a>\n      </div>\n    </div>\n</form>\n";
+var template = "<h1>Example Form</h1>\n<h2>Still To-Do:</h2>\n<ul>\n  <li>Large Textarea</li>\n  <li>Date</li>\n  <li>Time</li>\n</ul>\n\n<form id='example-form'>\n    <div class='xng-form-row'>\n      <label for=\"username\">Username:</label>\n      <input name=\"username\" placeholder=\"e.g. CoolDev\" required />\n      <span class='messages'></span>\n    </div>\n\n    <div class='xng-form-row'>\n      <label for=\"password\">Password:</label>\n      <input type=\"password\" name=\"password\" placeholder=\"Password\" required />\n      <span class='messages'></span>\n    </div>\n\n    <div class='xng-form-row with-errors'>\n      <label for=\"invalid-data\">Field With Errors:</label>\n      <input type=\"invalid-data\" name=\"invalid-data\" value='Invalid Entry' placeholder=\"Password\" required />\n      <span class='messages error'>Invalid format!</span>\n    </div>\n\n    <div class='xng-form-row with-errors'>\n      <label for=\"valid-data\">Valid Entry:</label>\n      <input name=\"valid-data\" value='Valid Entry'/>\n      <span class='messages success'>Name is available!</span>\n    </div>\n\n    <div class='xng-form-row'>\n      <label for=\"favorite_color\">Favorite Color:</label>\n      <select name='favorite_color' id='favorite_color'>\n        <option>Red</option>\n        <option>Orange</option>\n        <option>Yellow</option>\n        <option>Green</option>\n        <option>Blue</option>\n        <option>Indigo</option>\n        <option>Violet</option>\n        <option>White</option>\n        <option>Black</option>\n      </select>\n      <span class='messages'></span>\n    </div>\n\n    <div class='xng-form-row'>\n      <label>Radio Station:</label>\n      <div class='option-group'>\n        <label><input type='radio' name='radio_station' />KPCC</label>\n        <label><input type='radio' name='radio_station' />KROQ</label>\n        <label><input type='radio' name='radio_station' />KLOS</label>\n        <label><input type='radio' name='radio_station' />KQED</label>\n      </div>\n    </div>\n\n    <div class='xng-form-row'>\n      <label>Artists You Like:</label>\n      <div class='option-group'>\n        <label><input type='checkbox' name='artists' />Kandinsky</label>\n        <label><input type='checkbox' name='artists' />Renoir</label>\n        <label><input type='checkbox' name='artists' />De Kooning</label>\n        <label><input type='checkbox' name='artists' />Pollock</label>\n      </div>\n    </div>\n\n    <div class='xng-form-row'>\n      <label>Favorite Animal:</label>\n      <div class='option-group inline'>\n        <label><input type='radio' name='animal' />Cat</label>\n        <label><input type='radio' name='animal' />Dog</label>\n        <label><input type='radio' name='animal' />Other</label>\n      </div>\n    </div>\n\n    <div class='xng-form-row'>\n      <label for='message'>Message:</label>\n      <textarea name='message' id='message' />\n    </div>\n\n    <div class='xng-form-row'>\n      <button type=\"submit\" ng-click=\"sessionSubmit()\" class=\"call-to-action\">Submit</button>\n    </div>\n\n    <div class='xng-form-row'>\n      <div ng-if=\"passwordShow\" class='input-like'>\n        <a ui-sref='root.inner.passwordsRequest'>Forgot your password?</a>\n      </div>\n    </div>\n</form>\n";
 exports["default"] = template;
 module.exports = exports["default"];
 
 },{}],5:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
-var _interopRequireWildcard = function _interopRequireWildcard(obj) {
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
+
+function _interopRequireWildcard(obj) {
   if (obj && obj.__esModule) {
     return obj;
   } else {
-    var newObj = {};if (typeof obj === 'object' && obj !== null) {
+    var newObj = {};if (obj != null) {
       for (var key in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key];
       }
     }newObj['default'] = obj;return newObj;
   }
-};
+}
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+var _exampleFormStatesJs = require('./exampleFormStates.js');
 
-var _import = require('./exampleFormStates.js');
+var ExampleFormStates = _interopRequireWildcard(_exampleFormStatesJs);
 
-var ExampleFormStates = _interopRequireWildcard(_import);
+var _exampleFormControllersJs = require('./exampleFormControllers.js');
 
-var _ExampleFormController = require('./exampleFormControllers.js');
+var _exampleFormControllersJs2 = _interopRequireDefault(_exampleFormControllersJs);
 
-var _ExampleFormController2 = _interopRequireDefault(_ExampleFormController);
+var _a1atscript = require('a1atscript');
 
-var _Module = require('a1atscript');
-
-var ExampleForm = new _Module.Module('exampleForm', ['ui.router.state', ExampleFormStates, _ExampleFormController2['default']]);
+var ExampleForm = new _a1atscript.Module('exampleForm', ['ui.router.state', ExampleFormStates, _exampleFormControllersJs2['default']]);
 
 exports['default'] = ExampleForm;
 module.exports = exports['default'];
@@ -2697,17 +2696,17 @@ module.exports = exports['default'];
 },{"./exampleFormControllers.js":6,"./exampleFormStates.js":7,"a1atscript":1}],6:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _Controller = require('a1atscript');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
+
+var _a1atscript = require('a1atscript');
 
 var ExampleFormCtrl = (function () {
   function ExampleFormCtrl($scope) {
@@ -2715,7 +2714,7 @@ var ExampleFormCtrl = (function () {
   }
 
   var _ExampleFormCtrl = ExampleFormCtrl;
-  ExampleFormCtrl = _Controller.Controller('ExampleFormCtrl', ['$scope'])(ExampleFormCtrl) || ExampleFormCtrl;
+  ExampleFormCtrl = (0, _a1atscript.Controller)('ExampleFormCtrl', ['$scope'])(ExampleFormCtrl) || ExampleFormCtrl;
   return ExampleFormCtrl;
 })();
 
@@ -2725,25 +2724,25 @@ module.exports = exports['default'];
 },{"a1atscript":1}],7:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _State = require('../../stateInjector.js');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _template = require('./example-form.tpl.js');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _template2 = _interopRequireDefault(_template);
+var _stateInjectorJs = require('../../stateInjector.js');
+
+var _exampleFormTplJs = require("./example-form.tpl.js");
+
+var _exampleFormTplJs2 = _interopRequireDefault(_exampleFormTplJs);
 
 var ExampleFormState = (function () {
   function ExampleFormState() {
@@ -2751,11 +2750,11 @@ var ExampleFormState = (function () {
 
     this.url = '^/example-form';
     this.controller = 'ExampleFormCtrl';
-    this.template = _template2['default'];
+    this.template = _exampleFormTplJs2['default'];
   }
 
   var _ExampleFormState = ExampleFormState;
-  ExampleFormState = _State.State('root.inner.exampleForm')(ExampleFormState) || ExampleFormState;
+  ExampleFormState = (0, _stateInjectorJs.State)('root.inner.exampleForm')(ExampleFormState) || ExampleFormState;
   return ExampleFormState;
 })();
 
@@ -2767,36 +2766,36 @@ exports.ExampleFormState = ExampleFormState;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var template = "<div class=\"critical error\">\n  <img class='icon' src='/assets/icons/alert.svg' />\n\n  <p>A significant error has occurred in the application.\n  Please try returning to the <a href=\"/\">home page.</a></p>\n\n  <p>If you cannot visit the home page, the error is probably caused by a\n  failure in a remote service. Please report the error to your\n  administrator.</p>\n</div>\n";
+var template = "<div class=\"critical error\">\n  <img class='icon' src='/assets/icons/alert.svg' />\n\n  <p>A significant error has occurred in the application.\n  Please try returning to the <a href=\"/\">home page.</a></p>\n\n  <p>If you cannot visit the home page, the error is probably caused by a\n  failure in a remote service. Please report the error to your \n  administrator.</p>\n</div>\n";
 exports["default"] = template;
 module.exports = exports["default"];
 
 },{}],9:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _Module = require('a1atscript');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _State = require('../../stateInjector.js');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _template = require('./error-fallback.tpl.js');
+var _a1atscript = require('a1atscript');
+
+var _stateInjectorJs = require('../../stateInjector.js');
+
+var _errorFallbackTplJs = require("./error-fallback.tpl.js");
+
+var _errorFallbackTplJs2 = _interopRequireDefault(_errorFallbackTplJs);
 
 //import errorTemplate from 'common/templates/app/error-fallback.tpl.js';
-
-var _template2 = _interopRequireDefault(_template);
 
 //must be top level - don't want e.g. resolve error in root to break it
 
@@ -2805,16 +2804,16 @@ var FallbackState = (function () {
     _classCallCheck(this, _FallbackState);
 
     // no controller, no resolves.
-    this.url = '/error';
-    this.template = _template2['default'];
+    this.url = "/error";
+    this.template = _errorFallbackTplJs2['default'];
   }
 
   var _FallbackState = FallbackState;
-  FallbackState = _State.State('errorFallback')(FallbackState) || FallbackState;
+  FallbackState = (0, _stateInjectorJs.State)('errorFallback')(FallbackState) || FallbackState;
   return FallbackState;
 })();
 
-var Fallback = new _Module.Module('fallback', ['ui.router.state', FallbackState]);
+var Fallback = new _a1atscript.Module('fallback', ['ui.router.state', FallbackState]);
 
 exports['default'] = Fallback;
 module.exports = exports['default'];
@@ -2828,7 +2827,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.whenGoto = whenGoto;
 exports.appConfig = appConfig;
 
-var _Config$applyAnnotation = require("a1atscript");
+var _a1atscript = require("a1atscript");
 
 function whenGoto($location) {
   var search = $location.search();
@@ -2860,15 +2859,15 @@ function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   // backend in-turn redirects to /?goto=url wher url is the intended frontend url
   // this function then redirects frontend (via history API) to appropriate frontend
   // route
-  $urlRouterProvider.when(/.*/, ["$location", whenGoto]);
+  $urlRouterProvider.when(/.*/, ['$location', whenGoto]);
 
   $urlRouterProvider.otherwise(function ($injector, $location) {
-    $injector.get("$state").go("root.homepage.show");
+    $injector.get('$state').go('root.homepage.show');
     //return '/home';
   });
 }
 
-_Config$applyAnnotation.applyAnnotation(appConfig, _Config$applyAnnotation.Config, "$stateProvider", "$urlRouterProvider", "$locationProvider");
+(0, _a1atscript.applyAnnotation)(appConfig, _a1atscript.Config, '$stateProvider', '$urlRouterProvider', '$locationProvider');
 
 },{"a1atscript":1}],11:[function(require,module,exports){
 "use strict";
@@ -2883,15 +2882,9 @@ module.exports = exports["default"];
 },{}],12:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -2903,37 +2896,42 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _AsModule$DirectiveObject = require('a1atscript');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _template = require('./responsive-menu.tpl.js');
+var _a1atscript = require('a1atscript');
 
-var _template2 = _interopRequireDefault(_template);
+var _responsiveMenuTplJs = require("./responsive-menu.tpl.js");
+
+var _responsiveMenuTplJs2 = _interopRequireDefault(_responsiveMenuTplJs);
 
 var ResponsiveMenu = (function () {
   function ResponsiveMenu() {
     _classCallCheck(this, _ResponsiveMenu);
 
     this.restrict = 'E';
-    this.template = _template2['default'];
+    this.template = _responsiveMenuTplJs2['default'];
     this.transclude = true;
     this.scope = true;
   }
 
-  var _ResponsiveMenu = ResponsiveMenu;
-
-  _createClass(_ResponsiveMenu, [{
+  _createClass(ResponsiveMenu, [{
     key: 'link',
     value: function link(scope, element, attrs) {
-      var nav = responsiveNav('.nav-collapse');
+      var nav = responsiveNav(".nav-collapse");
     }
   }]);
 
-  ResponsiveMenu = _AsModule$DirectiveObject.DirectiveObject('lrdResponsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
-  ResponsiveMenu = _AsModule$DirectiveObject.AsModule('responsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
+  var _ResponsiveMenu = ResponsiveMenu;
+  ResponsiveMenu = (0, _a1atscript.DirectiveObject)('xngResponsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
+  ResponsiveMenu = (0, _a1atscript.AsModule)('responsiveMenu')(ResponsiveMenu) || ResponsiveMenu;
   return ResponsiveMenu;
 })();
 
@@ -2943,11 +2941,9 @@ module.exports = exports['default'];
 },{"./responsive-menu.tpl.js":11,"a1atscript":1}],13:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -2959,11 +2955,13 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _AsModule$DirectiveObject = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 var StateAttrs = (function () {
   function StateAttrs($compile, $state) {
@@ -2975,9 +2973,7 @@ var StateAttrs = (function () {
     this.priority = -500;
   }
 
-  var _StateAttrs = StateAttrs;
-
-  _createClass(_StateAttrs, [{
+  _createClass(StateAttrs, [{
     key: 'getUiViewName',
     value: function getUiViewName(attrs, inherited) {
       var name = attrs.uiView || attrs.name || '';
@@ -2994,15 +2990,16 @@ var StateAttrs = (function () {
         var idName = viewStateName.replace(/\./g, '_');
 
         if (!attrs.id) {
-          attrs.$set('id', idName);
+          attrs.$set("id", idName);
         }
         attrs.$addClass(className);
       }
     }
   }]);
 
-  StateAttrs = _AsModule$DirectiveObject.DirectiveObject('lrdStateAttrs', ['$compile', '$state'])(StateAttrs) || StateAttrs;
-  StateAttrs = _AsModule$DirectiveObject.AsModule('stateAttrs', ['ui.router.state'])(StateAttrs) || StateAttrs;
+  var _StateAttrs = StateAttrs;
+  StateAttrs = (0, _a1atscript.DirectiveObject)('xngStateAttrs', ['$compile', '$state'])(StateAttrs) || StateAttrs;
+  StateAttrs = (0, _a1atscript.AsModule)('stateAttrs', ['ui.router.state'])(StateAttrs) || StateAttrs;
   return StateAttrs;
 })();
 
@@ -3012,21 +3009,21 @@ module.exports = exports['default'];
 },{"a1atscript":1}],14:[function(require,module,exports){
 'use strict';
 
-function lrdCompilerService($q, $http, $injector, $compile, $controller, $templateCache) {
+function xngCompilerService($q, $http, $injector, $compile, $controller, $templateCache) {
 
   /**
    * @ngdoc service
-   * @name $lrdCompiler
-   * @module lrd.services.compiler
+   * @name $xngCompiler
+   * @module xng.services.compiler
    *
    * @description
-   * The $lrdCompiler service is an abstraction of angular's compiler, that allows the developer
+   * The $xngCompiler service is an abstraction of angular's compiler, that allows the developer
    * to easily compile an element with a templateUrl, controller, and locals.
    */
 
   /**
    * @ngdoc method
-   * @name $lrdCompiler#compile
+   * @name $xngCompiler#compile
    * @param {object} options An options object, with the following properties:
    *
    *    - `controller` â€“ `{(string=|function()=}` â€“ Controller fn that should be associated with
@@ -3069,7 +3066,7 @@ function lrdCompilerService($q, $http, $injector, $compile, $controller, $templa
    *     called.
    *
    * @usage
-   * $lrdCompiler.compile({
+   * $xngCompiler.compile({
    *   templateUrl: 'modal.html',
    *   controller: 'ModalCtrl',
    *   locals: {
@@ -3144,7 +3141,7 @@ function lrdCompilerService($q, $http, $injector, $compile, $controller, $templa
   };
 }
 
-angular.module('xing.utils.compiler', []).service('$lrdCompiler', ['$q', '$http', '$injector', '$compile', '$controller', '$templateCache', lrdCompilerService]);
+angular.module('xing.utils.compiler', []).service('$xngCompiler', ['$q', '$http', '$injector', '$compile', '$controller', '$templateCache', xngCompilerService]);
 
 },{}],15:[function(require,module,exports){
 "use strict";
@@ -3171,7 +3168,7 @@ module.exports = exports["default"];
 
 require('./compiler.js');
 
-angular.module('xing.utils.interimElement', ['xing.utils.compiler']).factory('$$interimElement', ['$q', '$rootScope', '$timeout', '$rootElement', '$animate', '$lrdCompiler', InterimElementFactory]);
+angular.module('xing.utils.interimElement', ['xing.utils.compiler']).factory('$$interimElement', ['$q', '$rootScope', '$timeout', '$rootElement', '$animate', '$xngCompiler', InterimElementFactory]);
 
 /**
  * @ngdoc service
@@ -3180,14 +3177,14 @@ angular.module('xing.utils.interimElement', ['xing.utils.compiler']).factory('$$
  * @description
  *
  * Factory that contructs `$$interimElement.$service` services.
- * Used internally in lrd for elements that appear on screen temporarily.
+ * Used internally in xing for elements that appear on screen temporarily.
  * The service provides a promise-like API for interacting with the temporary
  * elements.
  *
  * ```js
- * app.service('$lrdToast', function($$interimElement) {
- *   var $lrdToast = $$interimElement(toastDefaultOptions);
- *   return $lrdToast;
+ * app.service('$xngToast', function($$interimElement) {
+ *   var $xngToast = $$interimElement(toastDefaultOptions);
+ *   return $xngToast;
  * });
  * ```
  * @param {object=} defaultOptions Options used by default for the `show` method on the service.
@@ -3196,7 +3193,7 @@ angular.module('xing.utils.interimElement', ['xing.utils.compiler']).factory('$$
  *
  */
 
-function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate, $lrdCompiler) {
+function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate, $xngCompiler) {
 
   return function createInterimElementService(defaults) {
 
@@ -3223,7 +3220,8 @@ function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate,
       },
       onRemove: function onRemove(scope, $el, options) {
         return $animate.leave($el);
-      } }, defaults || {});
+      }
+    }, defaults || {});
 
     var service;
     service = {
@@ -3316,7 +3314,7 @@ function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate,
         options: options,
         deferred: $q.defer(),
         show: function show() {
-          return $lrdCompiler.compile(options).then(function (compiledData) {
+          return $xngCompiler.compile(options).then(function (compiledData) {
             element = compiledData.link(options.scope);
             var ret = options.onShow(options.scope, element, options);
             return $q.when(ret).then(startHideTimeout);
@@ -3353,7 +3351,7 @@ function InterimElementFactory($q, $rootScope, $timeout, $rootElement, $animate,
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var template = "<div id=\"messages\">\n  <div class=\"toast {{type}}>{{content}}</div>\n</div>";
+var template = "<div id=\"messages\">\n  <div class=\"toast {{type}}\">{{content}}</div>\n</div>\n";
 exports["default"] = template;
 module.exports = exports["default"];
 
@@ -3364,22 +3362,22 @@ module.exports = exports["default"];
 
   /**
    * @ngdoc module
-   * @name lrd.components.swipe
+   * @name xng.components.swipe
    * @description Swipe module!
    */
-  angular.module("xing.utils.swipe", ["ng"])
+  angular.module("xing.utils.swipe", ['ng'])
 
   /**
    * @ngdoc directive
-   * @module lrd.components.swipe
-   * @name lrdSwipe
+   * @module xng.components.swipe
+   * @name xngSwipe
    *
    *  This service allows directives to easily attach swipe and pan listeners to
    *  the specified element.
    *
    * @private
    */
-  .factory("$lrdSwipe", function () {
+  .factory("$xngSwipe", function () {
 
     // match expected API functionality
     var attachNoop = function attachNoop() {
@@ -3411,7 +3409,7 @@ module.exports = exports["default"];
         }
 
         // auto-disconnect during destroy
-        scope.$on("$destroy", function () {
+        scope.$on('$destroy', function () {
           hammertime.destroy();
         });
 
@@ -3472,14 +3470,14 @@ module.exports = exports["default"];
 
   /**
    * @ngdoc directive
-   * @module lrd.components.swipe
-   * @name lrdSwipeLeft
+   * @module xng.components.swipe
+   * @name xngSwipeLeft
    *
    * @order 0
    * @restrict A
    *
    * @description
-   * The `<div  lrd-swipe-left="<expression" >` directive identifies an element on which
+   * The `<div  xng-swipe-left="<expression" >` directive identifies an element on which
    * HammerJS horizontal swipe left and pan left support will be active. The swipe/pan action
    * can result in custom activity trigger by evaluating `<expression>`.
    *
@@ -3490,30 +3488,30 @@ module.exports = exports["default"];
    *
    * <div class="animate-switch-container"
    *      ng-switch on="data.selectedIndex"
-   *      lrd-swipe-left="data.selectedIndex+=1;"
-   *      lrd-swipe-right="data.selectedIndex-=1;" >
+   *      xng-swipe-left="data.selectedIndex+=1;"
+   *      xng-swipe-right="data.selectedIndex-=1;" >
    *
    * </div>
    * </hljs>
    *
    */
-  .directive("lrdSwipeLeft", ["$parse", "$lrdSwipe", function LRDSwipeLeft($parse, $lrdSwipe) {
+  .directive("xngSwipeLeft", ['$parse', '$xngSwipe', function XNGSwipeLeft($parse, $xngSwipe) {
     return {
-      restrict: "A",
-      link: swipePostLink($parse, $lrdSwipe, "SwipeLeft")
+      restrict: 'A',
+      link: swipePostLink($parse, $xngSwipe, "SwipeLeft")
     };
   }])
 
   /**
    * @ngdoc directive
-   * @module lrd.components.swipe
-   * @name lrdSwipeRight
+   * @module xng.components.swipe
+   * @name xngSwipeRight
    *
    * @order 1
    * @restrict A
    *
    * @description
-   * The `<div  lrd-swipe-right="<expression" >` directive identifies functionality
+   * The `<div  xng-swipe-right="<expression" >` directive identifies functionality
    * that attaches HammerJS horizontal swipe right and pan right support to an element. The swipe/pan action
    * can result in activity trigger by evaluating `<expression>`
    *
@@ -3524,17 +3522,17 @@ module.exports = exports["default"];
    *
    * <div class="animate-switch-container"
    *      ng-switch on="data.selectedIndex"
-   *      lrd-swipe-left="data.selectedIndex+=1;"
-   *      lrd-swipe-right="data.selectedIndex-=1;" >
+   *      xng-swipe-left="data.selectedIndex+=1;"
+   *      xng-swipe-right="data.selectedIndex-=1;" >
    *
    * </div>
    * </hljs>
    *
    */
-  .directive("lrdSwipeRight", ["$parse", "$lrdSwipe", function LRDSwipeRight($parse, $lrdSwipe) {
+  .directive("xngSwipeRight", ['$parse', '$xngSwipe', function XNGSwipeRight($parse, $xngSwipe) {
     return {
-      restrict: "A",
-      link: swipePostLink($parse, $lrdSwipe, "SwipeRight")
+      restrict: 'A',
+      link: swipePostLink($parse, $xngSwipe, "SwipeRight")
     };
   }]);
 
@@ -3542,18 +3540,18 @@ module.exports = exports["default"];
    * Factory to build PostLink function specific to Swipe or Pan direction
    *
    * @param $parse
-   * @param lrdSwipe
+   * @param xngSwipe
    * @param name
    * @returns {Function}
    */
-  function swipePostLink($parse, $lrdSwipe, name) {
+  function swipePostLink($parse, $xngSwipe, name) {
 
     return function (scope, element, attrs) {
       var direction = name.toLowerCase();
-      var directiveName = "lrd" + name;
+      var directiveName = "xng" + name;
 
       var parentGetter = $parse(attrs[directiveName]) || angular.noop;
-      var configureSwipe = $lrdSwipe(scope, direction);
+      var configureSwipe = $xngSwipe(scope, direction);
       var requestSwipe = function requestSwipe(locals) {
         // build function to request scope-specific swipe response
         parentGetter(scope, locals);
@@ -3571,230 +3569,229 @@ module.exports = exports["default"];
 },{}],20:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _applyAnnotation$Factory$Controller$Directive$Module = require('a1atscript');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
+
+var _a1atscript = require('a1atscript');
 
 require('./swipe.js');
 
 require('./interimElement.js');
 
-var _Inflector = require('xing-inflector');
+var _xingInflector = require('xing-inflector');
 
-var _Inflector2 = _interopRequireDefault(_Inflector);
+var _xingInflector2 = _interopRequireDefault(_xingInflector);
 
-var _errorListTemplate = require('./error-list.tpl.js');
+var _errorListTplJs = require("./error-list.tpl.js");
 
-var _errorListTemplate2 = _interopRequireDefault(_errorListTemplate);
+var _errorListTplJs2 = _interopRequireDefault(_errorListTplJs);
 
-var _errorTemplate = require('./error.tpl.js');
+var _errorTplJs = require("./error.tpl.js");
 
-var _errorTemplate2 = _interopRequireDefault(_errorTemplate);
+var _errorTplJs2 = _interopRequireDefault(_errorTplJs);
 
-var _noticeTemplate = require('./notice.tpl.js');
+var _noticeTplJs = require("./notice.tpl.js");
 
-var _noticeTemplate2 = _interopRequireDefault(_noticeTemplate);
+var _noticeTplJs2 = _interopRequireDefault(_noticeTplJs);
 
-/* This is cribbed from the lrd design toast */
-
-function lrdToastDirective() {
+function xngToastDirective() {
   return {
     restrict: 'E'
   };
 }
 
-_applyAnnotation$Factory$Controller$Directive$Module.applyAnnotation(lrdToastDirective, _applyAnnotation$Factory$Controller$Directive$Module.Directive, '$lrdToast');
+(0, _a1atscript.applyAnnotation)(xngToastDirective, _a1atscript.Directive, '$xngToast');
 
-var LrdToastErrorListCtrl = (function () {
-  function LrdToastErrorListCtrl($scope, type, header, messages) {
-    _classCallCheck(this, _LrdToastErrorListCtrl);
+var XngToastErrorListCtrl = (function () {
+  function XngToastErrorListCtrl($scope, type, header, messages) {
+    _classCallCheck(this, _XngToastErrorListCtrl);
 
     $scope.type = type;
     $scope.header = header;
     $scope.messages = messages;
   }
 
-  var _LrdToastErrorListCtrl = LrdToastErrorListCtrl;
-  LrdToastErrorListCtrl = _applyAnnotation$Factory$Controller$Directive$Module.Controller('$lrdToastErrorListCtrl', ['$scope', 'type', 'header', 'messages'])(LrdToastErrorListCtrl) || LrdToastErrorListCtrl;
-  return LrdToastErrorListCtrl;
+  var _XngToastErrorListCtrl = XngToastErrorListCtrl;
+  XngToastErrorListCtrl = (0, _a1atscript.Controller)('$xngToastErrorListCtrl', ['$scope', 'type', 'header', 'messages'])(XngToastErrorListCtrl) || XngToastErrorListCtrl;
+  return XngToastErrorListCtrl;
 })();
 
-var LrdToastErrorCtrl = (function () {
-  function LrdToastErrorCtrl($scope, type, message) {
-    _classCallCheck(this, _LrdToastErrorCtrl);
+var XngToastErrorCtrl = (function () {
+  function XngToastErrorCtrl($scope, type, message) {
+    _classCallCheck(this, _XngToastErrorCtrl);
 
     $scope.type = type;
     $scope.message = message;
   }
 
-  var _LrdToastErrorCtrl = LrdToastErrorCtrl;
-  LrdToastErrorCtrl = _applyAnnotation$Factory$Controller$Directive$Module.Controller('$lrdToastErrorCtrl', ['$scope', 'type', 'message'])(LrdToastErrorCtrl) || LrdToastErrorCtrl;
-  return LrdToastErrorCtrl;
+  var _XngToastErrorCtrl = XngToastErrorCtrl;
+  XngToastErrorCtrl = (0, _a1atscript.Controller)('$xngToastErrorCtrl', ['$scope', 'type', 'message'])(XngToastErrorCtrl) || XngToastErrorCtrl;
+  return XngToastErrorCtrl;
 })();
 
-var LrdToastNoticeCtrl = (function () {
-  function LrdToastNoticeCtrl($scope, type, message) {
-    _classCallCheck(this, _LrdToastNoticeCtrl);
+var XngToastNoticeCtrl = (function () {
+  function XngToastNoticeCtrl($scope, type, message) {
+    _classCallCheck(this, _XngToastNoticeCtrl);
 
     $scope.type = type;
     $scope.message = message;
   }
 
-  var _LrdToastNoticeCtrl = LrdToastNoticeCtrl;
-  LrdToastNoticeCtrl = _applyAnnotation$Factory$Controller$Directive$Module.Controller('$lrdToastNoticeCtrl', ['$scope', 'type', 'message'])(LrdToastNoticeCtrl) || LrdToastNoticeCtrl;
-  return LrdToastNoticeCtrl;
+  /**
+   * @ngdoc service
+   * @name $xngToast
+   * @module xng.components.toast
+   *
+   * @description
+   * Open a toast notification on any position on the screen, with an optional
+   * duration.
+   *
+   * Only one toast notification may ever be active at any time. If a new toast is
+   * shown while a different toast is active, the old toast will be automatically
+   * hidden.
+   *
+   * `$xngToast` is an `$interimElement` service and adheres to the same behaviors.
+   *  - `$xngToast.show()`
+   *  - `$xngToast.hide()`
+   *  - `$xngToast.cancel()`
+   *
+   * @usage
+   * <hljs lang="html">
+   * <div ng-controller="MyController">
+   *   <xng-button ng-click="openToast()">
+   *     Open a Toast!
+   *   </xng-button>
+   * </div>
+   * </hljs>
+   * <hljs lang="js">
+   * var app = angular.module('app', ['ngxng']);
+   * app.controller('MyController', function($scope, $xngToast) {
+   *   $scope.openToast = function($event) {
+   *     $xngToast.show({
+   *       template: '<xng-toast>Hello!</xng-toast>',
+   *       hideDelay: 3000
+   *     });
+   *   };
+   * });
+   * </hljs>
+   */
+
+  /**
+  * @ngdoc method
+  * @name $xngToast#show
+  *
+  * @description
+  * Show a toast dialog with the specified options.
+  *
+  * @paramType Options
+  * @param {string=} templateUrl The url of an html template file that will
+  * be used as the content of the toast. Restrictions: the template must
+  * have an outer `xng-toast` element.
+  * @param {string=} template Same as templateUrl, except this is an actual
+  * template string.
+  * @param {number=} hideDelay How many milliseconds the toast should stay
+  * active before automatically closing.  Set to 0 to disable duration.
+  * Default: 3000.
+  * @param {string=} position Where to place the toast. Available: any combination
+  * of 'bottom', 'left', 'top', 'right', 'fit'. Default: 'bottom left'.
+  * @param {string=} controller The controller to associate with this toast.
+  * The controller will be injected the local `$hideToast`, which is a function
+  * used to hide the toast.
+  * @param {string=} locals An object containing key/value pairs. The keys will
+  * be used as names of values to inject into the controller. For example,
+  * `locals: {three: 3}` would inject `three` into the controller with the value
+  * of 3.
+  * @param {object=} resolve Similar to locals, except it takes promises as values
+  * and the toast will not open until the promises resolve.
+  * @param {string=} controllerAs An alias to assign the controller to on the scope.
+  *
+  * @returns {Promise} Returns a promise that will be resolved or rejected when
+  *  `$xngToast.hide()` or `$xngToast.cancel()` is called respectively.
+  */
+
+  /**
+   * @ngdoc method
+   * @name $xngToast#hide
+   *
+   * @description
+   * Hide an existing toast and `resolve` the promise returned from `$xngToast.show()`.
+   *
+   * @param {*} arg An argument to resolve the promise with.
+   *
+   */
+
+  /**
+   * @ngdoc method
+   * @name $xngToast#cancel
+   *
+   * @description
+   * Hide an existing toast and `reject` the promise returned from `$xngToast.show()`.
+   *
+   * @param {*} arg An argument to reject the promise with.
+   *
+   */
+
+  var _XngToastNoticeCtrl = XngToastNoticeCtrl;
+  XngToastNoticeCtrl = (0, _a1atscript.Controller)('$xngToastNoticeCtrl', ['$scope', 'type', 'message'])(XngToastNoticeCtrl) || XngToastNoticeCtrl;
+  return XngToastNoticeCtrl;
 })();
 
-/**
- * @ngdoc service
- * @name $lrdToast
- * @module lrd.components.toast
- *
- * @description
- * Open a toast notification on any position on the screen, with an optional
- * duration.
- *
- * Only one toast notification may ever be active at any time. If a new toast is
- * shown while a different toast is active, the old toast will be automatically
- * hidden.
- *
- * `$lrdToast` is an `$interimElement` service and adheres to the same behaviors.
- *  - `$lrdToast.show()`
- *  - `$lrdToast.hide()`
- *  - `$lrdToast.cancel()`
- *
- * @usage
- * <hljs lang="html">
- * <div ng-controller="MyController">
- *   <lrd-button ng-click="openToast()">
- *     Open a Toast!
- *   </lrd-button>
- * </div>
- * </hljs>
- * <hljs lang="js">
- * var app = angular.module('app', ['nglrd']);
- * app.controller('MyController', function($scope, $lrdToast) {
- *   $scope.openToast = function($event) {
- *     $lrdToast.show({
- *       template: '<lrd-toast>Hello!</lrd-toast>',
- *       hideDelay: 3000
- *     });
- *   };
- * });
- * </hljs>
- */
-
-/**
-* @ngdoc method
-* @name $lrdToast#show
-*
-* @description
-* Show a toast dialog with the specified options.
-*
-* @paramType Options
-* @param {string=} templateUrl The url of an html template file that will
-* be used as the content of the toast. Restrictions: the template must
-* have an outer `lrd-toast` element.
-* @param {string=} template Same as templateUrl, except this is an actual
-* template string.
-* @param {number=} hideDelay How many milliseconds the toast should stay
-* active before automatically closing.  Set to 0 to disable duration.
-* Default: 3000.
-* @param {string=} position Where to place the toast. Available: any combination
-* of 'bottom', 'left', 'top', 'right', 'fit'. Default: 'bottom left'.
-* @param {string=} controller The controller to associate with this toast.
-* The controller will be injected the local `$hideToast`, which is a function
-* used to hide the toast.
-* @param {string=} locals An object containing key/value pairs. The keys will
-* be used as names of values to inject into the controller. For example,
-* `locals: {three: 3}` would inject `three` into the controller with the value
-* of 3.
-* @param {object=} resolve Similar to locals, except it takes promises as values
-* and the toast will not open until the promises resolve.
-* @param {string=} controllerAs An alias to assign the controller to on the scope.
-*
-* @returns {Promise} Returns a promise that will be resolved or rejected when
-*  `$lrdToast.hide()` or `$lrdToast.cancel()` is called respectively.
-*/
-
-/**
- * @ngdoc method
- * @name $lrdToast#hide
- *
- * @description
- * Hide an existing toast and `resolve` the promise returned from `$lrdToast.show()`.
- *
- * @param {*} arg An argument to resolve the promise with.
- *
- */
-
-/**
- * @ngdoc method
- * @name $lrdToast#cancel
- *
- * @description
- * Hide an existing toast and `reject` the promise returned from `$lrdToast.show()`.
- *
- * @param {*} arg An argument to reject the promise with.
- *
- */
-
-function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflector) {
+function xngToastService($timeout, $$interimElement, $animate, $xngSwipe, Inflector) {
 
   var factoryDef = {
     onShow: onShow,
     onRemove: onRemove,
     position: 'bottom left',
-    hideDelay: 3000 };
+    hideDelay: 3000
+  };
 
-  var toastElement = angular.element(document.getElementById('toast_main'));
-  var $lrdToast = $$interimElement(factoryDef);
+  var toastElement = angular.element(document.getElementById("toast_main"));
+  var $xngToast = $$interimElement(factoryDef);
 
-  $lrdToast.notice = function (message) {
-    var type = arguments[1] === undefined ? 'notice' : arguments[1];
+  $xngToast.notice = function (message) {
+    var type = arguments.length <= 1 || arguments[1] === undefined ? "notice" : arguments[1];
 
     return this.show({
       parent: toastElement,
-      template: _noticeTemplate2['default'],
+      template: _noticeTplJs2['default'],
       position: 'top left',
       locals: {
         type: type,
         message: message
       },
-      controller: '$lrdToastNoticeCtrl'
+      controller: '$xngToastNoticeCtrl'
     });
   };
 
-  $lrdToast.error = function (message) {
-    var type = arguments[1] === undefined ? 'error' : arguments[1];
+  $xngToast.error = function (message) {
+    var type = arguments.length <= 1 || arguments[1] === undefined ? "error" : arguments[1];
 
     return this.show({
       parent: toastElement,
-      template: _errorTemplate2['default'],
+      template: _errorTplJs2['default'],
       position: 'top left',
       locals: {
         type: type,
         message: message
       },
-      controller: '$lrdToastErrorCtrl'
+      controller: '$xngToastErrorCtrl'
     });
   };
 
-  $lrdToast.errorList = function (errors) {
-    var header = arguments[1] === undefined ? '' : arguments[1];
-    var type = arguments[2] === undefined ? 'error' : arguments[2];
+  $xngToast.errorList = function (errors) {
+    var header = arguments.length <= 1 || arguments[1] === undefined ? "" : arguments[1];
+    var type = arguments.length <= 2 || arguments[2] === undefined ? "error" : arguments[2];
 
     var messages = [];
     if (Array.isArray(errors)) {
@@ -3802,35 +3799,35 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
     } else {
       for (var key in errors) {
         if (errors.hasOwnProperty(key)) {
-          messages.push('' + Inflector.humanize(key) + ' ' + errors[key]);
+          messages.push(Inflector.humanize(key) + ' ' + errors[key]);
         }
       }
     }
     return this.show({
       parent: toastElement,
-      template: _errorListTemplate2['default'],
+      template: _errorListTplJs2['default'],
       position: 'top left',
       locals: {
         type: type,
         header: header,
         messages: messages
       },
-      controller: '$lrdToastErrorListCtrl'
+      controller: '$xngToastErrorListCtrl'
 
     });
   };
 
-  return $lrdToast;
+  return $xngToast;
 
   function onShow(scope, element, options) {
     element.addClass(options.position);
     options.parent.addClass(toastOpenClass(options.position));
 
-    var configureSwipe = $lrdSwipe(scope, 'swipeleft swiperight');
+    var configureSwipe = $xngSwipe(scope, 'swipeleft swiperight');
     options.detachSwipe = configureSwipe(element, function (ev) {
       //Add swipeleft/swiperight class to element so it can animate correctly
       element.addClass(ev.type);
-      $timeout($lrdToast.hide);
+      $timeout($xngToast.hide);
     });
 
     return $animate.enter(element, options.parent);
@@ -3843,13 +3840,13 @@ function lrdToastService($timeout, $$interimElement, $animate, $lrdSwipe, Inflec
   }
 
   function toastOpenClass(position) {
-    return 'lrd-toast-open-' + (position.indexOf('top') > -1 ? 'top' : 'bottom');
+    return 'xng-toast-open-' + (position.indexOf('top') > -1 ? 'top' : 'bottom');
   }
 }
 
-_applyAnnotation$Factory$Controller$Directive$Module.applyAnnotation(lrdToastService, _applyAnnotation$Factory$Controller$Directive$Module.Factory, '$lrdToast', ['$timeout', '$$interimElement', '$animate', '$lrdSwipe', 'Inflector']);
+(0, _a1atscript.applyAnnotation)(xngToastService, _a1atscript.Factory, '$xngToast', ['$timeout', '$$interimElement', '$animate', '$xngSwipe', 'Inflector']);
 
-var Toast = new _applyAnnotation$Factory$Controller$Directive$Module.Module('toast', ['xing.utils.interimElement', 'xing.utils.swipe', _Inflector2['default'], lrdToastDirective, LrdToastErrorListCtrl, LrdToastErrorCtrl, LrdToastNoticeCtrl, lrdToastService]);
+var Toast = new _a1atscript.Module('toast', ['xing.utils.interimElement', 'xing.utils.swipe', _xingInflector2['default'], xngToastDirective, XngToastErrorListCtrl, XngToastErrorCtrl, XngToastNoticeCtrl, xngToastService]);
 
 exports['default'] = Toast;
 module.exports = exports['default'];
@@ -3857,11 +3854,9 @@ module.exports = exports['default'];
 },{"./error-list.tpl.js":15,"./error.tpl.js":16,"./interimElement.js":17,"./notice.tpl.js":18,"./swipe.js":19,"a1atscript":1,"xing-inflector":2}],21:[function(require,module,exports){
 'use strict';
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -3873,11 +3868,13 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _DirectiveObject = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 var UnimplementedDirective = (function () {
   function UnimplementedDirective() {
@@ -3886,9 +3883,7 @@ var UnimplementedDirective = (function () {
     this.restrict = 'A';
   }
 
-  var _UnimplementedDirective = UnimplementedDirective;
-
-  _createClass(_UnimplementedDirective, [{
+  _createClass(UnimplementedDirective, [{
     key: 'link',
     value: function link(scope, element, attrs) {
       element.on('click', function () {
@@ -3897,7 +3892,8 @@ var UnimplementedDirective = (function () {
     }
   }]);
 
-  UnimplementedDirective = _DirectiveObject.DirectiveObject('xngUnimplemented', [])(UnimplementedDirective) || UnimplementedDirective;
+  var _UnimplementedDirective = UnimplementedDirective;
+  UnimplementedDirective = (0, _a1atscript.DirectiveObject)('xngUnimplemented', [])(UnimplementedDirective) || UnimplementedDirective;
   return UnimplementedDirective;
 })();
 
@@ -3907,11 +3903,9 @@ module.exports = exports['default'];
 },{"a1atscript":1}],22:[function(require,module,exports){
 "use strict";
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -3923,9 +3917,11 @@ var _createClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
 
 var ErrorLimiter = (function () {
   function ErrorLimiter(uiState, failsafeStateName) {
@@ -4001,25 +3997,25 @@ module.exports = exports["default"];
 },{}],23:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 
-var _Inflector = require('xing-inflector');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _Inflector2 = _interopRequireDefault(_Inflector);
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
 
-var _applyAnnotation$Module$Factory$Provider = require('a1atscript');
+var _xingInflector = require('xing-inflector');
+
+var _xingInflector2 = _interopRequireDefault(_xingInflector);
+
+var _a1atscript = require('a1atscript');
 
 var SerializerProvider = (function () {
   function SerializerProvider() {
@@ -4448,7 +4444,7 @@ var SerializerProvider = (function () {
   }
 
   var _SerializerProvider = SerializerProvider;
-  SerializerProvider = _applyAnnotation$Module$Factory$Provider.Provider('Serializer')(SerializerProvider) || SerializerProvider;
+  SerializerProvider = (0, _a1atscript.Provider)('Serializer')(SerializerProvider) || SerializerProvider;
   return SerializerProvider;
 })();
 
@@ -4464,7 +4460,7 @@ function RequestInterceptor(Serializer) {
   };
 }
 
-_applyAnnotation$Module$Factory$Provider.applyAnnotation(RequestInterceptor, _applyAnnotation$Module$Factory$Provider.Factory, 'RequestInterceptor', ['Serializer']);
+(0, _a1atscript.applyAnnotation)(RequestInterceptor, _a1atscript.Factory, 'RequestInterceptor', ['Serializer']);
 
 function ResponseInterceptor(Serializer) {
   var serializer = new Serializer();
@@ -4474,9 +4470,9 @@ function ResponseInterceptor(Serializer) {
   };
 }
 
-_applyAnnotation$Module$Factory$Provider.applyAnnotation(ResponseInterceptor, _applyAnnotation$Module$Factory$Provider.Factory, 'ResponseInterceptor', ['Serializer']);
+(0, _a1atscript.applyAnnotation)(ResponseInterceptor, _a1atscript.Factory, 'ResponseInterceptor', ['Serializer']);
 
-var Serializer = new _applyAnnotation$Module$Factory$Provider.Module('serializer', [_Inflector2['default'], SerializerProvider, RequestInterceptor, ResponseInterceptor]);
+var Serializer = new _a1atscript.Module('serializer', [_xingInflector2['default'], SerializerProvider, RequestInterceptor, ResponseInterceptor]);
 
 exports['default'] = Serializer;
 module.exports = exports['default'];
@@ -4484,15 +4480,27 @@ module.exports = exports['default'];
 },{"a1atscript":1,"xing-inflector":2}],24:[function(require,module,exports){
 'use strict';
 
-var _inherits = function _inherits(subClass, superClass) {
-  if (typeof superClass !== 'function' && superClass !== null) {
-    throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) subClass.__proto__ = superClass;
-};
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
+var _get = function get(_x, _x2, _x3) {
+  var _again = true;_function: while (_again) {
+    var object = _x,
+        property = _x2,
+        receiver = _x3;_again = false;if (object === null) object = Function.prototype;var desc = Object.getOwnPropertyDescriptor(object, property);if (desc === undefined) {
+      var parent = Object.getPrototypeOf(object);if (parent === null) {
+        return undefined;
+      } else {
+        _x = parent;_x2 = property;_x3 = receiver;_again = true;desc = parent = undefined;continue _function;
+      }
+    } else if ('value' in desc) {
+      return desc.value;
+    } else {
+      var getter = desc.get;if (getter === undefined) {
+        return undefined;
+      }return getter.call(receiver);
+    }
   }
 };
 
@@ -4506,7 +4514,7 @@ var _createDecoratedClass = (function () {
           } else {
             throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator);
           }
-        }if (descriptor.initializer) {
+        }if (descriptor.initializer !== undefined) {
           initializers[key] = descriptor;continue;
         }
       }Object.defineProperty(target, key, descriptor);
@@ -4516,20 +4524,31 @@ var _createDecoratedClass = (function () {
   };
 })();
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== 'function' && superClass !== null) {
+    throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass);
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
 
-var _Resolve = require('./stateInjector.js');
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError('Cannot call a class as a function');
+  }
+}
+
+var _stateInjectorJs = require('./stateInjector.js');
 
 var LoggedInOnlyState = (function () {
   function LoggedInOnlyState() {
     _classCallCheck(this, LoggedInOnlyState);
   }
 
+  // In base Xing, being logged in means you're an admin
+  // override AdminOnlyState and TrackAdminState in a more complex app
+
   _createDecoratedClass(LoggedInOnlyState, [{
     key: 'currentUser',
-    decorators: [_Resolve.Resolve('$auth', '$state')],
+    decorators: [(0, _stateInjectorJs.Resolve)('$auth', '$state')],
     value: function currentUser($auth, $state) {
       return $auth.validateUser().then(function (user) {
         return user;
@@ -4544,23 +4563,18 @@ var LoggedInOnlyState = (function () {
 
 exports.LoggedInOnlyState = LoggedInOnlyState;
 
-// In base Xing, being logged in means you're an admin
-// override AdminOnlyState and TrackAdminState in a more complex app
-
 var AdminOnlyState = (function (_LoggedInOnlyState) {
+  _inherits(AdminOnlyState, _LoggedInOnlyState);
+
   function AdminOnlyState() {
     _classCallCheck(this, AdminOnlyState);
 
-    if (_LoggedInOnlyState != null) {
-      _LoggedInOnlyState.apply(this, arguments);
-    }
+    _get(Object.getPrototypeOf(AdminOnlyState.prototype), 'constructor', this).apply(this, arguments);
   }
-
-  _inherits(AdminOnlyState, _LoggedInOnlyState);
 
   _createDecoratedClass(AdminOnlyState, [{
     key: 'onlyAdmin',
-    decorators: [_Resolve.Resolve()],
+    decorators: [(0, _stateInjectorJs.Resolve)()],
     value: function onlyAdmin() {
       return true;
     }
@@ -4578,7 +4592,7 @@ var TrackAdminState = (function () {
 
   _createDecoratedClass(TrackAdminState, [{
     key: 'isAdmin',
-    decorators: [_Resolve.Resolve('$auth')],
+    decorators: [(0, _stateInjectorJs.Resolve)('$auth')],
     value: function isAdmin($auth) {
       return $auth.validateUser().then(function (success) {
         return true;
@@ -4596,23 +4610,23 @@ exports.TrackAdminState = TrackAdminState;
 },{"./stateInjector.js":26}],25:[function(require,module,exports){
 'use strict';
 
-var _interopRequireDefault = function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { 'default': obj };
-};
-
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 exports['default'] = stateFallback;
 
-var _ErrorLimiter = require('./errorLimiter.js');
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : { 'default': obj };
+}
 
-var _ErrorLimiter2 = _interopRequireDefault(_ErrorLimiter);
+var _errorLimiterJs = require('./errorLimiter.js');
 
-var _Run$applyAnnotation = require('a1atscript');
+var _errorLimiterJs2 = _interopRequireDefault(_errorLimiterJs);
+
+var _a1atscript = require('a1atscript');
 
 function stateFallback($rootScope, $state) {
-  var limiter = new _ErrorLimiter2['default']($state, 'errorFallback');
+  var limiter = new _errorLimiterJs2['default']($state, "errorFallback");
   $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
     limiter.transitionError(fromState, toState);
   });
@@ -4621,11 +4635,15 @@ function stateFallback($rootScope, $state) {
   });
 }
 
-_Run$applyAnnotation.applyAnnotation(stateFallback, _Run$applyAnnotation.Run, '$rootScope', '$state');
+(0, _a1atscript.applyAnnotation)(stateFallback, _a1atscript.Run, "$rootScope", "$state");
 module.exports = exports['default'];
 
 },{"./errorLimiter.js":22,"a1atscript":1}],26:[function(require,module,exports){
 'use strict';
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 
 var _createClass = (function () {
   function defineProperties(target, props) {
@@ -4637,17 +4655,13 @@ var _createClass = (function () {
   };
 })();
 
-var _classCallCheck = function _classCallCheck(instance, Constructor) {
+function _classCallCheck(instance, Constructor) {
   if (!(instance instanceof Constructor)) {
     throw new TypeError('Cannot call a class as a function');
   }
-};
+}
 
-Object.defineProperty(exports, '__esModule', {
-  value: true
-});
-
-var _registerInjector$ToAnnotation = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 var State = (function () {
   function State(stateName) {
@@ -4657,7 +4671,7 @@ var State = (function () {
   }
 
   var _State = State;
-  State = _registerInjector$ToAnnotation.ToAnnotation(State) || State;
+  State = (0, _a1atscript.ToAnnotation)(State) || State;
   return State;
 })();
 
@@ -4665,17 +4679,17 @@ exports.State = State;
 
 var Resolve = (function () {
   function Resolve() {
+    _classCallCheck(this, _Resolve);
+
     for (var _len = arguments.length, inject = Array(_len), _key = 0; _key < _len; _key++) {
       inject[_key] = arguments[_key];
     }
-
-    _classCallCheck(this, _Resolve);
 
     this.inject = inject;
   }
 
   var _Resolve = Resolve;
-  Resolve = _registerInjector$ToAnnotation.ToAnnotation(Resolve) || Resolve;
+  Resolve = (0, _a1atscript.ToAnnotation)(Resolve) || Resolve;
   return Resolve;
 })();
 
@@ -4683,23 +4697,22 @@ exports.Resolve = Resolve;
 
 var Inject = (function () {
   function Inject() {
+    _classCallCheck(this, _Inject);
+
     for (var _len2 = arguments.length, inject = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
       inject[_key2] = arguments[_key2];
     }
 
-    _classCallCheck(this, _Inject);
-
     this.inject = inject;
   }
 
+  // An Injector must define an annotationClass getter and an instantiate method
   var _Inject = Inject;
-  Inject = _registerInjector$ToAnnotation.ToAnnotation(Inject) || Inject;
+  Inject = (0, _a1atscript.ToAnnotation)(Inject) || Inject;
   return Inject;
 })();
 
 exports.Inject = Inject;
-
-// An Injector must define an annotationClass getter and an instantiate method
 
 var StateInjector = (function () {
   function StateInjector() {
@@ -4707,24 +4720,19 @@ var StateInjector = (function () {
   }
 
   _createClass(StateInjector, [{
-    key: 'annotationClass',
-    get: function get() {
-      return State;
-    }
-  }, {
     key: 'annotateResolves',
     value: function annotateResolves(state) {
       state.resolve = {};
       for (var prop in state) {
-        if (typeof state[prop] == 'function') {
+        if (typeof state[prop] == "function") {
           var resolveItem = state[prop];
           resolveItem.annotations.forEach(function (annotation) {
             if (annotation instanceof (Resolve.originalClass || Resolve)) {
-              resolveItem.$inject = annotation.inject;
+              resolveItem['$inject'] = annotation.inject;
               state.resolve[prop] = resolveItem;
             }
             if (annotation instanceof (Inject.originalClass || Inject)) {
-              resolveItem.$inject = annotation.inject;
+              resolveItem['$inject'] = annotation.inject;
             }
           });
         }
@@ -4744,6 +4752,11 @@ var StateInjector = (function () {
         });
       });
     }
+  }, {
+    key: 'annotationClass',
+    get: function get() {
+      return State;
+    }
   }]);
 
   return StateInjector;
@@ -4751,7 +4764,7 @@ var StateInjector = (function () {
 
 exports.StateInjector = StateInjector;
 
-_registerInjector$ToAnnotation.registerInjector('state', StateInjector);
+(0, _a1atscript.registerInjector)('state', StateInjector);
 
 },{"a1atscript":1}],27:[function(require,module,exports){
 'use strict';
@@ -4761,38 +4774,38 @@ Object.defineProperty(exports, '__esModule', {
 });
 exports['default'] = uiRouteLogger;
 
-var _applyAnnotation$AsModule$Run = require('a1atscript');
+var _a1atscript = require('a1atscript');
 
 function uiRouteLogger($rootScope, $state, noTable) {
   if (noTable) {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
       /*jshint -W075 */
-      console.log('Routing Event', event.name);
-      console.log('From State', fromState.name, fromState.url);
-      console.log('To State', toState.name, toState.url);
+      console.log("Routing Event", event.name);
+      console.log("From State", fromState.name, fromState.url);
+      console.log("To State", toState.name, toState.url);
     });
     $rootScope.$on('$stateNotFound', function (event, missingState) {
-      console.log('Routing Event', event.name);
-      console.log('Missing state', missingState);
-      console.log('Existing states');
+      console.log("Routing Event", event.name);
+      console.log("Missing state", missingState);
+      console.log("Existing states");
       $state.get().forEach(function (state) {
         console.log(state);
       });
-      console.log('End of states');
+      console.log("End of states");
     });
     $rootScope.$on('$stateChangeSuccess', function (event, toState) {
-      console.log('Routing Event', event.name);
-      console.log('To State', toState.name, toState.url);
+      console.log("Routing Event", event.name);
+      console.log("To State", toState.name, toState.url);
     });
     $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
-      console.log('Routing Event', event.name);
-      console.log('From State', fromState);
-      console.log('To State', toState);
-      console.log('Error', error);
+      console.log("Routing Event", event.name);
+      console.log("From State", fromState);
+      console.log("To State", toState);
+      console.log("Error", error);
       console.log(error.stack);
     });
     $rootScope.$on('$viewContentLoaded', function (event) {
-      console.log('view event', event.name);
+      console.log("view event", event.name);
     });
   } else {
     $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
@@ -4820,14 +4833,14 @@ function uiRouteLogger($rootScope, $state, noTable) {
       console.table({ error: error });
       console.table({ fromState: fromState, toState: toState });
       //console.table({fromParams, toParams});
-      console.log('ui-router error', error.stack);
+      console.log("ui-router error", error.stack);
       console.groupEnd();
     });
   }
 }
 
-_applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.AsModule, 'route-logger');
-_applyAnnotation$AsModule$Run.applyAnnotation(uiRouteLogger, _applyAnnotation$AsModule$Run.Run, '$rootScope', '$state');
+(0, _a1atscript.applyAnnotation)(uiRouteLogger, _a1atscript.AsModule, 'route-logger');
+(0, _a1atscript.applyAnnotation)(uiRouteLogger, _a1atscript.Run, '$rootScope', '$state');
 module.exports = exports['default'];
 
 },{"a1atscript":1}],28:[function(require,module,exports){
